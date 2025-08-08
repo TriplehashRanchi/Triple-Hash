@@ -24,6 +24,7 @@ const config: Config = {
         },
         
       },
+      
       backgroundImage: {
         // Add this new utility for the dotted pattern
         'dotted-pattern': 'radial-gradient(circle, #382F56 1px, transparent 1px)',

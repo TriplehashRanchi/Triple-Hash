@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import HeroSection from "@/components/HeroSection";
+import HeroText from "@/components/HeroText";
 import NavBar from "@/components/NavBar";
 import SecondSection from "@/components/SecondSection";
 import Logos from "@/components/Logos";
 import IntegrationsSection from "@/components/IntegrationsSection";
-import HeroText from "@/components/HeroText";
-import Lightning from "@/components/Lightning";
+import ScrollStack from "@/components/ScrollStack";
+ 
+import Lightning from "@/components/ReactBit/Lightning";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       </div>
       <Logos />
       <IntegrationsSection />
+      <ScrollStack />
     </>
   );
 }
