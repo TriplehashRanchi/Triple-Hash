@@ -26,11 +26,11 @@ const Stack = () => {
                     {/* card 1 */}
                     <div
                         className={`${localStyles['scroll-stack-card']} 
-                                   bg-[#FFF9EF] border border-gray-700 `}
+                                 border border-gray-700 [background:radial-gradient(circle_at_top_left,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_top_right,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_bottom_left,rgba(0,200,255,0.4),transparent_2%),radial-gradient(circle_at_bottom_right,rgba(0,200,255,0.4),transparent_10%),#FFF9EF]`}
                     >
-                        <div className="flex flex-col lg:flex-row items-center w-full h-full gap-20 p-22">
+                        <div className="flex flex-col lg:flex-row items-center w-full h-full gap-20 p-14">
                             {/* Left Section: Text Content */}
-                            <div className="w-1/2 display flex flex-col gap-8">
+                            <div className="w-1/2 display flex flex-col gap-8 p-8">
                                 <div className='flex flex-col gap-4'>
                                     <h2 className="text-black font-medium text-[2.95rem] leading-none">Code when you need it, UI when you don't</h2>
                                     <p className="w-[70%] text-gray-1000 text-md">Other tools limit you to either a visual building experience, or code. With n8n, you get the best of both worlds.</p>
@@ -43,8 +43,8 @@ const Stack = () => {
                                 </div>
                             </div>
                             {/* Right Section: Image */}
-                            <div className="w-1/2">
-                                <img src="/code.webp" alt="" className='object-contain' />
+                            <div className="w-1/2 pr-8 ">
+                                <img src="/code.webp" alt="" className={`${localStyles['tilt-img']} object-contain `} />
                             </div>
                         </div>
                     </div>
@@ -53,9 +53,9 @@ const Stack = () => {
                         className={`${localStyles['scroll-stack-card']} 
                                    bg-[#0e0918] border-blue-700`}
                     >
-                        <div className="flex flex-col lg:flex-row items-center w-full h-full gap-20  p-20">
+                        <div className="flex flex-col lg:flex-row items-center w-full h-full gap-20  p-14">
                             {/* Left Section: Text Content */}
-                            <div className="w-1/2 display flex flex-col gap-8">
+                            <div className="w-1/2 display flex flex-col gap-8 p-8">
                                 {/* Add your text content here */}
                                 <div className='flex flex-col gap-0'>
                                     <h2 className="text-[2.9rem] font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-[#7C7C7C] ">Run. Tweak. Repeat</h2>
@@ -73,7 +73,7 @@ const Stack = () => {
                                     </div>
                                     <div className='flex gap-8'>
                                         <div className='flex gap-2 w-[45%]'>
-                                            <MdCheck fontSize={30} /><p ><strong className='text-white'>Debug fast</strong>, with logs in line with your code</p>
+                                            <MdCheck fontSize={30} /><p ><strong className='text-white'>Debug fast</strong>, with logs in line with your code </p>
 
                                         </div>
                                         <div className='flex gap-2 w-[45%]'>
@@ -90,7 +90,7 @@ const Stack = () => {
                             </div>
                             {/* Right Section: Image */}
 
-                            <div className="w-1/2">
+                            <div className="w-1/2 p-8">
                                 <img src="/code2.png" alt="" className='object-contain' />
                             </div>
 

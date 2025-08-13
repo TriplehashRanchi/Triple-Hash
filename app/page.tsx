@@ -6,7 +6,8 @@ import SecondSection from "@/components/SecondSection";
 import Logos from "@/components/Logos";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import ScrollStack from "@/components/ScrollStack";
- 
+import CaseStudy from "@/components/CaseStudy";
+import EnterpriseSection from "@/components/EnterpriseSection";
 import Lightning from "@/components/ReactBit/Lightning";
 
 export default function Home() {
@@ -34,6 +35,8 @@ export default function Home() {
       <Logos />
       <IntegrationsSection />
       <ScrollStack />
+      <CaseStudy />
+      <EnterpriseSection/>
     </>
   );
 }

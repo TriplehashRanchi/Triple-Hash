@@ -365,6 +365,7 @@ const IntegrationsSection = () => {
                             </div>
                         </SpotlightCard>
                     </div>
+                    
                 </div>
             </div>
 
