@@ -8,14 +8,18 @@ import IntegrationsSection from "@/components/IntegrationsSection";
 import ScrollStack from "@/components/ScrollStack";
 import CaseStudy from "@/components/CaseStudy";
 import EnterpriseSection from "@/components/EnterpriseSection";
+import Automation from "@/components/Automation"; // Ensure this path is correct
 import Lightning from "@/components/ReactBit/Lightning";
+import Footer from "@/components/Footer";
+import TestimonialsSection from "@/components/TestimonialsSection";
+
 
 export default function Home() {
   return (
     <>
       <div className="bg-[#0D0816] relative overflow-hidden">
         <div
-          className="absolute inset-0 z-[0]"
+          className="absolute inset-0 z-[0]" 
           style={{ width: "100%", height: "50%", position: "absolute" }}
         >
           <Lightning
@@ -36,7 +40,10 @@ export default function Home() {
       <IntegrationsSection />
       <ScrollStack />
       <CaseStudy />
-      <EnterpriseSection/>
+      <EnterpriseSection />
+      <Automation />
+      <TestimonialsSection/>
+      <Footer/>
     </>
   );
 }

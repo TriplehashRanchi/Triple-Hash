@@ -4,8 +4,8 @@ import SpotlightCard from './ReactBit/SpotlightCard';
 
 const CaseStudy = () => {
     return (
-        <div className='bg-[#0D0816] py-20'> {/* Added py-20 for vertical spacing */}
-            <div className='flex flex-col items-center max-w-[1360px] mx-auto px-6 lg:px-8'> {/* Added max-width and horizontal padding */}
+        <div className='bg-[#0D0816] pt-20 pb-10'> {/* Added py-20 for vertical spacing */}
+            <div className='flex flex-col items-center max-w-[1360px] mx-auto px-4 lg:px-8'> {/* Added max-width and horizontal padding */}
 
                 {/* Top Section: "See The Results" badge and "Case Studies" heading */}
                 <div className='flex items-center justify-center gap-1 rounded-3xl text-[0.9rem] border border-[#FFFFFF1A] text-white pt-[3px] pl-[1px] pr-3 mb-4
@@ -18,7 +18,7 @@ const CaseStudy = () => {
                 <h2 style={{
                     backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                     WebkitBackgroundClip: 'text',
-                }} className="text-3xl sm:text-4xl md:text-[2.8rem] font-bold font-raleway z-2 leading-tight text-transparent bg-clip-text" /* Added mb-20 for space below heading */
+                }} className="text-4xl sm:text-4xl md:text-[2.8rem] font-bold font-raleway z-2 leading-tight text-transparent bg-clip-text" /* Added mb-20 for space below heading */
                 >Case Studies</h2>
 
                 {/* Two Cards Section */}
@@ -27,7 +27,7 @@ const CaseStudy = () => {
                     <SpotlightCard className="custom-spotlight-card w-full max-w-[560px]"
                         spotlightColor="radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 104, 180, 0.3), rgba(91, 24, 255, 0.15) 60%, rgba(12, 8, 34, 0.1) 80%)">
                         <div
-                            className='p-14 rounded-[1.5rem]  h-full  text-white flex flex-col items-start'
+                            className='p-6 sm:p-14 rounded-[1.5rem]  h-full  text-white flex flex-col items-start'
                             style={{
                                 border: '1px solid hsla(0, 0%, 100%, .16)',
                                 boxShadow: 'inset 0 1px #ff8e5d66',
@@ -73,7 +73,7 @@ const CaseStudy = () => {
                     <SpotlightCard className="custom-spotlight-card w-full max-w-[560px]"
                         spotlightColor="radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 104, 180, 0.3), rgba(91, 24, 255, 0.15) 60%, rgba(12, 8, 34, 0.1) 80%)">
                         <div
-                            className='p-14 rounded-[1.5rem]  text-white flex flex-col items-start'
+                            className='p-6 sm:p-14 rounded-[1.5rem]  text-white flex flex-col items-start'
                             style={{
                                 border: '1px solid hsla(0, 0%, 100%, .16)',
                                 boxShadow: 'inset 0 1px #ff8e5d66',

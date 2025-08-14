@@ -79,13 +79,44 @@
   will-change: transform;
   backface-visibility: hidden;
   scale: 1;
- 
 }
 
+/* 📱 Mobile & Tablet Adjustments */
+@media (max-width: 1024px) {
+  .scroll-stack-wrapper {
+    height: auto;
+    align-items: flex-start;
+    padding: 2rem 0;
+  }
 
-@media (max-width: 768px) {
+  .scroll-stack-container {
+    height: auto;
+    overflow-y: visible;
+    padding: 0;
+  }
+
+  .scroll-stack-content {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2rem;
+  }
+
   .scroll-stack-card {
-    padding: 1.5rem;
+    position: relative;
+    top: 0;
+    transform: none !important;
+    opacity: 1 !important;
     min-height: auto;
+    border-radius: 12px;
+  }
+
+  .tilt-img {
+    transform: none;
+    border-radius: 12px;
   }
 }
+
+ 

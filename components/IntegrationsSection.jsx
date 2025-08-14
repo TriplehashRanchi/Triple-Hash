@@ -5,7 +5,7 @@ import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { MdCheck } from 'react-icons/md'
 import SpotlightCard from './ReactBit/SpotlightCard';
- 
+
 // --- DATA (No changes here) ---
 const integrationsRow1 = [
     { name: 'Google Calendar', src: '/icon1 (1).png' },
@@ -134,18 +134,18 @@ const IntegrationsSection = () => {
 
     return (
         // The main container needs `overflow-hidden` to contain the glows properly
-        <section className="relative w-full bg-[#0D0816] py-20 sm:py-0 overflow-hidden">
-            <div className="absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-11/12 rotate-[24deg] aspect-[1/2.2] w-[80%] max-w-[400px] bg-[linear-gradient(#a13355,#5159d9)] rounded-[800%] opacity-45 blur-[128px] z-[0]" />
+        <section className="relative w-full bg-[#0D0816] py-10 sm:py-0 overflow-hidden">
+            <div className=" hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-11/12 rotate-[24deg] aspect-[1/2.2] w-[80%] max-w-[400px] bg-[linear-gradient(#a13355,#5159d9)] rounded-[800%] opacity-45 blur-[128px] z-[0]" />
             <div
-                className="absolute bottom-[-10%] left-[20%] w-[80%] max-w-[500px] aspect-square rounded-full opacity-50 blur-[120px] z-0"
+                className="hidden sm:block absolute bottom-[-10%] left-[20%] w-[80%] max-w-[500px] aspect-square rounded-full opacity-50 blur-[120px] z-0"
                 style={{
                     background: 'radial-gradient(circle, #7877C6 -38%, #7877C6 0%)'
                 }}
             />
 
-            <div className="relative z-10 w-full max-w-[1360px] mx-auto px-6 lg:px-8 text-center">
+            <div className="relative z-10 w-full max-w-[1360px] mx-auto px-4 lg:px-8 text-center">
                 {/* Stats Cards (No changes here) */}
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mb-32">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-2 mb-25 sm:mb-32">
                     {stats.map((stat) => (
                         <div key={stat.id} className={`p-px border border-[#ffffff1a] rounded-xl ${stat.gradient}`}>
                             <div className="rounded-[15px] p-3 h-full flex items-center">
@@ -168,7 +168,7 @@ const IntegrationsSection = () => {
                 </div>
 
                 {/* Headline (No changes here) */}
-                <h2 style={{ backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`, WebkitBackgroundClip: 'text' }} className="font-raleway bg-clip-text text-transparent text-3xl sm:text-4xl md:text-[2.8rem] font-bold">
+                <h2 style={{ backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`, WebkitBackgroundClip: 'text' }} className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold">
                     Plug AI into your own data &
                     <br />
                     <span style={{ backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)', WebkitBackgroundClip: 'text' }} className='bg-clip-text text-transparent'>over 500 integrations</span>
@@ -220,7 +220,7 @@ const IntegrationsSection = () => {
                             get AI working in your business
                         </span>
                     </h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-2 gap-2 w-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-2 gap-6 md:gap-2 w-full">
                         {/* Card 1: Build multi-step agents (Left side, spanning both rows) */}
                         <SpotlightCard
                             className="custom-spotlight-card"
@@ -233,9 +233,12 @@ const IntegrationsSection = () => {
                                     backgroundImage: `radial-gradient(circle at 30% 140%, rgba(217, 126, 75, .3), transparent 37%), radial-gradient(circle at 50% 310%, #0400ff26, #a2a68700 78%), linear-gradient(transparent, #0d0a195e), radial-gradient(circle at 50% -30%, #a85c5c33, #67454500), radial-gradient(90% 10% at 50% 0, #a85c5c0d, #67454500 90%)`
                                 }} /* Spanning both rows */
                             >
-                                <div className=" rounded-3xl  px-10 py-4 flex items-center justify-between h-full  ">
+                                <div className="rounded-3xl px-6 py-8 sm:px-10 sm:py-4
+                       flex flex-col-reverse sm:flex-row items-center sm:justify-between
+                       h-auto sm:h-full gap-8"
+                                >
                                     {/* Text Content */}
-                                    <div className="flex flex-col gap-4 w-full max-w-[50%]">
+                                    <div className="flex flex-col gap-4 w-full sm:max-w-[50%] text-center sm:text-left">
                                         <h3 className="text-white font-semibold text-2xl  font-raleway text-left">
                                             Build multi-step agents
                                             <br />
@@ -253,7 +256,7 @@ const IntegrationsSection = () => {
 
                                     </div>
                                     {/* Image and Button */}
-                                    <div className=" ">
+                                    <div className="sm:ml-0 ml-5">
                                         <img src="/container.png" alt="" className='object-contain' />
                                     </div>
                                 </div>
@@ -274,7 +277,7 @@ const IntegrationsSection = () => {
 
                             >
 
-                                <div className=" rounded-3xl px-10 py-12 flex flex-col h-full min-h-[712px]">
+                                <div className=" rounded-3xl px-6 py-8  sm:px-10 sm:py-12 flex flex-col h-full min-h-[712px]">
                                     <h3 className="text-white  text-left font-semibold text-2xl font-raleway">
                                         Chat with your own data
                                     </h3>
@@ -335,7 +338,9 @@ const IntegrationsSection = () => {
                                     backgroundImage: `radial-gradient(circle at 30% 140%, rgba(217, 126, 75, .3), transparent 37%), radial-gradient(circle at 50% 310%, #0400ff26, #a2a68700 78%), linear-gradient(transparent, #0d0a195e), radial-gradient(circle at 50% -30%, #a85c5c33, #67454500), radial-gradient(90% 10% at 50% 0, #a85c5c0d, #67454500 90%)`
                                 }}
                             >
-                                <div className="rounded-3xl px-10 py-4 flex items-center justify-between h-full ">
+                                <div className="rounded-3xl px-6 py-8 sm:px-10 sm:py-4
+                       flex flex-col sm:flex-row items-center sm:justify-between
+                       h-auto sm:h-full gap-8">
 
                                     <div>
                                         <img src="/container2.png" alt="" className='object-contain' />
@@ -365,7 +370,7 @@ const IntegrationsSection = () => {
                             </div>
                         </SpotlightCard>
                     </div>
-                    
+
                 </div>
             </div>
 

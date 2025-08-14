@@ -1,0 +1,44 @@
+/* src/components/TestimonialsSection.css */
+
+/* Keyframes for the scrolling animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    /* Translate by the width of one full set of original testimonials.
+       Since we duplicated the testimonials 3 times, we need to scroll by 1/3 of the total width
+       of the `w-max` container. This creates a seamless loop.
+    */
+    transform: translateX(-33.3333%);
+  }
+}
+
+/* Class for the scrolling state */
+.scrolling {
+  animation: scroll-left 60s linear infinite; /* Adjust 60s for faster/slower scroll */
+}
+
+/* Class to pause the animation on hover */
+.paused {
+  animation-play-state: paused;
+}
+
+/* Optional: Background star/particle effect for visual detail */
+.stars-background {
+  background-image:
+    radial-gradient(2px 2px at 20% 10%, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 80% 30%, #eee, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 50% 60%, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 10% 80%, #eee, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 90% 95%, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 30% 70%, #eee, rgba(0,0,0,0));
+  background-size: 200px 200px; /* Adjust density and size */
+  animation: twinkle 10s infinite alternate; /* Optional twinkling effect */
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.8; }
+}
