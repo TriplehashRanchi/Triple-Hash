@@ -122,7 +122,7 @@ const Footer = () => {
     );
 
     return (
-        <footer className="bg-[#0D0816] text-gray-400 pb-30 relative overflow-hidden"> {/* REMOVED px-4 sm:px-6 lg:px-8 FROM HERE */}
+        <footer className="bg-[#0D0816] text-gray-400 pb-10 relative overflow-hidden"> {/* REMOVED px-4 sm:px-6 lg:px-8 FROM HERE */}
 
             <div className="max-w-[1360px] mx-auto relative z-10 px-4 sm:px-6 lg:px-8"> {/* ADDED px-4 sm:px-6 lg:px-8 HERE */}
                 {/* Top section: Logo, tagline, social, and main links */}

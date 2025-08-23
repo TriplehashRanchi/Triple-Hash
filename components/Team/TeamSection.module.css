@@ -1,0 +1,290 @@
+/* components/TeamSection.module.css */
+
+/* Define CSS Variables for easy color management */
+:root {
+    --primary-orange: #ff9900;
+    --background-dark: #110c1c;
+    --text-light: #e0e0e0;
+    --text-medium: #b0b0b0;
+    --purple-gradient-start: #7b42f6;
+    --purple-gradient-mid: #a765ea;
+    --purple-gradient-end: #d488e0;
+    --social-gradient-start: #8a41ec;
+    --social-gradient-end: #c46ee0;
+
+    /* New: Glow colors */
+    --glow-color-purple: rgba(123, 66, 246, 0.7);
+    --glow-color-pink: rgba(212, 136, 224, 0.6);
+}
+
+/* Keyframes for animations */
+@keyframes backgroundPulse {
+    0% { transform: translate(-50%, -50%) scale(0.98); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.02); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(0.98); opacity: 0.8; }
+}
+
+@keyframes dotPulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Team Section Styles */
+.teamSection {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: radial-gradient(circle at center, rgba(30, 20, 40, 0.8), rgba(17, 12, 28, 1) 70%);
+    overflow: hidden; /* Ensure background glow doesn't cause scrollbars */
+}
+
+/* New: Subtle animated background glow */
+.teamSection::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%; /* Adjust size of the glow */
+    height: 80%;
+    background: radial-gradient(circle, var(--glow-color-purple) 0%, transparent 70%);
+    filter: blur(80px); /* Make it very diffuse */
+    transform: translate(-50%, -50%);
+    animation: backgroundPulse 15s infinite alternate ease-in-out; /* Slower, subtle pulse */
+    z-index: 0; /* Keep it behind other content */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
+
+
+/* Decorative Orange Dots */
+.dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-orange);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 10px var(--primary-orange); /* Add a small glow to dots */
+    animation: dotPulse 2.5s infinite alternate ease-in-out; /* Animate dot pulse */
+}
+
+/* Existing dot positions */
+.topLeft { top: 60px; left: 60px; }
+.topRight { top: 60px; right: 60px; }
+.bottomLeft { bottom: 60px; left: 60px; }
+.bottomRight { bottom: 60px; right: 60px; }
+
+/* Adjust dot positions for smaller screens */
+@media (max-width: 1200px) {
+    .topLeft { top: 40px; left: 40px; }
+    .topRight { top: 40px; right: 40px; }
+    .bottomLeft { bottom: 40px; left: 40px; }
+    .bottomRight { bottom: 40px; right: 40px; }
+}
+@media (max-width: 768px) {
+    .dot { display: none; }
+}
+
+
+/* Container for all team cards */
+.teamCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 2;
+}
+
+/* Individual Team Card Styles */
+.teamCard {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight transparent background for cards */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 22.5px);
+    min-width: 280px;
+    max-width: 300px;
+    border-radius: 15px; /* Slightly rounded corners for cards */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Initial subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+
+    /* Entry animation properties */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards ease-out;
+}
+
+/* Staggered animation for each card */
+.teamCard:nth-child(1) { animation-delay: 0.1s; }
+.teamCard:nth-child(2) { animation-delay: 0.2s; }
+.teamCard:nth-child(3) { animation-delay: 0.3s; }
+.teamCard:nth-child(4) { animation-delay: 0.4s; }
+
+
+.teamCard:hover {
+    transform: translateY(-10px) scale(1.02); /* More pronounced lift and slight scale */
+    background-color: rgba(255, 255, 255, 0.05); /* Lighter background on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), /* Deeper shadow */
+                0 0 30px var(--glow-color-purple), /* Primary glow */
+                0 0 50px var(--glow-color-pink); /* Secondary glow for depth */
+}
+
+
+/* Profile Picture Wrapper (for the background gradient) */
+.profilePictureWrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, var(--purple-gradient-start) 0%, var(--purple-gradient-mid) 50%, var(--purple-gradient-end) 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease; /* Transition for wrapper's shadow */
+}
+
+.teamCard:hover .profilePictureWrapper {
+    /* Inner glow on profile picture wrapper on card hover */
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2), /* Subtle white inner glow */
+                0 8px 30px rgba(0, 0, 0, 0.6), /* Deeper outer shadow */
+                0 0 25px var(--glow-color-purple); /* Additional glow */
+}
+
+/* Next.js Image component handles actual width/height via props. */
+.profilePicture {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--background-dark);
+}
+
+/* Text Styles - No significant changes, but added font-family */
+.memberName {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.memberTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Orange Separator Line */
+.titleSeparator {
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-orange);
+    margin: 0 auto 25px auto;
+}
+
+.memberDescription {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--text-medium);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 250px;
+}
+
+
+/* Social Links */
+.socialLinks {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.socialIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--social-gradient-start) 0%, var(--social-gradient-end) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.socialIcon:hover {
+    transform: translateY(-5px); /* More pronounced lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), /* Deeper shadow */
+                0 0 20px var(--glow-color-purple), /* Glow from social icon */
+                0 0 30px var(--social-gradient-end); /* Secondary glow */
+    background: linear-gradient(135deg, #a050f0 0%, #d880ed 100%); /* Slightly brighter gradient on hover */
+}
+
+.socialIcon svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+
+/* Responsive Adjustments (no changes needed here for animations specifically) */
+@media (max-width: 1200px) {
+    .teamCard {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .teamCard {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 600px) {
+    .teamSection {
+        padding: 80px 15px;
+    }
+    .teamCard {
+        width: 100%;
+        max-width: 350px;
+    }
+    .memberName {
+        font-size: 22px;
+    }
+    .memberTitle {
+        font-size: 13px;
+    }
+    .memberDescription {
+        font-size: 14px;
+    }
+    .profilePictureWrapper {
+        width: 160px;
+        height: 160px;
+    }
+}

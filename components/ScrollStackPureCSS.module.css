@@ -1,72 +1,27 @@
-.scroll-stack-wrapper {
-  position: relative;
+.wrapper {
   width: 100%;
-  height: 100vh;
+  background-color: #0d0816; /* bg-[#0D0816] */
+  padding-top: 5rem; /* pt-20 */
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0d0816;
 }
 
-.scroll-stack-container {
-  position: relative;
+.container {
   width: 100%;
-  max-width: 1360px;
-  height: 100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-  padding: 0 1rem;
-  z-index: 1;
-}
-
-.scroll-stack-content {
+  max-width: 1360px; /* max-w-[1360px] */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto;
+  padding-left: 2rem; /* px-4 */
+  padding-right: 2rem;
   display: flex;
-  flex-direction: column;
-  padding-top: 20vh;
-  height: calc(
-    100vh + (var(--num-cards, 3) * var(--card-scroll-offset-multiplier, 80vh))
-  );
-  padding-bottom: 20vh;
+  flex-direction: column; /* flex-col */
+  justify-content: space-between;
+  gap: 3rem;
 }
 
-.scroll-stack-card {
-  position: sticky;
-  top: var(--sticky-offset, 20vh);
+.container2 {
+  margin-top: 40px;
   width: 100%;
-  height: auto;
-  min-height: 28rem;
-  border-radius: 18px;
-  box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform-origin: center center;
-  will-change: transform, opacity;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-.scroll-stack-card:nth-child(1) {
-  z-index: 1;
-  transform: scale(0.96) translateY(20px);
-  opacity: 0.9;
-}
-
-.scroll-stack-card:nth-child(2) {
-  z-index: 2;
-  transform: scale(0.98) translateY(10px);
-  opacity: 50;
-}
-
-.scroll-stack-card:nth-child(3) {
-  z-index: 3;
-  transform: scale(1) translateY(0);
-  opacity: 1;
+  height: 600px;
 }
 
 .tilt-img {
@@ -81,42 +36,12 @@
   scale: 1;
 }
 
-/* 📱 Mobile & Tablet Adjustments */
-@media (max-width: 1024px) {
-  .scroll-stack-wrapper {
-    height: auto;
-    align-items: flex-start;
-    padding: 2rem 0;
-  }
+@media screen and (max-width: 767px) {
+  
 
-  .scroll-stack-container {
-    height: auto;
-    overflow-y: visible;
-    padding: 0;
-  }
-
-  .scroll-stack-content {
-    height: auto;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 1rem;
+  .container {
+    padding-left: 1rem; /* px-4 */
     padding-right: 1rem;
-    gap: 2rem;
   }
-
-  .scroll-stack-card {
-    position: relative;
-    top: 0;
-    transform: none !important;
-    opacity: 1 !important;
-    min-height: auto;
-    border-radius: 12px;
-  }
-
-  .tilt-img {
-    transform: none;
-    border-radius: 12px;
-  }
-}
-
  
+}

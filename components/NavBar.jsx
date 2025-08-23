@@ -7,8 +7,8 @@ import styles from './Navbar.module.css'; // Import the CSS module
 
 // --- Data for Navigation Items ---
 const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About Us', href: '#' },
+    { label: 'Homepage', href: '/' },
+    { label: 'Portfolio', href: '#' },
     { label: 'Services ', href: '#' },
     { label: 'Blog', href: '#' },
     { label: 'Contact Us', href: '#' },
@@ -70,10 +70,10 @@ const Navbar = () => {
                     {/* Right Side: Action Buttons - Desktop */}
                     <div className={styles.desktopActions}>
                         <Link href="#" className={styles.signInLink}>
-                            Sign in
+                            Get In Touch
                         </Link>
                         <Link href="#" className={styles.getStartedButton}>
-                            Get Started
+                            Book A Call
                         </Link>
                     </div>
 
@@ -118,10 +118,10 @@ const Navbar = () => {
                         {/* Mobile Action Buttons */}
                         <div className={styles.mobileActions}>
                             <Link href="#" className={styles.mobileSignInLink} onClick={closeMobileMenu}>
-                                Sign in
+                                Get In Touch
                             </Link>
                             <Link href="#" className={styles.mobileGetStartedButton} onClick={closeMobileMenu}>
-                                Get Started
+                                Book A Call
                             </Link>
                         </div>
                     </div>

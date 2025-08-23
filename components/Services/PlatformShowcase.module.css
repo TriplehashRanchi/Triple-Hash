@@ -1,0 +1,166 @@
+/* components/PlatformShowcase.module.css */
+
+.platformSection {
+  background-color: #0d0816; /* Specified background color */
+   padding-bottom: 80px; 
+   padding-top: 50px;/* Vertical padding, horizontal padding to ensure content doesn't touch edges */
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center; /* Center content vertically if wrapper is taller than content */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  color: #fff; /* Default text color for the section */
+}
+
+.container {
+  max-width: 1260px; /* Specified max-width */
+  width: 100%; /* Take full width up to max-width */
+  text-align: center;
+  padding-right: 2rem;
+  padding-left: 2rem; /* Center text elements like heading and description */
+}
+
+.tagline {
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #c4bbd3;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  font-size: 4.2rem;
+  width: 60%; /* Large, bold heading */
+  font-weight: 800;
+  line-height: 1.1;
+  color: #e0e5ed; /* Darker text color as seen in image */
+  margin-bottom: 30px; /* Space below heading */
+  /* Constrain heading width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #c4bbd3; /* Lighter grey for description */
+  margin-bottom: 100px; /* Space below description before the grid */
+  max-width: 700px; /* Constrain description width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Space between grid items */
+  margin-top: 50px;
+  }
+
+.featureCard {
+  background: radial-gradient(
+      circle at 30% 140%,
+      rgba(217, 126, 75, 0.3),
+      transparent 37%
+    ),
+    radial-gradient(circle at 50% 310%, #0400ff26, #a2a68700 78%),
+    linear-gradient(transparent, #0d0a195e),
+    radial-gradient(circle at 50% -30%, #a85c5c33, #67454500),
+    radial-gradient(90% 10% at 50% 0, #a85c5c0d, #67454500 90%);
+  border-radius: 25px; /* Rounded corners for cards */
+  padding: 3rem; /* Padding inside each card */
+  text-align: left; /* Text alignment within cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1 / 1; /* Space between icon, title, description */
+}
+
+.iconWrapper {
+  background-color: #cbd5e1; /* Background for the icon circle */
+  border-radius: 16px; /* Makes it a circle */
+  width: 65px; /* Size of the icon circle */
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff; /* Darker text for title */
+  line-height: 1.4;
+}
+
+.featureDescription {
+ color: #9ca3af;   /* Tailwind's gray-400 */
+  font-size: 1.05rem;
+  line-height: 1.6;
+   /* Slightly lighter text for description */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    padding: 0 20px;
+  }
+  .featureCard {
+    padding: 25px;
+  }
+  .featureTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .platformSection {
+    padding: 60px 15px;
+  }
+  .tagline {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+  }
+  .heading {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  .description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    padding: 0;
+  }
+  .featureCard {
+    padding: 20px;
+    gap: 10px;
+  }
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .featureTitle {
+    font-size: 1.1rem;
+  }
+  .featureDescription {
+    font-size: 0.9rem;
+  }
+}

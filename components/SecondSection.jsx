@@ -72,7 +72,7 @@ const FeatureTabs = () => {
 
   return (
     <div className="w-full flex justify-center px-4 mt-12 bg-transparent relative z-40">
-      <div className="w-full max-w-[1360px]">
+      <div className="w-full max-w-[1360px] px-4 lg:px-8 ">
 
         <div className="hidden lg:block bg-[linear-gradient(116.91deg,_#e3a5724f,_#5780e661)] bg-no-repeat p-2.5 rounded-2xl">
           <div className="bg-[#1A1429] rounded-[10px]">

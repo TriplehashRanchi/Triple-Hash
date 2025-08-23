@@ -38,12 +38,15 @@ const HeroText = () => {
 
 
                     <div className="mt-6 sm:mt-8 flex z-2 flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-4 w-full sm:w-auto">
-                        <button className="w-full sm:w-auto border border-[#FFFFFF63] md:text-sm bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white font-semibold px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
-                            Get started for Free
-                        </button>
-                        <button className="w-full sm:w-auto md:text-sm bg-transparent border border-[#FFFFFF63] text-gray-200 font-semibold px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
-                            Talk to Sales
-                        </button>
+                     
+                            <button className="w-full sm:w-auto border border-[#FFFFFF63] md:text-sm bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white font-semibold px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                                Get started for Free
+                            </button>
+                       
+                            <button className="w-full sm:w-auto md:text-sm bg-transparent border border-[#FFFFFF63] text-gray-200 font-semibold px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
+                                Talk to Sales
+                            </button>
+                     
                     </div>
                 </div>
             </div>
