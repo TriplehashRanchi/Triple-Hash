@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-
+html, body {
+  overflow-x: hidden;
+}
 
 
 h1, h2, h3, h4, h5, h6 ,div, span, p, a, button {
     font-family: 'Raleway', sans-serif;
 }
-
-/* In src/app/globals.css */
-
-/* ...your other styles... */
-
-/* --- NEW: Keyframes for the infinite scrolling icons --- */
+ 
 @keyframes scroll-left {
   from {
     transform: translateX(0);

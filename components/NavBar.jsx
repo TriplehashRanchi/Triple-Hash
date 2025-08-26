@@ -8,8 +8,8 @@ import styles from './Navbar.module.css'; // Import the CSS module
 // --- Data for Navigation Items ---
 const navItems = [
     { label: 'Homepage', href: '/' },
-    { label: 'Portfolio', href: '#' },
-    { label: 'Services ', href: '#' },
+    { label: 'Portfolio', href: '/team' },
+    { label: 'Services ', href: '/services' },
     { label: 'Blog', href: '#' },
     { label: 'Contact Us', href: '#' },
 ];

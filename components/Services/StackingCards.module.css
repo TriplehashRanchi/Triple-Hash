@@ -6,6 +6,7 @@
   /* Add some padding-top to ensure content isn't directly at the top */
   padding-top: 100px; /* Adjust as needed */
   padding-bottom: 50px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -29,7 +30,7 @@
 }
 
 .card {
-  height: 510px;
+  height: 620px;
   width: 100%;
   margin-bottom: 20px; /* This will create vertical space between cards */
   background-color: #1b1728;
@@ -47,7 +48,7 @@
 }
 
 .cardLeft {
-  flex: 0 0 65%;
+  flex: 0 0 70%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,9 +63,10 @@
 }
 
 .cardRight {
-  flex: 0 0 35%;
+  flex: 0 0 30%;
   display: flex;
   flex-direction: column;
+justify-content: center;
   padding: 2.9rem;
 }
 
@@ -72,7 +74,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
-  color: #ffffff;
+ 
 }
 
 .cardDescription {
@@ -81,35 +83,6 @@
   color: #c4bbd3;
 }
 
-.platformSection {
-  background-color: #fff;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #333;
-  padding: 2rem;
-}
+ 
 
-.platformTagline {
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  color: #666;
-}
-
-.platformHeading {
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.platformDescription {
-  max-width: 600px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+ 

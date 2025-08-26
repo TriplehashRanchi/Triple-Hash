@@ -6,11 +6,12 @@ import Image from 'next/image';
 import { HiArrowRight } from 'react-icons/hi';
 import SpotlightCard from './ReactBit/SpotlightCard';
 
+
 const EnterpriseSection = () => {
     return (
         <section className="w-full bg-[#0D0816] pt-20 overflow-hidden">
             <div className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between gap-12 lg:gap-0">
-                
+
                 {/* --- Left Column: Text Content and Features --- */}
                 <div className="flex flex-col w-full lg:w-1/2">
                     {/* "Enterprise-ready" Badge */}
@@ -23,6 +24,7 @@ const EnterpriseSection = () => {
                     </div>
 
                     {/* Main Heading */}
+
                     <h2
                         style={{
                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,

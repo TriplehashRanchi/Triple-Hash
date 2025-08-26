@@ -23,13 +23,19 @@ export default function CallToAction() {
             style={{
               backgroundImage:
                 "radial-gradient(circle closest-corner at 50% 110%, #0f0a19, #26214900), linear-gradient(#67454599, #26214900 60%)",
+              transform: hovering
+                ? `perspective(1000px) rotateX(${(pos.y - 200) / 40}deg) rotateY(${(pos.x - 300) / 40}deg)`
+                : "none",
             }}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
             <div className={styles.mainCardContent}>
-              <h2 className={styles.heading}>Your vision, our technology.</h2>
+              <h2 style={{
+                backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)',
+                WebkitBackgroundClip: 'text',
+              }} className={`bg-clip-text text-transparent ${styles.heading}`}>Your vision, our technology.</h2>
               <p className={styles.description}>
                 Partner with us to design and deploy solutions that unlock your
                 full potential.
@@ -41,7 +47,7 @@ export default function CallToAction() {
               className={styles.bookMeetingButton}
             >
               <span className={styles.bookMeetingText}>Book a Meeting</span>
-              <span className={styles.arrowIcon}>→</span>
+              <span className={styles.arrowIcon}>➔</span>
             </button>
 
             {hovering && (

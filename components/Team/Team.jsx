@@ -1,12 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import ProfileCard from '../ReactBit/ProfileCard';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
+ 
+import ScrollReveal from "../Gsap/ScrollReveal";
 const Team = () => {
   const teamMembers = [
     {
@@ -51,51 +48,37 @@ const Team = () => {
     },
   ];
 
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const lines = containerRef.current.querySelectorAll('.animateLine');
-
-    gsap.from(lines, {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 40,
-      stagger: 0.3,
-      duration: 0.8,
-      ease: "power3.out",
-    });
-  }, []);
 
   return (
-    <div className="bg-[#0D0816] pb-30" ref={containerRef}>
-      <div className="flex flex-col items-center gap-2 max-w-[1360px] mx-auto px-4 lg:px-8">
-        
+    <div className="bg-[#0D0816] pb-30" >
+      <div className="flex flex-col items-center gap-2 max-w-[1360px] mx-auto px-4 lg:px-8 pt-10">
+
         {/* Heading */}
-        <h2
-          style={{
-            backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
-            WebkitBackgroundClip: 'text',
-          }}
-          className="animateLine bg-clip-text text-transparent font-raleway text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-center mb-4"
-        >
-          The People
-          <br />
-          <span
-            style={{ backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)', WebkitBackgroundClip: 'text' }}
-            className="bg-clip-text text-transparent"
+        <ScrollReveal>
+          <h2
+
+            className="bg-clip-text text-transparent font-raleway text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-center mb-4"
           >
-            Behind Our Vision
-          </span>
-        </h2>
+            <span style={{
+              backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
+              WebkitBackgroundClip: "text",
+            }} className="bg-clip-text text-transparent font-raleway text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-center mb-4">
+              The People
+            </span>
+            <span
+              style={{
+                backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                WebkitBackgroundClip: "text",
+              }}
+              className="reveal-item block bg-clip-text text-transparent"
+            >
+              Behind Our Vision
+            </span>
+          </h2>
+        </ScrollReveal>
 
         {/* Description */}
-        <p className="animateLine text-[#C4BBD3] text-center w-full sm:w-[80%] md:w-[70%] lg:w-[60%] text-base md:text-md leading-medium font-raleway mb-14">
+        <p className=" text-[#C4BBD3] text-center w-full sm:w-[80%] md:w-[70%] lg:w-[60%] text-base md:text-md leading-medium font-raleway mb-14">
           We are a diverse team of innovators, creators, and leaders, united by a shared vision of shaping the future.
           Bringing together unique perspectives and expertise, we collaborate to design solutions that inspire progress
           and drive meaningful change. Together, we’re building what comes next.
@@ -104,7 +87,7 @@ const Team = () => {
         {/* Team Cards */}
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-8 lg:gap-10">
           {teamMembers.map((member, index) => (
-            <div key={index} className="animateLine">
+            <div key={index}>
               <ProfileCard
                 name={member.name}
                 title={member.title}

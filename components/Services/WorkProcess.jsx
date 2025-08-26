@@ -84,60 +84,63 @@ export default function ProcessSteps() {
                 {stepsData.map((step, index) => {
                     const isEven = step.id % 2 === 0;
                     return (
-                        <div
-                            key={step.id}
-                            className={` flex items-center    ${isEven ? 'flex-row-reverse' : 'flex-row'
-                                } my-16 md:my-24 lg:my-32 last:mb-0`}
-                        >
+                        <ScrollReveal key={step.id}>
+                            <div
+                                key={step.id}
+                                className={` flex items-center    ${isEven ? 'flex-row-reverse' : 'flex-row'
+                                    } my-16 md:my-24 lg:my-32 last:mb-0`}
+                            >
 
-                            <div className='flex gap-10'>
-                                <div
-                                    className={`text-8xl md:text-9xl lg:text-[10rem] font-extrabold text-gray-300 opacity-80 ${isEven ? 'order-2' : 'order-1'
-                                        }`}
-                                    style={{ lineHeight: 0.5, }}
-                                >
-                                    {step.id}
-                                </div>
-
-
-                                <div
-                                    className={`w-full max-w-lg text-[#f8f8f8f2] ${isEven ? 'order-1 text-right' : 'order-2 text-left'
-                                        }`}
-                                >
-                                    <h3 className="text-3xl md:text-2xl font-bold mb-4">{step.title}</h3>
-                                    <p className="text-base text-[#E4E4E4]/70 md:text-lg leading-relaxed mb-6">{step.description}</p>
-
-                                    {/* Team Section */}
+                                <div className='flex gap-10'>
+                                     
                                     <div
-                                        className={`inline-block border border-dashed border-gray-300 p-4 bg-opacity-70 ${isEven ? 'ml-auto' : 'mr-auto'
+                                        className={`text-8xl md:text-9xl lg:text-[10rem] font-extrabold text-gray-300 opacity-80 ${isEven ? 'order-2' : 'order-1'
+                                            }`}
+                                        style={{ lineHeight: 0.5, }}
+                                    >
+                                        {step.id}
+                                    </div>
+
+
+                                    <div
+                                        className={`w-full max-w-lg text-[#f8f8f8f2] ${isEven ? 'order-1 text-right' : 'order-2 text-left'
                                             }`}
                                     >
-                                        <p className={`font-[500] text-2xl mb-2 ${isEven ? 'text-left' : 'text-left'}`}>Team:</p>
-                                        <ul className="list-disc pl-10  font-[500] text-md ">
-                                            {step.team.map((member, i) => (
-                                                <li key={i}>{member}</li>
-                                            ))}
-                                        </ul>
+                                        <h3 className="text-3xl md:text-2xl font-bold mb-4">{step.title}</h3>
+                                        <p className="text-base text-[#E4E4E4]/70 md:text-lg leading-relaxed mb-6">{step.description}</p>
+
+                                        {/* Team Section */}
+                                        <div
+                                            className={`inline-block border border-dashed border-gray-300 p-4 bg-opacity-70 ${isEven ? 'ml-auto' : 'mr-auto'
+                                                }`}
+                                        >
+                                            <p className={`font-[500] text-2xl mb-2 ${isEven ? 'text-left' : 'text-left'}`}>Team:</p>
+                                            <ul className="list-disc pl-10  font-[500] text-md ">
+                                                {step.team.map((member, i) => (
+                                                    <li key={i}>{member}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
+
                                 </div>
 
+                                {step.arrow && (
+                                    <div
+                                        className="w-[250px] md:w-[350px] lg:w-[400px] h-[200px]"
+                                        style={{
+                                            backgroundImage:
+                                                "linear-gradient(to right, #ff9b26, #ee4f27)",
+                                            WebkitMask: `url(${step.arrow}) no-repeat center`,
+                                            WebkitMaskSize: "contain",
+                                            mask: `url(${step.arrow}) no-repeat center`,
+                                            maskSize: "contain",
+                                        }}
+                                    ></div>
+                                )}
+
                             </div>
-
-                            {step.arrow && (
-                                <div
-                                    className="w-[250px] md:w-[350px] lg:w-[400px] h-[200px]"
-                                    style={{
-                                        backgroundImage:
-                                            "linear-gradient(to right, #ff9b26, #ee4f27)",
-                                        WebkitMask: `url(${step.arrow}) no-repeat center`,
-                                        WebkitMaskSize: "contain",
-                                        mask: `url(${step.arrow}) no-repeat center`,
-                                        maskSize: "contain",
-                                    }}
-                                ></div>
-                            )}
-
-                        </div>
+                        </ScrollReveal>
                     );
                 })}
             </div>

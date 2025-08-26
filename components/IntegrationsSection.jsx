@@ -5,6 +5,8 @@ import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { MdCheck } from 'react-icons/md'
 import SpotlightCard from './ReactBit/SpotlightCard';
+import ScrollReveal from "./Gsap/ScrollReveal";
+
 
 // --- DATA (No changes here) ---
 const integrationsRow1 = [
@@ -168,11 +170,29 @@ const IntegrationsSection = () => {
                 </div>
 
                 {/* Headline (No changes here) */}
-                <h2 style={{ backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`, WebkitBackgroundClip: 'text' }} className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold">
-                    Plug AI into your own data &
-                    <br />
-                    <span style={{ backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)', WebkitBackgroundClip: 'text' }} className='bg-clip-text text-transparent'>over 500 integrations</span>
-                </h2>
+                <ScrollReveal  >
+                    <h2
+                        className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold"
+                    >
+                        <span style={{
+                            backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
+                            WebkitBackgroundClip: "text",
+                        }}
+                            className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold reveal-item block"
+                        >
+                            Plug AI into your own data &
+                        </span>
+                        <span
+                            style={{
+                                backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                                WebkitBackgroundClip: "text",
+                            }}
+                            className="reveal-item block bg-clip-text text-transparent"
+                        >
+                            over 500 integrations
+                        </span>
+                    </h2>
+                </ScrollReveal>
 
                 {/* --- MODIFIED Marquee Container --- */}
                 <div
@@ -210,16 +230,30 @@ const IntegrationsSection = () => {
                     </button>
                 </div>
                 <div className="py-20 sm:py-34  flex flex-col items-center gap-20 ">
-                    <h2
-                        style={{ backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`, WebkitBackgroundClip: 'text' }}
-                        className="bg-clip-text text-transparent font-raleway text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-center ">
-                        The fast way to actually
-                        <br />
-                        <span style={{ backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)', WebkitBackgroundClip: 'text' }} className="bg-clip-text text-transparent"
+                    <ScrollReveal  >
+                        <h2
+                            className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold"
                         >
-                            get AI working in your business
-                        </span>
-                    </h2>
+                            <span style={{
+                                backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
+                                WebkitBackgroundClip: "text",
+                            }}
+                                className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold reveal-item block"
+                            >
+                               The fast way to actually
+                            </span>
+                            <span
+                                style={{
+                                    backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                                    WebkitBackgroundClip: "text",
+                                }}
+                                className="reveal-item block bg-clip-text text-transparent"
+                            >
+                                get AI working in your business
+                            </span>
+                        </h2>
+                    </ScrollReveal>
+
                     <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-2 gap-6 md:gap-2 w-full">
                         {/* Card 1: Build multi-step agents (Left side, spanning both rows) */}
                         <SpotlightCard

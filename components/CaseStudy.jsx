@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image'; // Assuming Next.js Image component for optimized images
 import SpotlightCard from './ReactBit/SpotlightCard';
+ 
+
 
 const CaseStudy = () => {
     return (
@@ -15,6 +17,7 @@ const CaseStudy = () => {
                     <img src="/case.png" alt="" className='object-contain w-8 h-8' /> {/* Adjusted image size */}
                     See The Results
                 </div>
+            
                 <h2 style={{
                     backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                     WebkitBackgroundClip: 'text',

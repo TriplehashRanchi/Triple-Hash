@@ -1,83 +1,223 @@
+"use client"
+
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
+import ScrollReveal from "../Gsap/ScrollReveal";
+import * as THREE from "three"
+import { useEffect, useRef, useState } from "react"
+import { Canvas, extend, useThree, useFrame, useLoader } from "@react-three/fiber"
+import { useGLTF, useTexture, Environment, Lightformer } from "@react-three/drei"
+import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from "@react-three/rapier"
+import { MeshLineGeometry, MeshLineMaterial } from "meshline"
 
-import * as THREE from 'three'
-import { useEffect, useRef, useState } from 'react'
-import { Canvas, extend, useThree, useFrame, useLoader } from '@react-three/fiber'
-import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
-import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier'
-import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 
 // Extend meshline
 extend({ MeshLineGeometry, MeshLineMaterial })
 
 // Preload assets
 useGLTF.preload(
-    'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb'
+    "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb",
 )
 useTexture.preload(
-    'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg'
+    "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg",
 )
-// 🔹 Preload your custom images
-useTexture.preload('/logo.png') // Make sure this path is correct relative to your public folder
-useTexture.preload('/Sagar.png')  // Make sure this path is correct relative to your public folder
 
-
-export default function App() {
+export default function EnhancedHero() {
     return (
-        <div style={{ backgroundColor: '#0D0816' }} className="h-[60vh] sm:h-[50vh] md:h-[80vh] lg:h-[71vh] flex items-center justify-center"
-        >
-            <Canvas camera={{ position: [0, 0, 13], fov: 25 }} style={{ backgroundColor: '#0D0816' }} className="h-[60vh] sm:h-[50vh] md:h-[80vh] lg:h-[80vh] flex items-center justify-center"
-            >
-                <ambientLight intensity={Math.PI} />
-                <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
-                    <Band />
-                </Physics>
-                <Environment blur={0.75}>
-                    <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-                    <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-                    <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
-                    <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
-                </Environment>
-            </Canvas>
-        </div>
+        <section className="relative  bg-[#0D0816] overflow-hidden">
+            {/* Background gradient overlay */}
+
+            {/* Content Container */}
+            <div className="relative z-10 max-w-[1360px] mx-auto px-4  lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20    ">
+                    {/* Left Content */}
+                    <div className="space-y-10 text-center lg:text-left order-2 lg:order-1 my-40">
+                        <div className="space-y-6">
+
+
+                            <ScrollReveal  >
+                                <h1
+                                    className="text-3xl sm:text-5xl md:text-4xl font-bold font-raleway z-2 leading-tight text-transparent bg-clip-text"
+
+                                >
+                                    <span className="text-3xl sm:text-5xl md:text-4xl font-bold font-raleway reveal-item block z-2 leading-tight text-transparent bg-clip-text"
+                                        style={{
+                                            backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
+                                            WebkitBackgroundClip: "text",
+                                        }}  >Have an Idea?</span>
+                                    <span
+                                        className="reveal-item block bg-clip-text text-transparent font-semibold"
+                                        style={{
+                                            backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                                            WebkitBackgroundClip: "text",
+                                        }}
+                                    >
+                                        Let’s Engineer It Into Reality !
+                                    </span>
+                                </h1>
+                            </ScrollReveal>
+
+                            <p className="mt-6 text-base z-2 md:text-md text-[#C4BBD3] max-w-lg font-raleway">
+                                We help founders turn raw ideas into high-performing web & mobile apps — with full-stack development, AI integration, and scalable architecture built for long-term&nbsp;growth.
+                            </p>
+                        </div>
+
+                        {/* CTA Buttons */}
+
+                        <div className="mt-6 sm:mt-8 flex z-2 flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-4 w-full sm:w-auto">
+
+                            <button className="w-full sm:w-auto border border-[#FFFFFF63] md:text-sm bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white font-semibold px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                                Get started for Free
+                            </button>
+
+                            <button className="w-full sm:w-auto md:text-sm bg-transparent border border-[#FFFFFF63] text-gray-200 font-semibold px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
+                                Talk to Sales
+                            </button>
+
+                        </div>
+                        <div class="  pt-10 border-t border-border" >
+
+                            <div className="   grid grid-cols-1 md:grid-cols-3 gap-8 text-white ">
+                                {[
+                                    { value: "99.9%", label: "Uptime" },
+                                    { value: "10k+", label: "Active Users" },
+                                    { value: "24/7", label: "Support" },
+                                ].map((stat, i) => (
+                                    <div
+                                        key={i}
+                                        className="group  overflow-hidden rounded-xl p-8
+        bg-gradient-to-br from-[#1A1128] to-[#0D0816]  
+          transition-all duration-300 ease-in-out
+        transform hover:-translate-y-2  "
+                                    >
+
+
+                                        {/* Content */}
+                                        <div className=" text-center">
+                                            <div
+                                                className="text-5xl md:text-[2.6rem] font-extrabold mb-2
+          bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300
+           
+          transition-all duration-300 ease-in-out"
+                                            >
+                                                {stat.value}
+                                            </div>
+                                            <div className="text-sm text-gray-400 uppercase tracking-wider font-medium">
+                                                {stat.label}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* Right Content - 3D Scene */}
+                    <div className="relative order-1 lg:order-2 mt-20">
+                        <div className="relative h-[60vh] sm:h-[50vh] md:h-[80vh] lg:h-[600px]  overflow-hidden">
+                            {/* Glow effect behind the canvas */}
+                            <div className="absolute inset-0   " />
+
+                            <Canvas
+                                camera={{ position: [0, 0, 13], fov: 25 }}
+                                className="relative z-10"
+                                style={{ background: "transparent" }}
+                            >
+                                <ambientLight intensity={Math.PI} />
+                                <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
+                                    <Band />
+                                </Physics>
+                                <Environment blur={0.75}>
+                                    <Lightformer
+                                        intensity={2}
+                                        color="white"
+                                        position={[0, -1, 5]}
+                                        rotation={[0, 0, Math.PI / 3]}
+                                        scale={[100, 0.1, 1]}
+                                    />
+                                    <Lightformer
+                                        intensity={3}
+                                        color="white"
+                                        position={[-1, -1, 1]}
+                                        rotation={[0, 0, Math.PI / 3]}
+                                        scale={[100, 0.1, 1]}
+                                    />
+                                    <Lightformer
+                                        intensity={3}
+                                        color="white"
+                                        position={[1, 1, 1]}
+                                        rotation={[0, 0, Math.PI / 3]}
+                                        scale={[100, 0.1, 1]}
+                                    />
+                                    <Lightformer
+                                        intensity={10}
+                                        color="white"
+                                        position={[-10, 0, 14]}
+                                        rotation={[0, Math.PI / 2, Math.PI / 3]}
+                                        scale={[100, 10, 1]}
+                                    />
+                                </Environment>
+                            </Canvas>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute top-1/4 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl opacity-20" />
+            <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl opacity-20" />
+        </section>
+
     )
 }
 
 function Band({ maxSpeed = 50, minSpeed = 10 }) {
-    const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef() // prettier-ignore
-    const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3() // prettier-ignore
-    const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 }
+    const band = useRef(),
+        fixed = useRef(),
+        j1 = useRef(),
+        j2 = useRef(),
+        j3 = useRef(),
+        card = useRef() // prettier-ignore
+    const vec = new THREE.Vector3(),
+        ang = new THREE.Vector3(),
+        rot = new THREE.Vector3(),
+        dir = new THREE.Vector3() // prettier-ignore
+    const segmentProps = { type: "dynamic", canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 }
 
     const { nodes, materials } = useGLTF(
-        'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb'
+        "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5huRVDzcoDwnbgrKUo1Lzs/53b6dd7d6b4ffcdbd338fa60265949e1/tag.glb",
     )
 
     const texture = useTexture(
-        'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg'
+        "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg",
     )
 
-    // 🔹 Load your custom ID card images for front and back
-    const frontTexture = useLoader(THREE.TextureLoader, '/logo.png')
-    const backTexture = useLoader(THREE.TextureLoader, '/Sagar.png')
+    const frontTexture = useLoader(THREE.TextureLoader, "/Sagar.png")
+    const backTexture = useLoader(THREE.TextureLoader, "/logo.png")
 
     const { width, height } = useThree((state) => state.size)
     const [curve] = useState(
-        () => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()])
+        () =>
+            new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]),
     )
     const [dragged, drag] = useState(false)
     const [hovered, hover] = useState(false)
 
-    // Physics joints
     useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1])
     useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1])
     useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1])
-    useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.45, 0]])
+    useSphericalJoint(j3, card, [
+        [0, 0, 0],
+        [0, 1.45, 0],
+    ])
 
     useEffect(() => {
         if (hovered) {
-            document.body.style.cursor = dragged ? 'grabbing' : 'grab'
-            return () => void (document.body.style.cursor = 'auto')
+            document.body.style.cursor = dragged ? "grabbing" : "grab"
+            return () => void (document.body.style.cursor = "auto")
         }
     }, [hovered, dragged])
 
@@ -110,15 +250,11 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
         }
     })
 
-    curve.curveType = 'chordal'
+    curve.curveType = "chordal"
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping
 
-    // Calculate plane dimensions based on collider and group scale
-    // The CuboidCollider has args [0.8, 1.125, 0.01], meaning total dimensions 1.6 x 2.25
-    // The parent group scales by 2.25, so the plane inside should be (1.6 / 2.25) x (2.25 / 2.25)
-    const planeWidth = 1.6 / 2.25; // Approximately 0.7111
-    const planeHeight = 1;
-
+    const planeWidth = 1.6 / 2.25 // Approximately 0.7111
+    const planeHeight = 1
 
     return (
         <>
@@ -135,28 +271,19 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                 </RigidBody>
 
                 {/* Card body */}
-                <RigidBody
-                    position={[2, 0, 0]}
-                    ref={card}
-                    {...segmentProps}
-                    type={dragged ? 'kinematicPosition' : 'dynamic'}
-                >
+                <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? "kinematicPosition" : "dynamic"}>
                     <CuboidCollider args={[0.8, 1.125, 0.01]} />
-                    <group
-                        scale={2.25}
-                        position={[0, -1.2, -0.05]}
-                    // Pointer events are now handled directly on the front mesh below
-                    >
-                        {/* 🔹 FRONT SIDE of the card (using planeGeometry with custom image) */}
+                    <group scale={2.25} position={[0, -1.2, -0.05]}>
+                        {/* FRONT SIDE of the card (using planeGeometry with custom image) */}
                         <mesh
                             position={[0, 0.44, 0.001]}
-                             onPointerOver={() => hover(true)}
+                            onPointerOver={() => hover(true)}
                             onPointerOut={() => hover(false)}
                             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
-                            onPointerDown={(e) =>
-                            (e.target.setPointerCapture(e.pointerId),
-                                drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))
-                            }
+                            onPointerDown={(e) => (
+                                e.target.setPointerCapture(e.pointerId),
+                                drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())))
+                            )}
                         >
                             {/* Using planeGeometry for perfect UV mapping */}
                             <planeGeometry args={[planeWidth, planeHeight]} />
@@ -168,11 +295,10 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                                 clearcoatRoughness={0.15}
                                 roughness={0.3}
                                 metalness={0.5}
-                            // color="white" // Keep if you want a tint or as a fallback
                             />
                         </mesh>
 
-                        {/* 🔹 BACK SIDE of the card (using planeGeometry with custom image, rotated) */}
+                        {/* BACK SIDE of the card (using planeGeometry with custom image, rotated) */}
                         <mesh position={[0, 0.47, 0.001]} rotation={[0, Math.PI, 0]}>
                             {/* Using planeGeometry for perfect UV mapping */}
                             <planeGeometry args={[planeWidth, planeHeight]} />
@@ -184,7 +310,6 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                                 clearcoatRoughness={0.15}
                                 roughness={0.3}
                                 metalness={0.5}
-                            // color="white" // Keep if you want a tint or as a fallback
                             />
                         </mesh>
 

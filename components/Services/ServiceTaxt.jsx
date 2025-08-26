@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,21 +8,25 @@ gsap.registerPlugin(ScrollTrigger);
 const ScrollLines = () => {
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    const lines = containerRef.current.querySelectorAll(".line");
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const lines = containerRef.current.querySelectorAll(".line");
 
-    gsap.from(lines, {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 80%", // start when top of container hits 80% viewport
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 50, // comes up from bottom
-      stagger: 0.4, // delay between lines
-      duration: 0.8,
-      ease: "power3.out",
-    });
+      gsap.from(lines, {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%", // start when top of container hits 80% viewport
+          toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 50, // comes up from bottom
+        stagger: 0.4, // delay between lines
+        duration: 0.8,
+        ease: "power3.out",
+      });
+    }, containerRef);
+
+    return () => ctx.revert(); // ✅ cleanup GSAP on unmount
   }, []);
 
   // 🔥 gradient text style reused for all lines
@@ -52,7 +56,7 @@ const ScrollLines = () => {
             fontSize: "0.85rem",
             fontWeight: "600",
             letterSpacing: "0.15em",
-            color: "#c4bbd3", // keep solid grey for tagline
+            color: "#c4bbd3", // solid grey tagline
             textTransform: "uppercase",
             marginBottom: "3.5rem",
           }}
