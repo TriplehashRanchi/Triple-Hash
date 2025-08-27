@@ -8,13 +8,14 @@ import WorkProcess from '../../components/Services/WorkProcess'
 import NavBar from '../../components/NavBar'
 import Footer from '../../components/Footer'
 import CallToAction from '../../components/CallToAction'
+import TestimonialsSection from '../../components/TestimonialsSection'
 
 import styles from '../../app/services/Home.module.css';
 
 const page = () => {
     return (
         <div>
-            <NavBar />
+            
             <Hero />
             <div className={styles.container}>
                 <main className={styles.main}>
@@ -24,10 +25,11 @@ const page = () => {
             <ServiceTaxt />
             <StackingCards />
             <PlatformShowcase />
-            {/* Set a base background if needed */}
+           
             <WorkProcess />
             <CallToAction />
-            <Footer />
+            <TestimonialsSection />
+          
 
         </div>
     )

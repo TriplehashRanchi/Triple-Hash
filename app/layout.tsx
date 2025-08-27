@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,9 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 const raleway = Raleway({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-raleway',
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-raleway",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable}${raleway.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

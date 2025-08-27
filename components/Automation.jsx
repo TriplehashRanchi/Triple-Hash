@@ -49,7 +49,7 @@ const CustomersSectionSimple = () => {
                         {/* Main Heading */}
                         <h2 className="text-white px-4 sm:px-0 text-3xl sm:text-5xl lg:text-[2.8rem] font-bold leading-medium font-raleway mb-6 max-w-xl">
                             Automation for
-                          
+
                             your customers
                         </h2>
 
