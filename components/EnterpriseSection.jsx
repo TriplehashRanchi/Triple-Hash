@@ -30,13 +30,13 @@ const EnterpriseSection = () => {
                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                             WebkitBackgroundClip: 'text',
                         }}
-                        className="text-transparent bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-[2.8rem] font-bold leading-medium font-raleway mb-6"
+                        className="headline text-transparent bg-clip-text  mb-6 w-1/2"
                     >
                         Secure. Reliable. Collaborative.
                     </h2>
 
                     {/* Description Paragraph */}
-                    <p className="text-[#C4BBD3] text-base md:text-md leading-medium font-raleway mb-8">
+                    <p className="description text-[#C4BBD3]  mb-8">
                         Remove inefficiencies across your org by rolling out automation as reliably as
                         you deploy code. Run n8n air-gapped on your servers or on our secure
                         cloud-based solution.
@@ -44,21 +44,21 @@ const EnterpriseSection = () => {
 
                     {/* Call-to-Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                        <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white text-sm font-semibold px-8 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full sm:w-auto">
+                        <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full sm:w-auto">
                             Explore n8n for enterprise
                         </button>
-                        <button className="bg-transparent border border-[#FFFFFF63] text-white text-sm font-semibold px-8 py-2.5 rounded-lg hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto">
+                        <button className="bg-transparent border border-[#FFFFFF63] text-white buttonfont px-8 py-2.5 rounded-lg hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto">
                             Talk to sales
                         </button>
                     </div>
 
                     {/* Feature List */}
-                    <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-y-6 md:gap-y-8 gap-x-6 text-white font-raleway">
+                    <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-y-6 md:gap-y-8 gap-x-6 text-white ">
                         <div>
                             <h3 className="text-md font-semibold mb-1">Security</h3>
                         </div>
                         <div>
-                            <p className="text-[#C4BBD3] text-base">
+                            <p className="text-[#C4BBD3] description">
                                 Fully on-prem option, SSO SAML, and LDAP,
                                 encrypted secret stores, version control,
                                 advanced RBAC permissions.
@@ -69,7 +69,7 @@ const EnterpriseSection = () => {
                             <h3 className="text-md font-semibold mb-1">Performance</h3>
                         </div>
                         <div>
-                            <p className="text-[#C4BBD3] text-base">
+                            <p className="text-[#C4BBD3] description">
                                 Audit logs & log streaming to 3rd party,
                                 workflow history, custom variables, external
                                 storage.
@@ -80,7 +80,7 @@ const EnterpriseSection = () => {
                             <h3 className="text-md font-semibold mb-1">Collaboration</h3>
                         </div>
                         <div>
-                            <p className="text-[#C4BBD3] text-base">
+                            <p className="text-[#C4BBD3] description">
                                 Git Control, isolated environments, multi-user
                                 workflows.
                             </p>
@@ -112,7 +112,7 @@ const EnterpriseSection = () => {
                             }}
                         >
                             {/* Quote */}
-                            <p className="text-gray-200 text-base leading-medium font-raleway mb-6 sm:mb-8">
+                            <p className="text-gray-200 description mb-6 sm:mb-8">
                                 "The idea is that everybody in the
                                 organization can use n8n to manage data
                                 retrieval or data transformation."

@@ -158,7 +158,7 @@ const IntegrationsSection = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <p className="text-neutral-300 font-raleway text-[1.08rem] leading-snug text-left">
+                                        <p className="text-neutral-300 font-[300]  text-[1.08rem] leading-snug text-left">
                                             <strong className="text-white font-semibold">{stat.title}</strong>{' '}
                                             {stat.description}
                                         </p>
@@ -169,16 +169,16 @@ const IntegrationsSection = () => {
                     ))}
                 </div>
 
-                {/* Headline (No changes here) */}
+
                 <ScrollReveal  >
                     <h2
-                        className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold"
+                        className="bg-clip-text text-transparent "
                     >
                         <span style={{
                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                             WebkitBackgroundClip: "text",
                         }}
-                            className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold reveal-item block"
+                            className="headline bg-clip-text text-transparent  reveal-item block"
                         >
                             Plug AI into your own data &
                         </span>
@@ -187,7 +187,7 @@ const IntegrationsSection = () => {
                                 backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
                                 WebkitBackgroundClip: "text",
                             }}
-                            className="reveal-item block bg-clip-text text-transparent"
+                            className="headline reveal-item block bg-clip-text text-transparent"
                         >
                             over 500 integrations
                         </span>
@@ -225,22 +225,22 @@ const IntegrationsSection = () => {
 
                 {/* CTA Button (No changes here) */}
                 <div className="mt-16">
-                    <button className="bg-gradient-to-r cursor-pointer from-[#077AC7] to-[#6B21EF] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                    <button className="bg-gradient-to-r cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                         Browse all integrations
                     </button>
                 </div>
                 <div className="py-20 sm:py-34  flex flex-col items-center gap-20 ">
                     <ScrollReveal  >
                         <h2
-                            className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold"
+                            className="headline bg-clip-text text-transparent  "
                         >
                             <span style={{
                                 backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                                 WebkitBackgroundClip: "text",
                             }}
-                                className="font-raleway bg-clip-text text-transparent text-[1.6rem] sm:text-4xl md:text-[2.8rem] font-bold reveal-item block"
+                                className="headline bg-clip-text text-transparent   reveal-item block"
                             >
-                               The fast way to actually
+                                The fast way to actually
                             </span>
                             <span
                                 style={{
@@ -273,18 +273,18 @@ const IntegrationsSection = () => {
                                 >
                                     {/* Text Content */}
                                     <div className="flex flex-col gap-4 w-full sm:max-w-[50%] text-center sm:text-left">
-                                        <h3 className="text-white font-semibold text-2xl  font-raleway text-left">
+                                        <h3 className="text-white subheadline text-left">
                                             Build multi-step agents
                                             <br />
                                             calling custom tools
                                         </h3>
-                                        <p className="text-gray-400 text-[1.05rem]  font-raleway text-left ">
+                                        <p className="text-[#938E95] description text-left ">
                                             Create agentic systems on a single screen.
                                             Integrate any LLM into your workflows as fast
                                             as you can drag-n-drop.
 
                                         </p>
-                                        <button className="bg-gradient-to-r w-full max-w-[50%] cursor-pointer from-[#077AC7] to-[#6B21EF] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                                        <button className="bg-gradient-to-r w-full max-w-[50%] cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                                             Explore AI
                                         </button>
 
@@ -312,10 +312,10 @@ const IntegrationsSection = () => {
                             >
 
                                 <div className=" rounded-3xl px-6 py-8  sm:px-10 sm:py-12 flex flex-col h-full min-h-[712px]">
-                                    <h3 className="text-white  text-left font-semibold text-2xl font-raleway">
+                                    <h3 className="text-white  text-left subheadline">
                                         Chat with your own data
                                     </h3>
-                                    <p className="mt-4 text-gray-400 text-[1rem]  text-left leading-relaxed font-raleway flex-grow">
+                                    <p className="mt-4 text-[#938E95] text-left description flex-grow">
                                         Use Slack, Teams, SMS, voice, or our
                                         embedded chat interface to get
                                         accurate answers from your data,
@@ -326,13 +326,13 @@ const IntegrationsSection = () => {
                                     <div className="mt-8 flex flex-col gap-4  font-raleway">
                                         <div style={{
                                             boxShadow: `inset 0px 4px 12px 0px hsla(0, 0%, 100%, 0.05), 0px 4px 16px -8px rgba(0, 0, 0, 0.23)`
-                                        }} className=" max-w-[60%]  p-3 rounded-lg border border-[#ffffff]/10 text-gray-500 text-sm  text-left">
+                                        }} className=" max-w-[60%]  p-3 rounded-lg border border-[#ffffff]/10 text-[#938E95] text-sm  text-left">
                                             Who held meetings with
                                             SpaceX last week?
                                         </div>
                                         <div style={{
                                             boxShadow: `inset 0px 4px 12px 0px hsla(0, 0%, 100%, 0.05), 0px 4px 16px -8px rgba(0, 0, 0, 0.23)`
-                                        }} className="max-w-[60%] border border-[#ffffff]/10  p-3 rounded-lg text-gray-500 text-sm self-end text-left">
+                                        }} className="max-w-[60%] border border-[#ffffff]/10  p-3 rounded-lg text-[#938E95] text-sm self-end text-left">
                                             On Wednesday, Joe
                                             updated the status to
                                             "won" in Salesforce after a
@@ -341,7 +341,7 @@ const IntegrationsSection = () => {
 
                                         <div style={{
                                             boxShadow: `inset 0px 4px 12px 0px hsla(0, 0%, 100%, 0.05), 0px 4px 16px -8px rgba(0, 0, 0, 0.23)`
-                                        }} className=" max-w-[60%] p-3 border border-[#ffffff]/10 rounded-lg text-gray-500 text-sm self-end  text-left">
+                                        }} className=" max-w-[60%] p-3 border border-[#ffffff]/10 rounded-lg text-[#938E95] text-sm self-end  text-left">
                                             On Thursday, Sue
                                             provided on-site setup and
                                             closed the ServiceNow
@@ -350,7 +350,7 @@ const IntegrationsSection = () => {
 
                                         <div style={{
                                             boxShadow: `inset 0px 4px 12px 0px hsla(0, 0%, 100%, 0.05), 0px 4px 16px -8px rgba(0, 0, 0, 0.23)`
-                                        }} className="max-w-[60%] p-3 border border-[#ffffff]/10 rounded-lg text-gray-500 text-sm self-start text-left">
+                                        }} className="max-w-[60%] p-3 border border-[#ffffff]/10 rounded-lg text-[#938E95]  self-start text-left">
                                             Create a task in Asana...
                                         </div>
                                     </div>
@@ -381,21 +381,21 @@ const IntegrationsSection = () => {
                                     </div>
 
                                     <div className="text-left">
-                                        <h3 className="text-white font-semibold text-2xl font-raleway mb-2">
+                                        <h3 className="text-white subheadline mb-2">
                                             Self-host everything –
                                             <br />
                                             including AI models
                                         </h3>
-                                        <p className='text-gray-400 mb-4'>Protect your data by deploying on-prem.</p>
-                                        <ul className="text-gray-400 text-md space-y-2 font-raleway">
+                                        <p className='text-[#938E95] mb-4 description'>Protect your data by deploying on-prem.</p>
+                                        <ul className="text-[#938E95] description space-y-2 ">
                                             <li className="flex items-center gap-2">
-                                                <MdCheck className="text-gray-400 text-xl" /> Deploy with Docker
+                                                <MdCheck className="text-[#938E95] text-xl" /> Deploy with Docker
                                             </li>
                                             <li className="flex items-center gap-2">
-                                                <MdCheck className="text-gray-400 text-xl" /> Access the entire source code on Github
+                                                <MdCheck className="text-[#938E95] text-xl" /> Access the entire source code on Github
                                             </li>
                                             <li className="flex items-center gap-2">
-                                                <MdCheck className="text-gray-400 text-xl" /> Hosted version also available
+                                                <MdCheck className="text-[#938E95] text-xl" /> Hosted version also available
                                             </li>
                                         </ul>
                                     </div>

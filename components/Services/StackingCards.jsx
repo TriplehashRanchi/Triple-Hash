@@ -82,11 +82,11 @@ export default function StackingCards() {
                         backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)',
                         WebkitBackgroundClip: 'text',
                       }}
-                      className={`bg-clip-text text-transparent ${styles.cardHeading}`}
+                      className={`bg-clip-text text-transparent subheadline ${styles.cardHeading}`}
                     >
                       {card.heading}
                     </h3>
-                    <p className={styles.cardDescription}>{card.description}</p>
+                    <p className={`description ${styles.cardDescription}`}>{card.description}</p>
                   </div>
                 </div>
               </motion.div>

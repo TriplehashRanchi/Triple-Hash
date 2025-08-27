@@ -101,7 +101,7 @@ const FeatureTabs = () => {
                     <div className="flex flex-col items-start justify-center px-4 cursor-pointer h-full min-h-[70px]">
                       <div>
                         <p className="text-white text-start">
-                          <span className="font-bold">⚡{" "}{tab.title}</span>
+                          <span className="font-[600]">⚡{" "}{tab.title}</span>
                         </p>
                         <div className="flex-grow flex items-start mt-2">
                           <div className="flex items-start">
@@ -126,9 +126,7 @@ const FeatureTabs = () => {
           </div>
         </div>
 
-        {/* ======================================= */}
-        {/* MOBILE VIEW: STACKED CARDS (hidden on desktop) */}
-        {/* ======================================= */}
+
         <div className="block lg:hidden">
           {tabsData.map((tab) => (
             <div key={tab.id} className="mb-4"> {/* Margin-bottom for spacing between cards */}

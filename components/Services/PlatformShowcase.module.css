@@ -2,8 +2,8 @@
 
 .platformSection {
   background-color: #0d0816; /* Specified background color */
-   padding-bottom: 80px; 
-   padding-top: 50px;/* Vertical padding, horizontal padding to ensure content doesn't touch edges */
+  padding-bottom: 80px;
+  padding-top: 50px; /* Vertical padding, horizontal padding to ensure content doesn't touch edges */
   display: flex;
   justify-content: center; /* Center the container horizontally */
   align-items: center; /* Center content vertically if wrapper is taller than content */
@@ -30,8 +30,8 @@
 }
 
 .heading {
-  font-size: 4.2rem;
-  width: 60%; /* Large, bold heading */
+  font-size: 4rem;
+  width: 50%; /* Large, bold heading */
   font-weight: 800;
   line-height: 1.1;
   color: #e0e5ed; /* Darker text color as seen in image */
@@ -42,8 +42,6 @@
 }
 
 .description {
-  font-size: 1.15rem;
-  line-height: 1.6;
   color: #c4bbd3; /* Lighter grey for description */
   margin-bottom: 100px; /* Space below description before the grid */
   max-width: 700px; /* Constrain description width */
@@ -56,7 +54,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px; /* Space between grid items */
   margin-top: 50px;
-  }
+}
 
 .featureCard {
   background: radial-gradient(
@@ -95,17 +93,12 @@
 }
 
 .featureTitle {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #fff; /* Darker text for title */
+  color: #fff;
   line-height: 1.4;
 }
 
 .featureDescription {
- color: #9ca3af;   /* Tailwind's gray-400 */
-  font-size: 1.05rem;
-  line-height: 1.6;
-   /* Slightly lighter text for description */
+  color: #9ca3af;
 }
 
 /* --- Responsive Adjustments --- */

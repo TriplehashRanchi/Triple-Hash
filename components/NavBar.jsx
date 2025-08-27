@@ -114,7 +114,7 @@ const Navbar = () => {
                                 </Link>
                             ))}
                         </nav>
-                        
+
                         {/* Mobile Action Buttons */}
                         <div className={styles.mobileActions}>
                             <Link href="#" className={styles.mobileSignInLink} onClick={closeMobileMenu}>

@@ -10,7 +10,7 @@ const CaseStudy = () => {
             <div className='flex flex-col items-center max-w-[1360px] mx-auto px-4 lg:px-8'> {/* Added max-width and horizontal padding */}
 
                 {/* Top Section: "See The Results" badge and "Case Studies" heading */}
-                <div className='flex items-center justify-center gap-1 rounded-3xl text-[0.9rem] border border-[#FFFFFF1A] text-white pt-[3px] pl-[1px] pr-3 mb-4
+                <div className='flex items-center justify-center gap-1 rounded-3xl text-[0.85rem] border border-[#FFFFFF1A] text-white pt-[3px] pl-[1px] pr-3 mb-4
                     backdrop-filter backdrop-blur-md
                     bg-[radial-gradient(circle_closest-corner_at_50%_160%,#8b5261,transparent_67%),linear-gradient(hsla(0,0%,100%,0.18),transparent)]
                     shadow-[inset_0_0_#c4bbd3,0_4px_4px_#0e091870,0_13px_16px_-8px_#000,inset_0_4px_12px_#ffffff0d]'>
@@ -21,7 +21,7 @@ const CaseStudy = () => {
                 <h2 style={{
                     backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                     WebkitBackgroundClip: 'text',
-                }} className="text-4xl sm:text-4xl md:text-[2.8rem] font-bold font-raleway z-2 leading-tight text-transparent bg-clip-text" /* Added mb-20 for space below heading */
+                }} className="headline  z-2 text-transparent bg-clip-text" /* Added mb-20 for space below heading */
                 >Case Studies</h2>
 
                 {/* Two Cards Section */}
@@ -67,7 +67,7 @@ const CaseStudy = () => {
                             </div>
 
                             {/* Button */}
-                            <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                            <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                                 Read Case Study
                             </button>
                         </div>
@@ -115,7 +115,7 @@ const CaseStudy = () => {
                             </div>
 
                             {/* Button */}
-                            <button className="  bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white text-sm font-semibold px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                            <button className="  bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                                 Read Case Study
                             </button>
                         </div>

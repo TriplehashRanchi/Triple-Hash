@@ -60,11 +60,11 @@ export default function ServicesHero() {
                                 backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                                 WebkitBackgroundClip: 'text',
                             }}
-                            className="animateLine text-transparent bg-clip-text"
+                            className=" animateLine text-transparent bg-clip-text"
                         >
                             Effortel: Services for growth
                         </h1>
-                        <p className="animateLine">
+                        <p className="animateLine description">
                             Empower your vision, ignite your growth. Effortel provides the expertise,
                             technology, and unwavering support to transform your communication services
                             with ours.

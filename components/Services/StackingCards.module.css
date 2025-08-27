@@ -6,7 +6,7 @@
   /* Add some padding-top to ensure content isn't directly at the top */
   padding-top: 100px; /* Adjust as needed */
   padding-bottom: 50px;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -15,7 +15,6 @@
   justify-content: center;
   flex-direction: column; /* Changed to column to stack cards vertically */
 }
- 
 
 .cards {
   /* This container will now hold cards in a normal block flow */
@@ -37,7 +36,6 @@
   border-radius: 2rem;
   font-size: 36px;
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
- 
 }
 
 /* Rest of your existing CSS... */
@@ -66,23 +64,14 @@
   flex: 0 0 30%;
   display: flex;
   flex-direction: column;
-justify-content: center;
+  justify-content: center;
   padding: 2.9rem;
 }
 
 .cardHeading {
-  font-size: 1.4rem;
-  font-weight: 700;
   margin-bottom: 0.6rem;
- 
 }
 
 .cardDescription {
-  font-size: 1rem;
-  line-height: 1.6;
   color: #c4bbd3;
 }
-
- 
-
- 

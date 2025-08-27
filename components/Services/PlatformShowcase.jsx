@@ -39,13 +39,13 @@ export default function PlatformShowcase() {
         },
         // Add more features if needed based on the full image
     ];
-      const gradientText = {
-    backgroundImage:
-      "linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)",
-    WebkitBackgroundClip: "text",
-    backgroundClip: "text",
-    color: "transparent",
-  };
+    const gradientText = {
+        backgroundImage:
+            "linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)",
+        WebkitBackgroundClip: "text",
+        backgroundClip: "text",
+        color: "transparent",
+    };
 
     return (
         <div className={styles.platformSection}>
@@ -53,7 +53,7 @@ export default function PlatformShowcase() {
                 <ScrollReveal>
                     <p className={styles.tagline}>[ STREAMLINED MVNO OPERATIONS ]</p>
                     <h1 className={styles.heading} style={gradientText}>Award-Winning OSS/BSS Platform</h1>
-                    <p className={styles.description}>
+                    <p className={`${styles.description} description`}>
                         Streamline your MVNO operations with our comprehensive, cloud-based EMS platform. Access all the essential components for success, including:
                     </p>
                 </ScrollReveal>
@@ -74,8 +74,8 @@ export default function PlatformShowcase() {
                                     />
                                 </div>
                                 <div className={styles.featureContent}>
-                                    <h3 className={styles.featureTitle}>{feature.title}</h3>
-                                    <p className={styles.featureDescription}>{feature.description}</p>
+                                    <h3 className={`subheadline ${styles.featureTitle}`}>{feature.title}</h3>
+                                    <p className={`description ${styles.featureDescription}`}>{feature.description}</p>
                                 </div>
                             </div>
                         </SpotlightCard>

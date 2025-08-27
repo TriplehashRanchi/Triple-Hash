@@ -1,14 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: "Geomanist";
+  src: url("/font/geomanist-regular.woff2") format("woff2"),
+    url("/font/geomanist-regular.woff") format("woff");
+
+  font-style: normal;
+}
+
 @import "tailwindcss";
-html, body {
+html,
+body {
   overflow-x: hidden;
+  font-family: "Geomanist", sans-serif;
+}
+.headline {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 48px;
+}
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 48px;
+}
+.subheadline {
+  font-size: 1.5rem;
+  line-height: 24px;
+  font-weight: 600;
+}
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+.buttonfont {
+  font-size: 0.875rem;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-
-h1, h2, h3, h4, h5, h6 ,div, span, p, a, button {
-    font-family: 'Raleway', sans-serif;
-}
- 
 @keyframes scroll-left {
   from {
     transform: translateX(0);
@@ -29,4 +59,10 @@ h1, h2, h3, h4, h5, h6 ,div, span, p, a, button {
   }
 }
 
- 
+/* globals.css */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none; /* Firefox */
+}

@@ -79,9 +79,9 @@
 }
 
 .desktopNavLink {
-  font-size: 0.875rem; /* text-sm */
-  font-weight: 500; /* font-medium */
-  color: #d1d5db;
+  font-size: 1rem; /* text-sm */
+  font-weight: 400; /* font-medium */
+  color: #C4BBD3;
   transition: color 0.5s ease-in-out;
   padding: 0.5rem 0.25rem; /* py-2 px-1 */
 }
@@ -212,7 +212,7 @@
   padding: 0.5rem 0; /* py-2 */
   font-size: 1.2rem; /* text-2xl */
   font-weight: 600;
-  color: #e5e7eb;
+  color: #C4BBD3;
   transition: color 0.5s ease-in-out;
 }
 
@@ -229,11 +229,13 @@
 }
 
 .mobileSignInLink {
-  font-size: 1.25rem; /* text-xl */
+  font-size: 1rem; /* text-xl */
   font-weight: 500;
   color: #d1d5db;
-  transition: color 0.5s ease-in-out;
-  padding: 0.5rem 0.75rem; /* py-2 px-3 */
+transition: color 0.5s ease-in-out;
+  padding: 0.3rem 1.25rem; /* py-2 px-3 */
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  border-radius: 0.5rem;
 }
 
 .mobileSignInLink:hover {
@@ -244,7 +246,7 @@
   background-image: linear-gradient(to right, #ff8c00, #ff4500);
   color: #fff;
   font-weight: 600;
-  font-size: 1.25rem; /* text-xl */
+  font-size: 1rem; /* text-xl */
   padding: 0.7rem 1.5rem; /* py-3 px-6 */
   border-radius: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.39);

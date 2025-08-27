@@ -57,12 +57,12 @@ const Team = () => {
         <ScrollReveal>
           <h2
 
-            className="bg-clip-text text-transparent font-raleway text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-center mb-4"
+            className="  text-center mb-4"
           >
             <span style={{
               backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
               WebkitBackgroundClip: "text",
-            }} className="bg-clip-text text-transparent font-raleway text-3xl sm:text-4xl md:text-[2.8rem] font-bold text-center mb-4">
+            }} className="bg-clip-text text-transparent  headline text-center mb-4">
               The People
             </span>
             <span
@@ -70,7 +70,7 @@ const Team = () => {
                 backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
                 WebkitBackgroundClip: "text",
               }}
-              className="reveal-item block bg-clip-text text-transparent"
+              className="reveal-item headline block bg-clip-text text-transparent"
             >
               Behind Our Vision
             </span>
@@ -78,7 +78,7 @@ const Team = () => {
         </ScrollReveal>
 
         {/* Description */}
-        <p className=" text-[#C4BBD3] text-center w-full sm:w-[80%] md:w-[70%] lg:w-[60%] text-base md:text-md leading-medium font-raleway mb-14">
+        <p className=" text-[#C4BBD3] text-center w-full sm:w-[80%] md:w-[70%] lg:w-[60%] description mb-14">
           We are a diverse team of innovators, creators, and leaders, united by a shared vision of shaping the future.
           Bringing together unique perspectives and expertise, we collaborate to design solutions that inspire progress
           and drive meaningful change. Together, we’re building what comes next.

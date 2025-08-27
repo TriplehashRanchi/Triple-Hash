@@ -66,7 +66,7 @@ export default function ProcessSteps() {
                     </p>
 
                     <h1
-                        className="text-[4.2rem] text-center font-extrabold leading-[1.1] text-[#e0e5ed]   mb-[30px] mx-auto"
+                        className="text-[4rem] text-center font-extrabold leading-[1.1] text-[#e0e5ed]   mb-[30px] mx-auto"
                         style={{
                             backgroundImage: "linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)",
                             WebkitBackgroundClip: "text",
@@ -76,7 +76,7 @@ export default function ProcessSteps() {
                         Our  Work Process
                     </h1>
 
-                    <p className="text-[1.15rem] text-center leading-[1.6] text-[#c4bbd3] w-[60%]   mb-24 mx-auto">
+                    <p className=" description text-center  text-[#c4bbd3] w-[60%]   mb-24 mx-auto">
                         The business analysis process encompasses various stages, each requiring a specific team composition. It’s important to note that the workflow may vary according to the unique requirements of each project.
                     </p>
 
@@ -92,9 +92,9 @@ export default function ProcessSteps() {
                             >
 
                                 <div className='flex gap-10'>
-                                     
+
                                     <div
-                                        className={`text-8xl md:text-9xl lg:text-[10rem] font-extrabold text-gray-300 opacity-80 ${isEven ? 'order-2' : 'order-1'
+                                        className={`text-6xl md:text-8xl lg:text-[8rem] font-extrabold text-gray-300 opacity-80 ${isEven ? 'order-2' : 'order-1'
                                             }`}
                                         style={{ lineHeight: 0.5, }}
                                     >
@@ -106,8 +106,8 @@ export default function ProcessSteps() {
                                         className={`w-full max-w-lg text-[#f8f8f8f2] ${isEven ? 'order-1 text-right' : 'order-2 text-left'
                                             }`}
                                     >
-                                        <h3 className="text-3xl md:text-2xl font-bold mb-4">{step.title}</h3>
-                                        <p className="text-base text-[#E4E4E4]/70 md:text-lg leading-relaxed mb-6">{step.description}</p>
+                                        <h3 className="subheadline mb-4">{step.title}</h3>
+                                        <p className="description text-[#E4E4E4]/70   mb-6">{step.description}</p>
 
                                         {/* Team Section */}
                                         <div

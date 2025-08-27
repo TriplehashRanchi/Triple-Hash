@@ -43,7 +43,7 @@ const ScrollLines = () => {
       <div
         ref={containerRef}
         style={{
-          fontSize: "4.2rem",
+          fontSize: "4rem",
           fontWeight: "800",
           lineHeight: "1.3",
           padding: "3rem 0 0",

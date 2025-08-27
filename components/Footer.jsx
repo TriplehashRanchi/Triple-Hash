@@ -153,19 +153,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* First Divider */}
-                <hr className="border-t border-gray-700/50 my-12" />
-
-                {/* Bottom section: Integration and guide links */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                    <LinkColumn title="Popular integrations" links={integrations} showMore={true} />
-                    <LinkColumn title="Trending combinations" links={trendingCombinations} showMore={true} />
-                    <LinkColumn title="Top integration categories" links={categories} showMore={true} />
-                    <LinkColumn title="Trending templates" links={templates} showMore={true} />
-                    <LinkColumn title="Top guides" links={guides} showMore={true} />
-                </div>
-
-                {/* Second Divider */}
+               
+           
                 <hr className="border-t border-gray-700/50 my-12" />
 
                 {/* Copyright and legal links */}

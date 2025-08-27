@@ -51,7 +51,7 @@ const SectionLayout = () => {
                 >
                     Empowering Communication Service Providers
                 </h1>
-                <p className={`animateLine ${styles.sectionDescription}`}>
+                <p className={`animateLine description ${styles.sectionDescription}`}>
                     We support all types of communication service providers (CSPs), from full-fledged
                     operations to branded resellers. Choose the deployment model that best suits your needs:
                 </p>

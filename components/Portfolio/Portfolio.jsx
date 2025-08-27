@@ -164,9 +164,9 @@ export default function PortfolioProjects() {
                                         {currentProject.category}
                                     </span>
                                 </div>
-                                <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{currentProject.clientName}</h3>
-                                <p className="text-gray-400 text-lg mb-6">{currentProject.profession}</p>
-                                <p className="text-[#C4BBD3] leading-relaxed max-w-2xl">{currentProject.description}</p>
+                                <h3 className=" heading text-white mb-2">{currentProject.clientName}</h3>
+                                <p className="text-gray-400 subheadline mb-6">{currentProject.profession}</p>
+                                <p className="text-[#C4BBD3] description max-w-2xl">{currentProject.description}</p>
                             </div>
 
                             {/* Right side - CTA and navigation */}
