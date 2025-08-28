@@ -75,3 +75,89 @@
 .cardDescription {
   color: #c4bbd3;
 }
+
+/* Tablet (≤991px) */
+@media (max-width: 991px) {
+  .cards {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .card {
+    height: auto;
+  }
+
+  .cardContent {
+    flex-direction: column !important;
+    text-align: center;
+    height: 100%;
+  }
+
+  .cardLeft {
+    flex: unset;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .cardImage {
+    object-fit: contain;
+    max-height: 100%;
+  }
+
+  .cardRight {
+    flex: unset;
+    width: 100%;
+    padding: 2.9rem; /* remove heavy padding */
+  }
+
+  .cardHeading {
+    font-size: 1.8rem;
+  }
+
+  .cardDescription {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (≤600px) */
+@media (max-width: 600px) {
+  .cards {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .wrapper {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .card {
+    border-radius: 1rem;
+  }
+
+  .cardContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .cardLeft {
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+  .cardRight {
+    padding: 2.9rem;
+  }
+
+  .cardHeading {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .cardImage {
+    width: 100%;
+    height: 100%;
+  }
+}

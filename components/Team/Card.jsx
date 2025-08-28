@@ -31,21 +31,21 @@ export default function EnhancedHero() {
             <div className="relative z-10 max-w-[1360px] mx-auto px-4  lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20    ">
                     {/* Left Content */}
-                    <div className="space-y-10 text-center lg:text-left order-2 lg:order-1 my-40">
+                    <div className="space-y-10 text-center lg:text-left order-2 lg:order-1 my-0 sm:my-0 lg:my-40">
                         <div className="space-y-6">
-
-
-                            <ScrollReveal  >
-                                <h1
-
-                                >
-                                    <span className="heading reveal-item block z-2 leading-tight text-transparent bg-clip-text"
+                            <ScrollReveal>
+                                <h1>
+                                    <span
+                                        className="heading reveal-item block z-2 leading-tight text-transparent bg-clip-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
                                         style={{
                                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                                             WebkitBackgroundClip: "text",
-                                        }}  >Have an Idea?</span>
+                                        }}
+                                    >
+                                        Have an Idea?
+                                    </span>
                                     <span
-                                        className="heading reveal-item block bg-clip-text text-transparent font-semibold"
+                                        className="heading reveal-item block bg-clip-text text-transparent font-semibold text-xl sm:text-2xl md:text-3xl lg:text-5xl"
                                         style={{
                                             backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
                                             WebkitBackgroundClip: "text",
@@ -56,27 +56,27 @@ export default function EnhancedHero() {
                                 </h1>
                             </ScrollReveal>
 
-                            <p className="mt-6 description z-2 md:text-md text-[#C4BBD3] max-w-lg">
-                                We help founders turn raw ideas into high-performing web & mobile apps — with full-stack development, AI integration, and scalable architecture built for long-term&nbsp;growth.
+                            <p className="mt-6 description z-2 text-sm sm:text-base md:text-md text-[#C4BBD3] max-w-md sm:max-w-lg mx-auto lg:mx-0">
+                                We help founders turn raw ideas into high-performing web & mobile apps —
+                                with full-stack development, AI integration, and scalable architecture
+                                built for long-term&nbsp;growth.
                             </p>
                         </div>
 
                         {/* CTA Buttons */}
-
-                        <div className="mt-6 sm:mt-8 flex z-2 flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-4 w-full sm:w-auto">
-
-                            <button className="w-full sm:w-auto border border-[#FFFFFF63] buttonfont bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white  px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                        <div className="mt-6 sm:mt-8 flex z-2 flex-col sm:flex-row justify-center sm:justify-center md:justify-start sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                            <button className="w-full sm:w-auto border border-[#FFFFFF63] buttonfont bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                                 Get started for Free
                             </button>
 
-                            <button className="w-full sm:w-auto buttonfont bg-transparent border border-[#FFFFFF63] text-gray-200  px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
+                            <button className="w-full sm:w-auto buttonfont bg-transparent border border-[#FFFFFF63] text-gray-200 text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
                                 Talk to Sales
                             </button>
-
                         </div>
-                        <div class="  pt-10 border-t border-border" >
 
-                            <div className="   grid grid-cols-1 md:grid-cols-3 gap-8 text-white ">
+                        {/* Stats Section */}
+                        <div className="pt-10 border-t border-border">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-6 sm:gap-8 text-white">
                                 {[
                                     { value: "99.9%", label: "Uptime" },
                                     { value: "10k+", label: "Active Users" },
@@ -84,36 +84,25 @@ export default function EnhancedHero() {
                                 ].map((stat, i) => (
                                     <div
                                         key={i}
-                                        className="group  overflow-hidden rounded-xl p-8
-        bg-gradient-to-br from-[#1A1128] to-[#0D0816]  
-          transition-all duration-300 ease-in-out
-        transform hover:-translate-y-2  "
+                                        className="group overflow-hidden rounded-xl p-6 sm:p-8 bg-gradient-to-br from-[#1A1128] to-[#0D0816] transition-all duration-300 ease-in-out transform hover:-translate-y-2"
                                     >
-
-
-                                        {/* Content */}
-                                        <div className=" text-center">
-                                            <div
-                                                className="text-5xl md:text-[2.4rem] font-extrabold mb-2
-          bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300
-           
-          transition-all duration-300 ease-in-out"
-                                            >
+                                        <div className="text-center">
+                                            <div className="text-3xl sm:text-4xl md:text-[2.4rem] font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 transition-all duration-300 ease-in-out">
                                                 {stat.value}
                                             </div>
-                                            <div className="description text-[#C4BBD3] uppercase tracking-wider  ">
+                                            <div className="description text-xs sm:text-sm md:text-base text-[#C4BBD3] uppercase tracking-wider">
                                                 {stat.label}
                                             </div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-
                         </div>
                     </div>
 
+
                     {/* Right Content - 3D Scene */}
-                    <div className="relative order-1 lg:order-2 mt-20">
+                    <div className="relative order-1 lg:order-2 mt-16 sm:mt-16 md:mt-20">
                         <div className="relative h-[60vh] sm:h-[50vh] md:h-[80vh] lg:h-[600px]  overflow-hidden">
                             {/* Glow effect behind the canvas */}
                             <div className="absolute inset-0   " />

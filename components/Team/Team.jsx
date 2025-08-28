@@ -51,7 +51,7 @@ const Team = () => {
 
   return (
     <div className="bg-[#0D0816] pb-30" >
-      <div className="flex flex-col items-center gap-2 max-w-[1360px] mx-auto px-4 lg:px-8 pt-10">
+      <div className="flex flex-col items-center gap-2 max-w-[1360px] mx-auto px-4 lg:px-8 pt-20 sm:pt-20 md:pt-0">
 
         {/* Heading */}
         <ScrollReveal>

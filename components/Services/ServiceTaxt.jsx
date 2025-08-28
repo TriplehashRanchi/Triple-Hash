@@ -15,21 +15,20 @@ const ScrollLines = () => {
       gsap.from(lines, {
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 80%", // start when top of container hits 80% viewport
+          start: "top 80%",
           toggleActions: "play none none none",
         },
         opacity: 0,
-        y: 50, // comes up from bottom
-        stagger: 0.4, // delay between lines
+        y: 50,
+        stagger: 0.4,
         duration: 0.8,
         ease: "power3.out",
       });
     }, containerRef);
 
-    return () => ctx.revert(); // ✅ cleanup GSAP on unmount
+    return () => ctx.revert();
   }, []);
 
-  // 🔥 gradient text style reused for all lines
   const gradientText = {
     backgroundImage:
       "linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)",
@@ -39,42 +38,43 @@ const ScrollLines = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#0D0816", textAlign: "center" }}>
+    <div className="bg-[#0D0816] text-center">
       <div
         ref={containerRef}
-        style={{
-          fontSize: "4rem",
-          fontWeight: "800",
-          lineHeight: "1.3",
-          padding: "3rem 0 0",
-        }}
+        className="
+          font-[700] 
+          leading-[1.1]
+          pt-12
+          text-[2.2rem] sm:text-[3rem] md:text-[4rem]   /* ✅ responsive font sizes */
+          px-4
+        "
       >
         <h2
-          className="line"
-          style={{
-            fontFamily: "monospace",
-            fontSize: "0.85rem",
-            fontWeight: "600",
-            letterSpacing: "0.15em",
-            color: "#c4bbd3", // solid grey tagline
-            textTransform: "uppercase",
-            marginBottom: "3.5rem",
-          }}
+          className="
+            line 
+            font-mono 
+            text-[0.75rem] sm:text-[0.85rem] 
+            font-semibold 
+            tracking-[0.15em] 
+            uppercase 
+            text-[#c4bbd3] 
+            mb-6 sm:mb-10
+          "
         >
           [ End-to-End MVNO Enablement ]
         </h2>
 
-        {/* gradient text applied per <p> */}
-        <p className="line leading-[1.1]" style={gradientText}>
+        {/* gradient lines */}
+        <p className="line" style={gradientText}>
           Global Reach,
         </p>
-        <p className="line leading-[1.1]" style={gradientText}>
+        <p className="line" style={gradientText}>
           Seamless Integrations,
         </p>
-        <p className="line leading-[1.1]" style={gradientText}>
+        <p className="line" style={gradientText}>
           Data-Driven Success, and
         </p>
-        <p className="line leading-[1.1]" style={gradientText}>
+        <p className="line" style={gradientText}>
           Regulatory Confidence.
         </p>
       </div>

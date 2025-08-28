@@ -61,7 +61,7 @@
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.1;
-   
+
   margin-right: 40px;
   text-align: left;
 
@@ -106,7 +106,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(116, 116, 115, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(116, 116, 115, 0.2),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -114,10 +119,9 @@
   left: 100%;
 }
 
- 
-
 .bookMeetingText {
-  background-image: linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1);
+  background-image: linear-gradient(180deg, #ffffff1a, #0003 58%),
+    linear-gradient(140deg, #fff, #7c65a1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -127,7 +131,7 @@
 
 .arrowIcon {
   font-size: 2rem;
-  font-weight: 900;   /* bold karega */
+  font-weight: 900; /* bold karega */
   line-height: 1;
   color: #e1d3d3;
   padding-left: 10px;
@@ -136,77 +140,83 @@
   transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-
 .bookMeetingButton:hover .arrowIcon {
   transform: translateX(5px);
 }
- 
+
 @media (max-width: 900px) {
   .mainCard {
-    padding: 60px 40px;
+    padding: 0px 5px;
+    gap: 100px; /* reduce excessive gap for tab */
   }
+
   .mainCardContent {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding: 40px 20px;
   }
+
   .heading {
-    font-size: 2.5rem;
-    margin-right: 0;
-    margin-bottom: 20px;
-    flex-basis: auto;
-    min-width: auto;
+    font-size: 2.4rem;
+    margin: 0 0 15px 0;
     text-align: center;
+    min-width: auto;
   }
+
   .description {
     font-size: 1rem;
-    flex-basis: auto;
-    min-width: auto;
     text-align: center;
+    max-width: 90%;
   }
+
   .bookMeetingButton {
-    bottom: -50px;
-    font-size: 1.3rem;
-    padding: 20px 30px;
-    width: 80%;
-    max-width: 500px;
-  }
-  .bookMeetingButton::after {
-    right: 60px;
+    font-size: 1.4rem;
+    padding: 18px 28px;
+    width: 100%;
+    
   }
   .arrowIcon {
-    font-size: 1.8rem;
-    right: 25px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    right: 20px;
   }
 }
 
 @media (max-width: 600px) {
-  .sectionWrapper {
-    padding-top: 100px;
-    padding-bottom: 200px;
-  }
+  
   .mainCard {
+    padding: 0px 5px;
+    gap: 60px;
+  }
+    .mainCardContent {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
     padding: 40px 20px;
-    border-radius: 15px;
   }
+
+
   .heading {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
+
   .description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 95%;
   }
+
   .bookMeetingButton {
-    bottom: -40px;
-    font-size: 1.1rem;
-    padding: 15px 25px;
-    width: 90%;
-  }
-  .bookMeetingButton::after {
-    right: 50px;
-  }
+    font-size: 1rem;
+    padding: 14px 22px;
+   }
+
   .arrowIcon {
-    font-size: 1.5rem;
-    right: 20px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    right: 15px;
   }
 }

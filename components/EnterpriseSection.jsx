@@ -30,7 +30,7 @@ const EnterpriseSection = () => {
                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                             WebkitBackgroundClip: 'text',
                         }}
-                        className="headline text-transparent bg-clip-text  mb-6 w-1/2"
+                        className="headline text-transparent bg-clip-text  mb-6 w-full sm:w-1/2"
                     >
                         Secure. Reliable. Collaborative.
                     </h2>
