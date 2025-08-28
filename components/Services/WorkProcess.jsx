@@ -111,7 +111,7 @@ export default function ProcessSteps() {
                                         className={`w-full max-w-lg text-[#f8f8f8f2] text-left sm:text-left mt-4 sm:mt-0 md:mt-10 ${isEven ? 'sm:order-1 sm:text-right' : 'sm:order-2 sm:text-left'
                                             }`}
                                     >
-                                        <h3 className="subheadline  mb-3 sm:mb-4">{step.title}</h3>
+                                        <h3 className="subheadline text-2xl sm:text-4xl  mb-3 sm:mb-4">{step.title}</h3>
                                         <p className="description text-[#E4E4E4]/70 mb-4 sm:mb-6">{step.description}</p>
 
                                         {/* Team Section */}
@@ -123,7 +123,7 @@ export default function ProcessSteps() {
                                 {step.arrow && (
                                     <div
                                         className={`
-      w-[200px] h-[80px]           
+      w-[200px] h-[60px]           
       sm:w-[200px] sm:h-[140px]   
       md:w-[300px] md:h-[180px]    
       lg:w-[300px] lg:h-[200px]   
