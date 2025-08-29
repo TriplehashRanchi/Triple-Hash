@@ -12,7 +12,7 @@ const Team = () => {
       handle: "javicodes",
       status: "Online",
       contactText: "Contact Me",
-      avatarUrl: "/Sagar.png",
+      avatarUrl: "/Team/Team3.png",
     },
     {
       name: "Javi A. Torres",
@@ -20,7 +20,7 @@ const Team = () => {
       handle: "javicodes",
       status: "Online",
       contactText: "Contact Me",
-      avatarUrl: "/Sagar.png",
+      avatarUrl: "/Team/Team1.png",
     },
     {
       name: "Aarav Mehta",
@@ -28,7 +28,7 @@ const Team = () => {
       handle: "aarav.designs",
       status: "Online",
       contactText: "Connect",
-      avatarUrl: "/Sagar.png",
+      avatarUrl: "/Team/Team2.png",
     },
     {
       name: "Sanya Kapoor",
@@ -36,7 +36,7 @@ const Team = () => {
       handle: "sanyakapoor",
       status: "Busy",
       contactText: "Message",
-      avatarUrl: "/Sagar.png",
+      avatarUrl: "/Team/Team4.png",
     },
     {
       name: "Rohan Verma",
@@ -44,7 +44,7 @@ const Team = () => {
       handle: "rohan.codes",
       status: "Offline",
       contactText: "Ping Me",
-      avatarUrl: "/Sagar.png",
+      avatarUrl: "/Team/Team5.png",
     },
   ];
 

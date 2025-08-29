@@ -21,24 +21,24 @@ export default function StackingCards() {
             variants={cardVariants('right')}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.3 }}
-            className="mb-[50px] w-full rounded-2xl shadow-xl border border-gray-700 bg-[#FFF9EF]"
+            className="mb-[50px] w-full rounded-2xl shadow-xl border border-gray-700 [background:radial-gradient(circle_at_top_left,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_top_right,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_bottom_left,rgba(0,200,255,0.4),transparent_2%),radial-gradient(circle_at_bottom_right,rgba(0,200,255,0.4),transparent_10%),#FFF9EF]"
           >
             <div className="flex flex-col-reverse lg:flex-row items-center w-full h-full gap-5 lg:gap-20 p-4 lg:p-14">
-              <div className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8 p-4 lg:p-8">
+              <div className="w-full lg:w-2/3 flex flex-col gap-6 lg:gap-8 p-4 lg:p-8">
                 <div className="flex flex-col gap-4">
                   <h2 className="text-black headline">
-                    Code when you need it, UI when you don't
+                    We Don’t Just Build App, We Build Growth Engines
                   </h2>
-                  <p className="lg:w-[70%] text-gray-800 description">
-                    Other tools limit you to either a visual building experience, or code.
-                    With n8n, you get the best of both worlds.
+                  <p className="lg:w-[100%] text-gray-800 description">
+                    Every feature we design is tied to your business goals — not just technical specs. Our team blends entrepreneurial insight with technical expertise, so what you get isn’t just a product… it’s a system that helps you scale.
+
                   </p>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Write JavaScript or Python</strong> - you can always fall back to</p>
-                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Add libraries</strong> from npm or Python for even more power</p>
-                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Paste cURL requests</strong> into your workflow</p>
-                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Merge workflow branches</strong>, don’t just split them</p>
+                  <p className="flex gap-2 description"> <strong>We follow a simple, proven framework to bring your vision to life:</strong></p>
+                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Plan: </strong> Understand your goals, market, and users.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Build: </strong> Develop fast, scalable products with AI at the core.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Scale: </strong> Optimize funnels, automate workflows, and grow with you.</p>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 p-4 lg:pr-8">
@@ -70,37 +70,40 @@ export default function StackingCards() {
               <div className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8 p-0 lg:p-8">
                 <div className="flex flex-col gap-0">
                   <h2 className="headline text-transparent bg-clip-text bg-gradient-to-r from-white to-[#7C7C7C]">
-                    Run. Tweak. Repeat
+                    Build. Test. Scale.
                   </h2>
                   <p className="description text-gray-300 mt-4">
-                    The same short feedback loops that make you smile at your scripts.
+                    <strong>Faster Than Ever.</strong> We follow short, iterative feedback loops — so you get results in weeks, not months.
                   </p>
                 </div>
                 <div className="description text-[#C4BBD3] flex flex-wrap gap-4">
                   <div className="flex gap-8 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
                       <MdCheck fontSize={40} />
-                      <p><strong className="text-white description">Re-run single steps</strong> without re-running the whole workflow</p>
+                      <p><strong className="text-white description"> Launch MVPs quickly</strong> without waiting for long dev cycles
+                        w</p>
                     </div>
                     <div className="flex justify-start gap-2 w-full lg:w-[45%]">
                       <MdCheck fontSize={40} />
-                      <p><strong className="text-white description">Replay or mock data</strong> to avoid waiting for external systems</p>
+                      <p><strong className="text-white description">Test features live</strong>  with real users and pivot fast
+                      </p>
                     </div>
                   </div>
                   <div className="flex gap-8 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                      <MdCheck fontSize={30} />
-                      <p><strong className="text-white description">Debug fast</strong>, with logs in line with your code</p>
+                      <MdCheck fontSize={40} />
+                      <p><strong className="text-white description">Continuous improvements </strong>instead of one-off builds</p>
                     </div>
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                      <MdCheck fontSize={30} />
-                      <p><strong className="text-white description">Use 1700+ templates</strong> to jump-start your project</p>
+                      <MdCheck fontSize={40} />
+                      <p><strong className="text-white description">Scale confidently </strong> with data-driven decisions
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="mt-4">
                   <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity">
-                    Browse all integrations
+                    Let's Build Faster
                   </button>
                 </div>
               </div>

@@ -22,7 +22,7 @@ const SocialProofSection = () => {
           <div className="flex flex-col items-center gap-4">
             {/* smaller text on phones, desktop unchanged */}
             <p className="text-center text-lg sm:text-lg text-[#A3A3A3] font-raleway max-w-3xl">
-              The world's most popular workflow automation platform for technical teams including
+              Trusted by startups, founders, and educators worldwide — powering products with AI, automation, and scalable workflows.
             </p>
 
             {/* responsive spacing; desktop unchanged */}

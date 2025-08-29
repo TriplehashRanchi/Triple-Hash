@@ -67,22 +67,22 @@ const stats = [
     {
         id: 'github',
         icon: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/VS_Code_Dark_b6aa3d887d.svg',
-        title: 'Top 50 Github.',
-        description: 'Our 126.7k stars place us among the most popular projects.',
+        title: 'Top-Rated Builds',
+        description: 'Recognized for delivering MVPs and SaaS products that scale.',
         gradient: `bg-[radial-gradient(circle_farthest-side_at_100%_-80%,rgba(175,106,140,0.46),rgba(98,65,83,0.38)_39%,transparent_55%),radial-gradient(circle_at_50%_100%,#7a396d4a,#2a192963)]`
     },
     {
         id: 'g2',
         icon: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/VS_Code_Dark_1_ab4a2bad7b.svg',
-        title: '4.9/5 stars on G2.',
-        description: 'To quote "A solid automation tool that just works".',
+        title: ' Client Love ',
+        description: '4.9/5 Satisfaction — “Triple Hash just gets it done.',
         gradient: `bg-[radial-gradient(circle_at_0_100%,#ff4f311f,#fff0),radial-gradient(circle_at_50%_100%,hsla(0,0%,100%,.06),transparent),radial-gradient(circle_at_50%_100%,#4b397a6e,#2a192963)]`,
     },
     {
         id: 'community',
         icon: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/social_proof_2_14745833f3.svg',
-        title: '200k+ community members.',
-        description: "This wouldn't be possible without you.",
+        title: 'Global Reach',
+        description: " 200+ projects shipped across multiple industries.",
         gradient: `bg-[radial-gradient(circle_farthest-side_at_0_100%,#b200ff26,#fff0_56%),radial-gradient(circle_farthest-side_at_20%_100%,hsla(0,0%,100%,.1),transparent_43%),radial-gradient(circle_at_50%_100%,#a3643a87,#2a192963)]`,
     },
 ];
@@ -180,7 +180,7 @@ const IntegrationsSection = () => {
                         }}
                             className="headline bg-clip-text text-transparent  reveal-item block"
                         >
-                            Plug AI into your own data &
+                            Seamlessly Connect AI &
                         </span>
                         <span
                             style={{
@@ -189,7 +189,7 @@ const IntegrationsSection = () => {
                             }}
                             className="headline reveal-item block bg-clip-text text-transparent"
                         >
-                            over 500 integrations
+                            Automation With Over 500+ Tools.
                         </span>
                     </h2>
                 </ScrollReveal>
@@ -240,7 +240,7 @@ const IntegrationsSection = () => {
                             }}
                                 className="headline bg-clip-text text-transparent   reveal-item block"
                             >
-                                The fast way to actually
+                                The Fastest Way to Get AI
                             </span>
                             <span
                                 style={{
@@ -249,7 +249,7 @@ const IntegrationsSection = () => {
                                 }}
                                 className="reveal-item block bg-clip-text text-transparent"
                             >
-                                get AI working in your business
+                                Actually Working in Your Business.
                             </span>
                         </h2>
                     </ScrollReveal>
@@ -274,15 +274,13 @@ const IntegrationsSection = () => {
                                     {/* Text Content */}
                                     <div className="flex flex-col gap-4 w-full sm:max-w-[50%] text-center sm:text-left">
                                         <h3 className="text-white subheadline text-left">
-                                            Build multi-step agents
+                                            Launch AI-Powered Web
                                             <br />
-                                            calling custom tools
+                                            & Mobile Apps
+
                                         </h3>
                                         <p className="text-[#938E95] description text-left ">
-                                            Create agentic systems on a single screen.
-                                            Integrate any LLM into your workflows as fast
-                                            as you can drag-n-drop.
-
+                                            From MVPs to full-scale apps, we build scalable products with AI features like chatbots, recommendations, and analytics built right in.
                                         </p>
                                         <button className="bg-gradient-to-r w-full max-w-[50%] cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                                             Explore AI
@@ -313,14 +311,11 @@ const IntegrationsSection = () => {
 
                                 <div className=" rounded-3xl px-6 py-8  sm:px-10 sm:py-12 flex flex-col h-full min-h-[712px]">
                                     <h3 className="text-white  text-left subheadline">
-                                        Chat with your own data
+                                        Automate Workflows & SaaS Features
+
                                     </h3>
                                     <p className="mt-4 text-[#938E95] text-left description flex-grow">
-                                        Use Slack, Teams, SMS, voice, or our
-                                        embedded chat interface to get
-                                        accurate answers from your data,
-                                        create
-                                        tasks, and complete workflows.
+                                        We replace manual tasks with AI-driven automations, integrating with 500+ tools and tailoring solutions to match your business operations
                                     </p>
                                     {/* Chat Bubbles */}
                                     <div className="mt-8 flex flex-col gap-4  font-raleway">
@@ -382,20 +377,23 @@ const IntegrationsSection = () => {
 
                                     <div className="text-left">
                                         <h3 className="text-white subheadline mb-2">
-                                            Self-host everything –
+                                            Build Sales Funnel  &
+
                                             <br />
-                                            including AI models
+                                            Landing Pages
                                         </h3>
-                                        <p className='text-[#938E95] mb-4 description'>Protect your data by deploying on-prem.</p>
+                                        <p className='text-[#938E95] mb-4 max-w-md description'>We create high-converting landing pages and funnels powered by AI-driven personalization and automation.
+</p>
                                         <ul className="text-[#938E95] description space-y-2 ">
                                             <li className="flex items-center gap-2">
-                                                <MdCheck className="text-[#938E95] text-xl" /> Deploy with Docker
+                                                <MdCheck className="text-[#938E95] text-xl" /> Custom design
+
                                             </li>
                                             <li className="flex items-center gap-2">
-                                                <MdCheck className="text-[#938E95] text-xl" /> Access the entire source code on Github
+                                                <MdCheck className="text-[#938E95] text-xl" /> Automation and Integration
                                             </li>
                                             <li className="flex items-center gap-2">
-                                                <MdCheck className="text-[#938E95] text-xl" /> Hosted version also available
+                                                <MdCheck className="text-[#938E95] text-xl" />Conversion-focused Approach
                                             </li>
                                         </ul>
                                     </div>

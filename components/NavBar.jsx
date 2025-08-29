@@ -10,8 +10,8 @@ const navItems = [
     { label: 'Homepage', href: '/' },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Services ', href: '/services' },
-    { label: 'Blog', href: '/team' },
-    { label: 'Contact Us', href: '#' },
+    { label: 'Team', href: '/team' },
+    { label: 'Blog', href: '/blog' },
 ];
 
 // --- Main Navbar Component ---
