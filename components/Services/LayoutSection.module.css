@@ -84,9 +84,9 @@
   font-size: 18px; /* Slightly smaller title for inactive */
   margin-top: 0; /* Remove top margin when collapsed */
   color: #b3c1cc;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: wrap; /* Prevent text wrapping */
   margin: 0 auto; /* Center vertical text */
-  text-align: center;
+  text-align: left;
 }
 
 .inactiveSection .plusIcon {
@@ -514,7 +514,9 @@
 
   .inactiveSection .sectionTitle {
     font-size: 16px;
+    text-align: left;
   }
+
 
   .plusIcon {
     font-size: 28px;
@@ -545,7 +547,7 @@
   }
 
   .sectionTitle {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .activeSectionContent .description {

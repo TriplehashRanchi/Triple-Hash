@@ -43,13 +43,13 @@
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  width: 70%;
+  width: 100%;
 }
 
 .heroSection p {
   color: #c4bbd3;
   max-width: 36rem;
-  width: 70%;
+  width: 100%;
 }
 
 .imageWrapper {

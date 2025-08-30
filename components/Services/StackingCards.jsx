@@ -6,14 +6,51 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
 export default function StackingCards() {
-  const cardsData = [
-    { id: 1, img: "/card1.svg", heading: "Designing and Planning", description: "We help you choose the right MVNO setup...", reverse: false },
-    { id: 2, img: "/card1.svg", heading: "Designing and Planning", description: "We help you choose the right MVNO setup...", reverse: true },
-    { id: 3, img: "/card1.svg", heading: "Designing and Planning", description: "We help you choose the right MVNO setup...", reverse: false },
-    { id: 4, img: "/card1.svg", heading: "Designing and Planning", description: "We help you choose the right MVNO setup...", reverse: true },
-    { id: 5, img: "/card1.svg", heading: "Designing and Planning", description: "We help you choose the right MVNO setup...", reverse: false },
-    { id: 6, img: "/card1.svg", heading: "Designing and Planning", description: "We help you choose the right MVNO setup...", reverse: true },
-  ];
+const cardsData = [
+  {
+    id: 1,
+    img: "/card1.svg",
+    heading: "Web & Mobile Apps",
+    description: "From MVPs to full-scale platforms — fast, scalable, and designed for growth.",
+    reverse: false,
+  },
+  {
+    id: 2,
+    img: "/card5.svg",
+    heading: "AI-Powered Tools",
+    description: "Chatbots, recommendations, analytics & automations — AI baked into your product.",
+    reverse: true,
+  },
+  {
+    id: 3,
+    img: "/card3.svg",
+    heading: "Custom CRM & SaaS",
+    description: "Streamline sales, leads, and operations with CRMs and SaaS products tailored to your workflows.",
+    reverse: false,
+  },
+  {
+    id: 4,
+    img: "/card4.svg",
+    heading: "E-Learning & LMS",
+    description: "Smart, interactive learning platforms with AI-driven assessments and personalized dashboards.",
+    reverse: true,
+  },
+  {
+    id: 5,
+    img: "/card5.svg",
+    heading: "Automation & Integrations",
+    description: "Connect with 500+ tools and APIs to eliminate busywork and scale workflows seamlessly.",
+    reverse: false,
+  },
+  {
+    id: 6,
+    img: "/card6.svg",
+    heading: "Internal Management Systems",
+    description: "Dashboards, reporting, and automation to manage operations and scale efficiently.",
+    reverse: true,
+  },
+];
+
 
   return (
     <div className={styles.wrapper}>

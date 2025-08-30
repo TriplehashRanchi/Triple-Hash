@@ -61,21 +61,15 @@ const ScrollLines = () => {
             mb-6 sm:mb-10
           "
         >
-          [ End-to-End MVNO Enablement ]
+          [ OUR SERVICES ]
         </h2>
 
         {/* gradient lines */}
         <p className="line" style={gradientText}>
-          Global Reach,
+          End-to-End Solutions That Build,
         </p>
         <p className="line" style={gradientText}>
-          Seamless Integrations,
-        </p>
-        <p className="line" style={gradientText}>
-          Data-Driven Success, and
-        </p>
-        <p className="line" style={gradientText}>
-          Regulatory Confidence.
+          Automate & Scale Your Business
         </p>
       </div>
     </div>

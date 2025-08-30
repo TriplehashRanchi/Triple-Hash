@@ -31,7 +31,7 @@
 
 .heading {
   font-size: 4rem;
-  width: 50%; /* Large, bold heading */
+  width: 100%; /* Large, bold heading */
   font-weight: 700;
   line-height: 1.1;
   color: #e0e5ed; /* Darker text color as seen in image */
@@ -152,7 +152,8 @@
     padding: 0;
   }
   .featureCard {
-    padding: 20px;
+    justify-content: center;
+    padding: 20px 40px ;
     gap: 10px;
   }
   .iconWrapper {

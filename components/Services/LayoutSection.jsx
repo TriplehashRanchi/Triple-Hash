@@ -40,7 +40,7 @@ const SectionLayout = () => {
         <div className={styles.layoutSection}>
             <div ref={textRef}>
                 <h2 className={`animateLine bg-clip-text text-transparent ${styles.title}`}>
-                    [ Flexible Deployment Options ]
+                    [ CHOOSE HOW YOU SCALE ]
                 </h2>
                 <h1
                     style={{
@@ -49,11 +49,10 @@ const SectionLayout = () => {
                     }}
                     className={`animateLine text-transparent bg-clip-text ${styles.subTitle}`}
                 >
-                    Empowering Communication Service Providers
+                    Flexibility Built In, Because One Size Doesn’t Fit All
                 </h1>
                 <p className={`animateLine description ${styles.sectionDescription}`}>
-                    We support all types of communication service providers (CSPs), from full-fledged
-                    operations to branded resellers. Choose the deployment model that best suits your needs:
+                   Every founder and business operates differently — that’s why TripleHash adapts our approach to fit your goals, budget, and speed. Whether you need to validate an MVP quickly or roll out an enterprise-grade platform, we’ll meet you where you are.
                 </p>
             </div>
 
@@ -64,12 +63,12 @@ const SectionLayout = () => {
                     onClick={() => handleSectionClick('european-cloud')}
                 >
                     <h2 className={activeSection === 'european-cloud' ? styles.sectionTitleActive : styles.sectionTitle}>
-                        European Cloud
+                        Rapid MVP Launch
                     </h2>
                     {activeSection === 'european-cloud' ? (
                         <div className={styles.activeSectionContent}>
                             <p className={styles.description}>
-                                Leverage our geo-redundant data centers in Belgium for high availability and reliability.
+                                Test your idea fast with a lean, scalable prototype that can evolve into a full product.
                             </p>
                             <div className={styles.europeanCloudMapViz}></div>
                         </div>
@@ -84,12 +83,12 @@ const SectionLayout = () => {
                     onClick={() => handleSectionClick('on-premise')}
                 >
                     <h2 className={activeSection === 'on-premise' ? styles.sectionTitleActive : styles.sectionTitle}>
-                        On-Premise
+                        Custom Product Development
                     </h2>
                     {activeSection === 'on-premise' ? (
                         <div className={styles.activeSectionContent}>
                             <p className={styles.description}>
-                                Combine the flexibility of public cloud with the security and control of on-premise solutions.
+                                Tailored web, mobile, and AI-powered systems built to match your unique workflows.
                             </p>
                         </div>
                     ) : (
@@ -103,12 +102,12 @@ const SectionLayout = () => {
                     onClick={() => handleSectionClick('hybrid')}
                 >
                     <h2 className={activeSection === 'hybrid' ? styles.sectionTitleActive : styles.sectionTitle}>
-                        Hybrid
+                        Enterprise-Ready Platforms
                     </h2>
                     {activeSection === 'hybrid' ? (
                         <div className={styles.activeSectionContent}>
                             <p className={styles.description}>
-                                Combine the flexibility of public cloud with the security and control of on-premise solutions.
+                                Secure, compliant, and scalable solutions for teams that can’t afford downtime.
                             </p>
                         </div>
                     ) : (

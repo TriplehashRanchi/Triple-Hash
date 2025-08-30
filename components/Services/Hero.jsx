@@ -53,7 +53,7 @@ export default function ServicesHero() {
                     {/* Left Side */}
                     <div className={styles.heroSection} ref={textRef}>
                         <div className={`animateLine ${styles.subtitle}`}>
-                            [ Launch with confidence ]
+                            [ FROM IDEA TO IMPACT ]
                         </div>
                         <h1
                             style={{
@@ -62,9 +62,9 @@ export default function ServicesHero() {
                             }}
                             className=" animateLine text-transparent bg-clip-text"
                         >
-                            Effortel: Services for growth
+                            Web, Mobile & AI Solutions That Scale Beyond Launch
                         </h1>
-                        <p className="animateLine description">
+                        <p className="animateLine description w">
                             Empower your vision, ignite your growth. Effortel provides the expertise,
                             technology, and unwavering support to transform your communication services
                             with ours.

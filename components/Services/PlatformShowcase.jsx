@@ -6,39 +6,48 @@ import SpotlightCard from "../ReactBit/SpotlightCard";
 import ScrollReveal from "../Gsap/ScrollReveal";
 
 export default function PlatformShowcase() {
-    const features = [
-        {
-            icon: '/icon1.svg', // Placeholder, replace with actual SVG paths
-            title: 'Online Charging and Billing',
-            description: 'Efficiently manage billing and charging processes.',
-        },
-        {
-            icon: '/icon2.svg', // Placeholder
-            title: 'Point of Sales',
-            description: 'Simplify customer acquisition and service activation.',
-        },
-        {
-            icon: '/icon4.svg', // Placeholder
-            title: 'Resource and Order Management',
-            description: 'Optimize resource allocation and order fulfillment.',
-        },
-        {
-            icon: '/icon4.svg', // Placeholder
-            title: 'Customer Relationship Management',
-            description: 'Build strong customer relationships and deliver personalized experiences.',
-        },
-        {
-            icon: '/icon1.svg', // Placeholder
-            title: 'End-User Interactions',
-            description: 'Enable seamless communication and support for your subscribers.',
-        },
-        {
-            icon: '/icon2.svg', // Placeholder
-            title: 'Product Catalogue',
-            description: 'Create and manage a diverse range of attractive product offerings.',
-        },
-        // Add more features if needed based on the full image
-    ];
+const features = [
+  {
+    icon: '/icon1.svg',
+    title: 'Scalable Architecture',
+    description:
+      'We design products that grow with you. From early MVPs to platforms serving millions, our builds are engineered for performance and reliability — so you never need to start over.',
+  },
+  {
+    icon: '/icon2.svg',
+    title: 'Seamless Integrations',
+    description:
+      'Your tools should work together, not in silos. We connect with 500+ APIs and platforms to create smooth, automated workflows across your entire business stack.',
+  },
+  {
+    icon: '/icon3.svg',
+    title: 'AI at the Core',
+    description:
+      'Every product we build comes with AI built in. From automation to analytics and personalization, your platform learns, adapts, and delivers smarter results every day.',
+  },
+  {
+    icon: '/icon4.svg',
+    title: 'User-Centric Design',
+    description:
+      'Design isn’t just about looks — it’s about flow. We craft interfaces that feel natural from the first click, keeping users engaged and coming back.',
+  },
+  {
+    icon: '/icon5.svg',
+    title: 'Data-Driven Decisions',
+    description:
+      'We turn raw data into clarity. With dashboards and insights tailored to your goals, you’ll always know where to optimize and how to grow with confidence.',
+  },
+  {
+    icon: '/icon6.svg',
+    title: 'Enterprise-Grade Security',
+    description:
+      'Your business deserves trust at scale. We deliver bank-level protection, compliance support, and secure infrastructure that keeps your growth safe.',
+  },
+];
+
+
+
+
     const gradientText = {
         backgroundImage:
             "linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)",
@@ -51,10 +60,10 @@ export default function PlatformShowcase() {
         <div className={styles.platformSection}>
             <div className={styles.container}>
                 <ScrollReveal>
-                    <p className={styles.tagline}>[ STREAMLINED MVNO OPERATIONS ]</p>
-                    <h1 className={styles.heading} style={gradientText}>Award-Winning OSS/BSS Platform</h1>
+                    <p className={styles.tagline}>[ BUILT FOR IMPACT ]</p>
+                    <h1 className={styles.heading} style={gradientText}>Features That Power Every TripleHash Build</h1>
                     <p className={`${styles.description} description`}>
-                        Streamline your MVNO operations with our comprehensive, cloud-based EMS platform. Access all the essential components for success, including:
+                        Every product we ship comes with the essentials already built in — scalability, automation, integrations, and security. No extra fluff, just the features you actually need to grow.
                     </p>
                 </ScrollReveal>
 
