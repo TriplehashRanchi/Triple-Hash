@@ -17,7 +17,7 @@ export default function HomePage() {
         <Team />
         <CallToAction />
         <TestimonialsSection />
-
+        
       </div>
 
     </>

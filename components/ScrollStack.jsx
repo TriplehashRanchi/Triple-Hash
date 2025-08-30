@@ -20,7 +20,7 @@ export default function StackingCards() {
             whileInView="visible"
             variants={cardVariants('right')}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             className="mb-[50px] w-full rounded-2xl shadow-xl border border-gray-700 [background:radial-gradient(circle_at_top_left,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_top_right,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_bottom_left,rgba(0,200,255,0.4),transparent_2%),radial-gradient(circle_at_bottom_right,rgba(0,200,255,0.4),transparent_10%),#FFF9EF]"
           >
             <div className="flex flex-col-reverse lg:flex-row items-center w-full h-full gap-5 lg:gap-20 p-4 lg:p-14">
@@ -60,7 +60,7 @@ export default function StackingCards() {
             whileInView="visible"
             variants={cardVariants('left')}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ amount: 0.3 }}
             style={{ border: '1px solid hsla(0, 0%, 100%, .16)' }}
             className="relative w-full rounded-2xl shadow-xl bg-[#0e0918]"
           >
