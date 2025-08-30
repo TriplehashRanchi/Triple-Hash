@@ -27,12 +27,10 @@ export default function StackingCards() {
               <div className="w-full lg:w-2/3 flex flex-col gap-6 lg:gap-8 p-4 lg:p-8">
                 <div className="flex flex-col gap-4">
                   <h2 className="text-black headline">
-                    We Don’t Just Build App, We Build Growth Engines
+                   Apps? Nah. <br /> We Build Business Engines.
                   </h2>
                   <p className="lg:w-[100%] text-gray-800 description">
-                    Every feature we design is tied to your business goals — not just technical specs. Our team blends entrepreneurial insight with technical expertise, so what you get isn’t just a product… it’s a system that helps you scale.
-
-                  </p>
+                    Every feature we design is tied to your business goals — not just technical specs. Our team blends entrepreneurial insight with technical expertise, so what you get isn’t just a product… it’s a system that helps you grow. </p>
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="flex gap-2 description"> <strong>We follow a simple, proven framework to bring your vision to life:</strong></p>
@@ -70,29 +68,29 @@ export default function StackingCards() {
               <div className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8 p-0 lg:p-8">
                 <div className="flex flex-col gap-0">
                   <h2 className="headline text-transparent bg-clip-text bg-gradient-to-r from-white to-[#7C7C7C]">
-                    Build. Test. Scale.
+                    Ship. Learn. Repeat.
                   </h2>
                   <p className="description text-gray-300 mt-4">
-                    <strong>Faster Than Ever.</strong> We follow short, iterative feedback loops — so you get results in weeks, not months.
+                    <strong>We don’t just code — </strong> We run rapid feedback loops. That means you get results in weeks, not months, with continuous improvements and smarter scaling.
                   </p>
                 </div>
                 <div className="description text-[#C4BBD3] flex flex-wrap gap-4">
                   <div className="flex gap-8 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
                       <MdCheck fontSize={40} />
-                      <p><strong className="text-white description"> Launch MVPs quickly</strong> without waiting for long dev cycles
+                      <p><strong className="text-white description"> Launch quickly</strong>  on scalable foundations
                         w</p>
                     </div>
                     <div className="flex justify-start gap-2 w-full lg:w-[45%]">
                       <MdCheck fontSize={40} />
-                      <p><strong className="text-white description">Test features live</strong>  with real users and pivot fast
+                      <p><strong className="text-white description">Test live </strong>  wwith real users & pivot fast
                       </p>
                     </div>
                   </div>
                   <div className="flex gap-8 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
                       <MdCheck fontSize={40} />
-                      <p><strong className="text-white description">Continuous improvements </strong>instead of one-off builds</p>
+                      <p><strong className="text-white description">Improve continuously, </strong> not in one-off cycles </p>
                     </div>
                     <div className="flex gap-2 w-full lg:w-[45%]">
                       <MdCheck fontSize={40} />
@@ -101,11 +99,7 @@ export default function StackingCards() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-4">
-                  <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity">
-                    Let's Build Faster
-                  </button>
-                </div>
+               
               </div>
               <div className="w-[90%] lg:w-1/2 p-0 lg:p-8">
                 <img src="/code.webp" alt="Code Preview" className="
