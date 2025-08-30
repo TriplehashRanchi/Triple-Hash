@@ -180,7 +180,7 @@ const IntegrationsSection = () => {
                         }}
                             className="headline bg-clip-text text-transparent  reveal-item block"
                         >
-                            Seamlessly Connect AI &
+                           Integrations So Smooth,
                         </span>
                         <span
                             style={{
@@ -189,7 +189,7 @@ const IntegrationsSection = () => {
                             }}
                             className="headline reveal-item block bg-clip-text text-transparent"
                         >
-                            Automation With Over 500+ Tools.
+                            Even Your Coffee’s Jealous ☕️
                         </span>
                     </h2>
                 </ScrollReveal>
@@ -226,7 +226,7 @@ const IntegrationsSection = () => {
                 {/* CTA Button (No changes here) */}
                 <div className="mt-16">
                     <button className="bg-gradient-to-r cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
-                        Browse all integrations
+                        Supercharge My Business
                     </button>
                 </div>
                 <div className="py-20 sm:py-34  flex flex-col items-center gap-20 ">
@@ -240,7 +240,7 @@ const IntegrationsSection = () => {
                             }}
                                 className="headline bg-clip-text text-transparent   reveal-item block"
                             >
-                                The Fastest Way to Get AI
+                                We Don’t Sell Hype. 
                             </span>
                             <span
                                 style={{
@@ -249,7 +249,7 @@ const IntegrationsSection = () => {
                                 }}
                                 className="reveal-item block bg-clip-text text-transparent"
                             >
-                                Actually Working in Your Business.
+                                We Build AI That Works.
                             </span>
                         </h2>
                     </ScrollReveal>

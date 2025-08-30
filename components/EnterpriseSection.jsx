@@ -30,25 +30,23 @@ const EnterpriseSection = () => {
                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                             WebkitBackgroundClip: 'text',
                         }}
-                        className="headline text-transparent bg-clip-text  mb-6 w-full sm:w-1/2"
+                        className="headline text-transparent bg-clip-text  mb-6 w-full sm:w-3/4"
                     >
-                        Secure. Reliable. Collaborative.
+                        As Safe As Your Bank. As Fast As Your Startup
                     </h2>
 
                     {/* Description Paragraph */}
                     <p className="description text-[#C4BBD3]  mb-8">
-                        Remove inefficiencies across your org by rolling out automation as reliably as
-                        you deploy code. Run n8n air-gapped on your servers or on our secure
-                        cloud-based solution.
+                        We engineer systems that are as secure as they are scalable. Whether you need on-prem deployments or cloud flexibility, TripleHash ensures your apps, automations, and data stay protected while your team collaborates without friction.
                     </p>
 
                     {/* Call-to-Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
                         <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full sm:w-auto">
-                            Explore n8n for enterprise
+                           Explore Enterprise Solutions
                         </button>
                         <button className="bg-transparent border border-[#FFFFFF63] text-white buttonfont px-8 py-2.5 rounded-lg hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto">
-                            Talk to sales
+                            Book a Strategy Call
                         </button>
                     </div>
 
@@ -59,9 +57,7 @@ const EnterpriseSection = () => {
                         </div>
                         <div>
                             <p className="text-[#C4BBD3] description">
-                                Fully on-prem option, SSO SAML, and LDAP,
-                                encrypted secret stores, version control,
-                                advanced RBAC permissions.
+                               Enterprise-grade protection with encrypted stores, SSO, and advanced access controls.
                             </p>
                         </div>
 
@@ -70,9 +66,7 @@ const EnterpriseSection = () => {
                         </div>
                         <div>
                             <p className="text-[#C4BBD3] description">
-                                Audit logs & log streaming to 3rd party,
-                                workflow history, custom variables, external
-                                storage.
+                                Audit logs, workflow history, and external storage options — so nothing slows you down.
                             </p>
                         </div>
 
@@ -81,8 +75,7 @@ const EnterpriseSection = () => {
                         </div>
                         <div>
                             <p className="text-[#C4BBD3] description">
-                                Git Control, isolated environments, multi-user
-                                workflows.
+                                Multi-user workflows, Git control, and isolated environments to keep teams in sync.
                             </p>
                         </div>
                     </div>
@@ -113,24 +106,22 @@ const EnterpriseSection = () => {
                         >
                             {/* Quote */}
                             <p className="text-gray-200 description mb-6 sm:mb-8">
-                                "The idea is that everybody in the
-                                organization can use n8n to manage data
-                                retrieval or data transformation."
+                                "Our mission has always been simple — build products that not only scale businesses, but protect them. Security is table stakes, growth is the real goal."
                             </p>
 
                             {/* Author */}
                             <div className="flex items-center mb-8 sm:mb-12">
                                 <Image src="/picture1.png" alt="Martino Bonfiglioli Avatar" width={48} height={48} className="rounded-full mr-4" />
                                 <div>
-                                    <p className="font-semibold text-base sm:text-[1.1rem] font-raleway">Martino Bonfiglioli</p>
-                                    <p className="text-[#C4BBD3] text-sm font-raleway">Senior Product Manager</p>
+                                    <p className="font-semibold text-base sm:text-[1.1rem] font-raleway">Kunal Kumar</p>
+                                    <p className="text-[#C4BBD3] text-sm font-raleway">Founder, Triplehash</p>
                                 </div>
                             </div>
 
                             {/* Link */}
-                            <a href="#" className="inline-flex items-center text-[#C4BBD3] text-sm font-semibold group font-raleway">
+                            {/* <a href="#" className="inline-flex items-center text-[#C4BBD3] text-sm font-semibold group font-raleway">
                                 See the case <HiArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                            </a>
+                            </a> */}
                         </div>
                     </SpotlightCard>
                 </div>

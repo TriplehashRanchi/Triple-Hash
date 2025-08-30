@@ -6,140 +6,158 @@ import React, { useState, useRef } from 'react';
 import './TestimonialsSection.css'; // Import the CSS file for animation
 
 const testimonials = [
-    {
-        quote: (
-            <>
-                I just have to say, <strong className="text-white">n8n's integration with third-party services is absolutely mind-blowing.</strong> It's like having a Swiss Army knife for automation. So many tasks become a breeze, and I can quickly validate and implement my ideas without any hassle.
-            </>
-        ),
-        author: 'Nanbing',
-        handle: '@1ronben',
-        avatarSrc: '/picture1.png',
-        bgColor: {
-            '--bg-color-1': 'rgba(126,34,206,.3)', // A light blue with 30% opacity
-            '--bg-color-2': 'rgba(38, 33, 73, 0)',   // A dark purple that is fully transparent
-            backgroundColor: '#190918f0',           // The main dark purple/black background of the card
-            // --- Change this line ---
-            backgroundImage: 'radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)',
-            // -------------------------
-            backgroundRepeat: 'no-repeat',
-            boxShadow: 'inset -1px -1px #fff3, inset 1px 1px #fff3',
-            transitionDuration: '.3s',
-            transitionProperty: '--bg-color-1, --bg-color-2',
-        }
-
+  {
+    quote: (
+      <>
+        TripleHash completely transformed our platform.{" "}
+        <strong className="text-white">
+          They built Codingwise’s website and LMS from the ground up
+        </strong>{" "}
+        — smooth, scalable, and loved by our students.
+      </>
+    ),
+    author: "Sagar Chouksey",
+    handle: "Founder, Codingwise",
+    avatarSrc: "/avatars/sagar.png",
+    bgColor: {
+      "--bg-color-1": "rgba(126,34,206,.3)",
+      "--bg-color-2": "rgba(38, 33, 73, 0)",
+      backgroundColor: "#190918f0",
+      backgroundImage:
+        "radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)",
+      backgroundRepeat: "no-repeat",
+      boxShadow: "inset -1px -1px #fff3, inset 1px 1px #fff3",
+      transitionDuration: ".3s",
+      transitionProperty: "--bg-color-1, --bg-color-2",
     },
-    {
-        quote: (
-            <>
-                Found the holy grail of automation yesterday... Yesterday I tried n8n and it blew my mind 🤯 What would've taken me 3 days to code from scratch? Done in 2 hours. The best part? If you still want to get your hands dirty with code (because let's be honest, we developers can't help ourselves &#129322;), you can just drop in custom code nodes. Zero restrictions.
-            </>
-        ),
-        author: 'Francois LaBl',
-        handle: '@francois-laBl',
-        avatarSrc: '/picture2.png',
-        bgColor: {
-            '--bg-color-1': 'rgba(7, 122, 199, 0.3)', // A light blue with 30% opacity
-            '--bg-color-2': 'rgba(38, 33, 73, 0)',   // A dark purple that is fully transparent
-            backgroundColor: '#190918f0',           // The main dark purple/black background of the card
-            // --- Change this line ---
-            backgroundImage: 'radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)',
-            // -------------------------
-            backgroundRepeat: 'no-repeat',
-            boxShadow: 'inset -1px -1px #fff3, inset 1px 1px #fff3',
-            transitionDuration: '.3s',
-            transitionProperty: '--bg-color-1, --bg-color-2',
-        }
+  },
+  {
+    quote: (
+      <>
+        We wanted a powerful PMS for wedding photographers,{" "}
+        <strong className="text-white">
+          and TripleHash delivered with FirstHash
+        </strong>
+        . Exactly what we needed — practical, fast, and scalable.
+      </>
+    ),
+    author: "Abdullah Ansari",
+    handle: "Founder, Marketizers & Owner FirstHash",
+    avatarSrc: "/avatars/abdullah.png",
+    bgColor: {
+      "--bg-color-1": "rgba(7, 122, 199, 0.3)",
+      "--bg-color-2": "rgba(38, 33, 73, 0)",
+      backgroundColor: "#190918f0",
+      backgroundImage:
+        "radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)",
+      backgroundRepeat: "no-repeat",
+      boxShadow: "inset -1px -1px #fff3, inset 1px 1px #fff3",
+      transitionDuration: ".3s",
+      transitionProperty: "--bg-color-1, --bg-color-2",
     },
-    {
-        quote: (
-            <>
-                <strong className="text-white">  Anything is possible with n8n.</strong> These guys are doing amazing work and are very open. The entire project is available to look at on GitHub.
-            </>
-        ),
-        author: 'Jodie M',
-        handle: '@jodiem',
-        avatarSrc: '/picture1.png',
-        bgColor: {
-            '--bg-color-1': 'rgba(126,34,206,.3)', // A light blue with 30% opacity
-            '--bg-color-2': 'rgba(38, 33, 73, 0)',   // A dark purple that is fully transparent
-            backgroundColor: '#190918f0',           // The main dark purple/black background of the card
-            // --- Change this line ---
-            backgroundImage: 'radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)',
-            // -------------------------
-            backgroundRepeat: 'no-repeat',
-            boxShadow: 'inset -1px -1px #fff3, inset 1px 1px #fff3',
-            transitionDuration: '.3s',
-            transitionProperty: '--bg-color-1, --bg-color-2',
-        }
+  },
+  {
+    quote: (
+      <>
+        With{" "}
+        <strong className="text-white">
+          DG Saarthi CRM built by TripleHash
+        </strong>
+        , we now handle WhatsApp & FB leads seamlessly. It’s an absolute game-changer for Digital Gyani.
+      </>
+    ),
+    author: "Amit Sharma",
+    handle: "Co-founder, Digital Gyani",
+    avatarSrc: "/avatars/amit.png",
+    bgColor: {
+      "--bg-color-1": "rgba(126,34,206,.3)",
+      "--bg-color-2": "rgba(38, 33, 73, 0)",
+      backgroundColor: "#190918f0",
+      backgroundImage:
+        "radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)",
+      backgroundRepeat: "no-repeat",
+      boxShadow: "inset -1px -1px #fff3, inset 1px 1px #fff3",
+      transitionDuration: ".3s",
+      transitionProperty: "--bg-color-1, --bg-color-2",
     },
-    {
-        quote: (
-            <>
-                <strong className="text-white">n8n is an incredibly powerful workflow automation tool. </strong> It's flexible, open-source, and constantly evolving with new features and integrations. Highly recommend it!
-            </>
-        ),
-        author: 'Alex P',
-        handle: '@alex_p',
-        avatarSrc: '/picture2.png',
-        bgColor: {
-            '--bg-color-1': 'rgba(7, 122, 199, 0.3)', // A light blue with 30% opacity
-            '--bg-color-2': 'rgba(38, 33, 73, 0)',   // A dark purple that is fully transparent
-            backgroundColor: '#190918f0',           // The main dark purple/black background of the card
-            // --- Change this line ---
-            backgroundImage: 'radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)',
-            // -------------------------
-            backgroundRepeat: 'no-repeat',
-            boxShadow: 'inset -1px -1px #fff3, inset 1px 1px #fff3',
-            transitionDuration: '.3s',
-            transitionProperty: '--bg-color-1, --bg-color-2',
-        }
+  },
+  {
+    quote: (
+      <>
+        TripleHash built{" "}
+        <strong className="text-white">
+          our entire internal management system at Finask Value
+        </strong>
+        . It’s the backbone of our operations today.
+      </>
+    ),
+    author: "Palash Malik",
+    handle: "Founder, Finask Value",
+    avatarSrc: "/avatars/palash.png",
+    bgColor: {
+      "--bg-color-1": "rgba(7, 122, 199, 0.3)",
+      "--bg-color-2": "rgba(38, 33, 73, 0)",
+      backgroundColor: "#190918f0",
+      backgroundImage:
+        "radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)",
+      backgroundRepeat: "no-repeat",
+      boxShadow: "inset -1px -1px #fff3, inset 1px 1px #fff3",
+      transitionDuration: ".3s",
+      transitionProperty: "--bg-color-1, --bg-color-2",
     },
-    {
-        quote: (
-            <>
-                The community around n8n is fantastic. <strong className="text-white">I've always found quick help and great insights whenever I've needed them.</strong> A true testament to open-source power!
-            </>
-        ),
-        author: 'Maria S',
-        handle: '@maria_s',
-        avatarSrc: '/picture1.png',
-        bgColor: {
-            '--bg-color-1': 'rgba(126,34,206,.3)', // A light blue with 30% opacity
-            '--bg-color-2': 'rgba(38, 33, 73, 0)',   // A dark purple that is fully transparent
-            backgroundColor: '#190918f0',           // The main dark purple/black background of the card
-            // --- Change this line ---
-            backgroundImage: 'radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)',
-            // -------------------------
-            backgroundRepeat: 'no-repeat',
-            boxShadow: 'inset -1px -1px #fff3, inset 1px 1px #fff3',
-            transitionDuration: '.3s',
-            transitionProperty: '--bg-color-1, --bg-color-2',
-        }
+  },
+  {
+    quote: (
+      <>
+        Our LMS and{" "}
+        <strong className="text-white">
+          AI-powered interview tools for Kalam IAS Academy
+        </strong>{" "}
+        were all built by TripleHash. It’s helping us train the next generation of civil servants.
+      </>
+    ),
+    author: "Kalam IAS Academy",
+    handle: "Management Team",
+    avatarSrc: "/avatars/kalam.png",
+    bgColor: {
+      "--bg-color-1": "rgba(126,34,206,.3)",
+      "--bg-color-2": "rgba(38, 33, 73, 0)",
+      backgroundColor: "#190918f0",
+      backgroundImage:
+        "radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)",
+      backgroundRepeat: "no-repeat",
+      boxShadow: "inset -1px -1px #fff3, inset 1px 1px #fff3",
+      transitionDuration: ".3s",
+      transitionProperty: "--bg-color-1, --bg-color-2",
     },
-    {
-        quote: (
-            <>
-                Honestly, n8n has saved me countless hours. Before,   <strong className="text-white">I was manually moving data between apps.</strong> Now, it's all automated. Pure magic! ✨
-            </>
-        ),
-        author: 'Ben T',
-        handle: '@ben_t',
-        avatarSrc: '/picture1.png',
-        bgColor: {
-            '--bg-color-1': 'rgba(7, 122, 199, 0.3)', // A light blue with 30% opacity
-            '--bg-color-2': 'rgba(38, 33, 73, 0)',   // A dark purple that is fully transparent
-            backgroundColor: '#190918f0',           // The main dark purple/black background of the card
-            // --- Change this line ---
-            backgroundImage: 'radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)',
-            // -------------------------
-            backgroundRepeat: 'no-repeat',
-            boxShadow: 'inset -1px -1px #fff3, inset 1px 1px #fff3',
-            transitionDuration: '.3s',
-            transitionProperty: '--bg-color-1, --bg-color-2',
-        }
+  },
+  {
+    quote: (
+      <>
+        TripleHash built{" "}
+        <strong className="text-white">
+          PrepX — our AI-powered resume analyzer & LinkedIn optimizer
+        </strong>
+        . The speed, quality, and innovation blew us away.
+      </>
+    ),
+    author: "Deepak Goyal",
+    handle: "Founder, Azurelib",
+    avatarSrc: "/avatars/deepak.png",
+    bgColor: {
+      "--bg-color-1": "rgba(7, 122, 199, 0.3)",
+      "--bg-color-2": "rgba(38, 33, 73, 0)",
+      backgroundColor: "#190918f0",
+      backgroundImage:
+        "radial-gradient(ellipse at 50% 100%, var(--bg-color-1), var(--bg-color-2) 70%)",
+      backgroundRepeat: "no-repeat",
+      boxShadow: "inset -1px -1px #fff3, inset 1px 1px #fff3",
+      transitionDuration: ".3s",
+      transitionProperty: "--bg-color-1, --bg-color-2",
     },
+  },
 ];
+
 
 const TestimonialCard = ({ quote, author, handle, avatarSrc, bgColor }) => {
     return (
