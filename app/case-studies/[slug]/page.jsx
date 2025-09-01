@@ -4,9 +4,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SpotlightCard2 from "../../../components/ReactBit/SpotlightCard2";
- import { caseStudiesData } from "../data";
+import { caseStudiesData } from "../data";
 
-const BackButton = ({ href = "/#case-studies", children = "Back to Case Studies" }) => (
+const BackButton = ({ href = "/case-studies", children = "Back to Case Studies" }) => (
   <Link href={href} passHref>
     <span className="inline-flex items-center description text-[#C4BBD3] mb-8 cursor-pointer">
       <svg
@@ -52,7 +52,7 @@ const CaseStudyDetailPage = ({ params }) => {
   return (
     <div className="min-h-screen bg-[#0D0816] text-white py-16">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8 mb-16 mt-32 flex flex-col items-center gap-30">
-        
+
         {/* Headline */}
         <div className="relative w-full flex justify-center mb-12">
           <h1
@@ -65,7 +65,7 @@ const CaseStudyDetailPage = ({ params }) => {
           />
 
           <div
-            className="absolute -bottom-80 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] lg:w-[1000px] h-[600px] sm:h-[800px] lg:h-[1000px] rounded-full blur-[120px] opacity-60"
+            className="absolute -bottom-80 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] lg:w-[1000px] h-[600px] sm:h-[800px] lg:h-[1000px] rounded-full blur-[120px] opacity-60 pointer-events-none z-0 "
             style={{
               background: "radial-gradient(ellipse at center, #611610, #2E0D32 100%)",
             }}
@@ -73,7 +73,7 @@ const CaseStudyDetailPage = ({ params }) => {
         </div>
 
         {/* Content Layout */}
-        <div className="flex flex-col lg:flex-row justify-center gap-12 w-full">
+        <div className="flex flex-col lg:flex-row justify-center gap-12 w-full z-10 ">
           {/* LEFT COLUMN */}
           <aside className="w-full lg:w-[30%]">
             <BackButton />

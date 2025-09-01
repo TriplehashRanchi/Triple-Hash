@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import SpotlightCard from './ReactBit/SpotlightCard';
 import Link from 'next/link';
- // 👈 adjust path
- import { caseStudiesData } from '../app/case-studies/data'; // Adjust path as necessary
+// 👈 adjust path
+import { caseStudiesData } from '../app/case-studies/data'; // Adjust path as necessary
 
 
 const CaseStudy = () => {
@@ -33,7 +33,7 @@ const CaseStudy = () => {
 
         {/* Cards */}
         <div className="flex flex-col lg:flex-row gap-6 justify-center w-full mt-16 flex-wrap">
-          {caseStudiesData.map((study, i) => (
+          {caseStudiesData.slice(0, 2).map((study, i) => (
             <SpotlightCard
               key={i}
               className="custom-spotlight-card w-full max-w-[560px]"
@@ -97,6 +97,13 @@ const CaseStudy = () => {
               </div>
             </SpotlightCard>
           ))}
+        </div>
+        <div className="mt-16">
+          <Link href="/case-studies" passHref>
+            <button className="cursor-pointer buttonfont w-full sm:w-auto border border-[#FFFFFF63] bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white   px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+              View All Case Studies
+            </button>
+          </Link>
         </div>
       </div>
     </div>

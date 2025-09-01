@@ -3,7 +3,8 @@ import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import ScrollBar from "@/components/ScrollBar";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import ScrollBar from "@/components/ScrollBar/ScrollBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <ScrollBar />
         <Navbar />
         {children}
+        <ScrollToTop />
         <Footer />
       </body>
     </html>

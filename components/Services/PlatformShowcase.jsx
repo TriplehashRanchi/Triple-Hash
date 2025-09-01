@@ -32,13 +32,13 @@ const features = [
       'Design isn’t just about looks — it’s about flow. We craft interfaces that feel natural from the first click, keeping users engaged and coming back.',
   },
   {
-    icon: '/icon5.svg',
+    icon: '/icon2.svg',
     title: 'Data-Driven Decisions',
     description:
       'We turn raw data into clarity. With dashboards and insights tailored to your goals, you’ll always know where to optimize and how to grow with confidence.',
   },
   {
-    icon: '/icon6.svg',
+    icon: '/icon4.svg',
     title: 'Enterprise-Grade Security',
     description:
       'Your business deserves trust at scale. We deliver bank-level protection, compliance support, and secure infrastructure that keeps your growth safe.',

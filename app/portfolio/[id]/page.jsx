@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaChevronLeft, FaExternalLinkAlt } from "react-icons/fa";
 
-// Import your centralized projects data
-import { projects } from "../projects"; // Adjust path if your `data` folder is elsewhere, e.g., "../../data/projects"
+ import { projects } from "../projects"; // Adjust path if your `data` folder is elsewhere, e.g., "../../data/projects"
 
 export default function ProjectDetailPage({ params }) {
     const projectId = parseInt(params.id); // Get the ID from the URL parameters
