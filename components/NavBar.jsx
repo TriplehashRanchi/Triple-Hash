@@ -11,7 +11,7 @@ const navItems = [
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Services ', href: '/services' },
     { label: 'Team', href: '/team' },
-    { label: 'Blog', href: '/blog' },
+    { label: 'Blog', href: '/case-studies' },
 ];
 
 // --- Main Navbar Component ---

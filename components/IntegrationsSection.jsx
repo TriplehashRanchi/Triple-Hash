@@ -254,7 +254,7 @@ const IntegrationsSection = () => {
                         </h2>
                     </ScrollReveal>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-2 gap-6 md:gap-2 w-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-2 gap-6 md:gap-2 w-full ">
                         {/* Card 1: Build multi-step agents (Left side, spanning both rows) */}
                         <SpotlightCard
                             className="custom-spotlight-card"
