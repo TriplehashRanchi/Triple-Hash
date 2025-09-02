@@ -48,10 +48,9 @@ const ProfileCardComponent = ({
   name = "Javi A. Torres",
   title = "Software Engineer",
   handle = "javicodes",
-  status = "Online",
-  contactText = "Contact",
+   contactText = "Contact",
   showUserInfo = true,
-  onContactClick,
+  onContactClick = "",
 }) => {
   const wrapRef = useRef(null);
   const cardRef = useRef(null);
@@ -272,15 +271,20 @@ const ProfileCardComponent = ({
     ({
       "--icon": iconUrl ? `url(${iconUrl})` : "none",
       "--grain": grainUrl ? `url(${grainUrl})` : "none",
-   
+
       "--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
     }),
     [iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient]
   );
 
   const handleContactClick = useCallback(() => {
-    onContactClick?.();
+    if (typeof onContactClick === "function") {
+      onContactClick();
+    } else if (typeof onContactClick === "string" && onContactClick.startsWith("http")) {
+      window.open(onContactClick, "_blank");
+    }
   }, [onContactClick]);
+
 
   return (
     <div
@@ -320,7 +324,7 @@ const ProfileCardComponent = ({
                   </div>
                   <div className="pc-user-text">
                     <div className="pc-handle">@{handle}</div>
-                    <div className="pc-status">{status}</div>
+                  
                   </div>
                 </div>
                 <button

@@ -75,7 +75,7 @@ export default function ServicesHero() {
                     <div className={styles.isImage}>
                         <div className={styles.imageWrapper} ref={imageRef}>
                             <img
-                                src="/service1.avif"
+                                src="/service.jpeg"
                                 alt="Effortel Services"
                             />
                         </div>

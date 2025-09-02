@@ -2,50 +2,76 @@
 
 import React, { useLayoutEffect, useRef } from 'react';
 import ProfileCard from '../ReactBit/ProfileCard';
- 
+
 import ScrollReveal from "../Gsap/ScrollReveal";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Javi A. Torres",
-      title: "Software Engineer",
-      handle: "javicodes",
-      status: "Online",
+      name: "Kunal Kumar",
+      title: "Founder",
+      handle: "ceo",
       contactText: "Contact Me",
-      avatarUrl: "/Team/team1.png",
+      avatarUrl: "/Team/kunal-sir.png",
+      miniAvatarUrl: "/Team/kunal-sir-icon.jpeg",
+      onContactClick: "https://www.linkedin.com/in/buildwithkunal/",
     },
+
     {
-      name: "Javi A. Torres",
-      title: "Software Engineer",
-      handle: "javicodes",
-      status: "Online",
+      name: "Vishal Kumar",
+      title: "Video Editor",
+      handle: "vishal",
       contactText: "Contact Me",
-      avatarUrl: "/Team/team5.png",
+      avatarUrl: "/Team/Vishalkumar.png",
+      miniAvatarUrl: "/Team/Vishalkumar.png",
+      onContactClick: "https://www.linkedin.com/in/buildwithkunal/",
     },
     {
-      name: "Aarav Mehta",
-      title: "Product Designer",
-      handle: "aarav.designs",
-      status: "Online",
-      contactText: "Connect",
-      avatarUrl: "/Team/Team3.png",
+      name: "Kunal Kumar",
+      title: " Full Stack Developer",
+      handle: "kunal",
+      contactText: "Contact Me",
+      avatarUrl: "/Team/kunal.png",
+      miniAvatarUrl: "/Team/kunal.png",
+      onContactClick: "https://www.linkedin.com/in/champ18ionx/",
+    },
+
+    {
+      name: "Dhiraj Giri",
+      title: "Senior WordPress Developer",
+      handle: "dhiraj",
+      contactText: "Connect Me",
+      avatarUrl: "/Team/dheeraj-sir.png",
+      miniAvatarUrl: "/Team/dheeraj-sir.png",
+      onContactClick: "https://www.linkedin.com/in/dhiraj-giri-717a3532b/",
     },
     {
-      name: "Sanya Kapoor",
-      title: "Frontend Developer",
-      handle: "sanyakapoor",
-      status: "Busy",
-      contactText: "Message",
-      avatarUrl: "/Team/team6.png",
+      name: "Aman Kumar",
+      title: "WordPress Developer",
+      handle: "aman",
+      contactText: "Connect Me",
+      avatarUrl: "/Team/Aman.png",
+      miniAvatarUrl: "/Team/Aman.png",
+      onContactClick: "https://www.linkedin.com/in/aman-nayak-31399737b/",
     },
     {
-      name: "Rohan Verma",
-      title: "Backend Engineer",
-      handle: "rohan.codes",
-      status: "Offline",
-      contactText: "Ping Me",
-      avatarUrl: "/Team/Team5.png",
+      name: "Gautam Kr. Pandit",
+      title: "Full Stack Developer",
+      handle: "gautam",
+      contactText: "Connect Me",
+      avatarUrl: "/Team/gautam.png",
+      miniAvatarUrl: "/Team/gautam.png",
+      onContactClick: "https://www.linkedin.com/in/gautam-pandit-4b185224b/",
     },
+    {
+      name: "Sagar Kumar",
+      title: "Full Stack Developer",
+      handle: "sagar",
+      contactText: "Contact Me",
+      avatarUrl: "/Team/sagar1.png",
+      miniAvatarUrl: "/Team/sagar-icon.jpg",
+      onContactClick: "https://www.linkedin.com/in/sagar-kumar-ab452b276/",
+    },
+
   ];
 
 
@@ -63,7 +89,7 @@ const Team = () => {
               backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
               WebkitBackgroundClip: "text",
             }} className="bg-clip-text text-transparent  headline text-center mb-4">
-              The People
+              Talent. Passion. Innovation.
             </span>
             <span
               style={{
@@ -72,7 +98,7 @@ const Team = () => {
               }}
               className="reveal-item headline block bg-clip-text text-transparent"
             >
-              Behind Our Vision
+              That’s our team
             </span>
           </h2>
         </ScrollReveal>
@@ -92,13 +118,13 @@ const Team = () => {
                 name={member.name}
                 title={member.title}
                 handle={member.handle}
-                status={member.status}
                 contactText={member.contactText}
                 avatarUrl={member.avatarUrl}
+                miniAvatarUrl={member.miniAvatarUrl}
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
-                onContactClick={() => console.log('Contact clicked')}
+                onContactClick={member.onContactClick}
               />
             </div>
           ))}

@@ -18,7 +18,7 @@ const testimonials = [
     ),
     author: "Sagar Chouksey",
     handle: "Founder, Codingwise",
-    avatarSrc: "/avatars/sagar.png",
+    avatarSrc: "/Testimonials/sagar-codingwise.png",
     bgColor: {
       "--bg-color-1": "rgba(126,34,206,.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -43,7 +43,7 @@ const testimonials = [
     ),
     author: "Abdullah Ansari",
     handle: "Founder, Marketizers & Owner FirstHash",
-    avatarSrc: "/avatars/abdullah.png",
+    avatarSrc: "/Testimonials/abdullah.jpg",
     bgColor: {
       "--bg-color-1": "rgba(7, 122, 199, 0.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -68,7 +68,7 @@ const testimonials = [
     ),
     author: "Amit Sharma",
     handle: "Co-founder, Digital Gyani",
-    avatarSrc: "/avatars/amit.png",
+    avatarSrc: "/Testimonials/amit.jpeg",
     bgColor: {
       "--bg-color-1": "rgba(126,34,206,.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -93,7 +93,7 @@ const testimonials = [
     ),
     author: "Palash Malik",
     handle: "Founder, Finask Value",
-    avatarSrc: "/avatars/palash.png",
+    avatarSrc: "/Testimonials/palash.jpeg",
     bgColor: {
       "--bg-color-1": "rgba(7, 122, 199, 0.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -118,7 +118,7 @@ const testimonials = [
     ),
     author: "Kalam IAS Academy",
     handle: "Management Team",
-    avatarSrc: "/avatars/kalam.png",
+    avatarSrc: "/Testimonials/kalam.png",
     bgColor: {
       "--bg-color-1": "rgba(126,34,206,.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -143,7 +143,7 @@ const testimonials = [
     ),
     author: "Deepak Goyal",
     handle: "Founder, Azurelib",
-    avatarSrc: "/avatars/deepak.png",
+    avatarSrc: "/Testimonials/deepak.jpeg",
     bgColor: {
       "--bg-color-1": "rgba(7, 122, 199, 0.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",

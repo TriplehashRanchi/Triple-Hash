@@ -85,8 +85,8 @@ const EnterpriseSection = () => {
                     {/* Compliance Logos */}
                     <div className="flex flex-wrap items-center gap-4 sm:gap-6">
                         <Image src="/legal.png" alt="AICPA SOC Logo" width={80} height={80} />
-                        <Image src="/legal.png" alt="GDPR Compliant Logo" width={80} height={80} />
-                        <Image src="/legal.png" alt="Compliance Shield Star" width={80} height={80} />
+                        <Image src="/legal1.svg" alt="GDPR Compliant Logo" width={80} height={80} />
+                        <Image src="/legal2.png" alt="Compliance Shield Star" width={80} height={80} />
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@ const EnterpriseSection = () => {
 
                             {/* Author */}
                             <div className="flex items-center mb-8 sm:mb-12">
-                                <Image src="/picture1.png" alt="Martino Bonfiglioli Avatar" width={48} height={48} className="rounded-full mr-4" />
+                                <Image src="/Team/kunal-sir.jpeg" alt="Kunal Kumar Avatar" width={48} height={48} className="rounded-full mr-4" />
                                 <div>
                                     <p className="font-semibold text-base sm:text-[1.1rem] font-raleway">Kunal Kumar</p>
                                     <p className="text-[#C4BBD3] text-sm font-raleway">Founder, Triplehash</p>
@@ -119,9 +119,9 @@ const EnterpriseSection = () => {
                             </div>
 
                             {/* Link */}
-                            {/* <a href="#" className="inline-flex items-center text-[#C4BBD3] text-sm font-semibold group font-raleway">
+                            <a href="/case-studies/kunal-kumar" className="inline-flex items-center text-[#C4BBD3] text-sm font-semibold group font-raleway">
                                 See the case <HiArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                            </a> */}
+                            </a>
                         </div>
                     </SpotlightCard>
                 </div>

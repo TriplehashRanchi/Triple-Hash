@@ -62,34 +62,34 @@ export default function PortfolioProjects() {
             <div className="relative max-w-[1360px] mx-auto px-4 lg:px-8">
                 <div className="py-20">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
-  <ScrollReveal>
-    <h1
-      style={{
-        backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
-        WebkitBackgroundClip: "text",
-      }}
-      className="bg-clip-text text-transparent text-5xl sm:text-8xl font-black leading-none"
-    >
-      WORK
-    </h1>
-    <p
-      style={{
-        backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
-        WebkitBackgroundClip: "text",
-      }}
-      className="text-lg sm:text-2xl bg-clip-text text-transparent font-light tracking-[0.2em] mt-2"
-    >
-      PORTFOLIO MAGAZINE
-    </p>
-  </ScrollReveal>
+                        <ScrollReveal>
+                            <h1
+                                style={{
+                                    backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
+                                    WebkitBackgroundClip: "text",
+                                }}
+                                className="bg-clip-text text-transparent text-5xl sm:text-8xl font-black leading-none"
+                            >
+                                WORK
+                            </h1>
+                            <p
+                                style={{
+                                    backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                                    WebkitBackgroundClip: "text",
+                                }}
+                                className="text-lg sm:text-2xl bg-clip-text text-transparent font-light tracking-[0.2em] mt-2"
+                            >
+                                PORTFOLIO MAGAZINE
+                            </p>
+                        </ScrollReveal>
 
-  <ScrollReveal>
-    <div className="text-left sm:text-right text-gray-400 mt-4 sm:mt-0">
-      <p className="text-sm">ISSUE #01</p>
-      <p className="text-sm">2024 EDITION</p>
-    </div>
-  </ScrollReveal>
-</div>
+                        <ScrollReveal>
+                            <div className="text-left sm:text-right text-gray-400 mt-4 sm:mt-0">
+                                <p className="text-sm">ISSUE #01</p>
+                                <p className="text-sm">2024 EDITION</p>
+                            </div>
+                        </ScrollReveal>
+                    </div>
 
 
                     <div className="h-px bg-gradient-to-r from-orange-500 via-white/20 to-transparent" />

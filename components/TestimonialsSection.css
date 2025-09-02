@@ -1,15 +1,10 @@
-/* src/components/TestimonialsSection.css */
-
-/* Keyframes for the scrolling animation */
+ 
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);
   }
   100% {
-    /* Translate by the width of one full set of original testimonials.
-       Since we duplicated the testimonials 3 times, we need to scroll by 1/3 of the total width
-       of the `w-max` container. This creates a seamless loop.
-    */
+    
     transform: translateX(-33.3333%);
   }
 }

@@ -74,7 +74,8 @@
   transform: translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg);
   background-size: 100% 100%;
   background-position: 0 0, 0 0, 50% 50%, 0 0;
-  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 90%, var(--card-opacity)) 4%, hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaac4 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ffff 0%, #07c6ffff 40%, #07c6ffff 60%, #c137ffff 100%);
+   background-image: linear-gradient(hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0.26));
+  /* background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 90%, var(--card-opacity)) 4%, hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaac4 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ffff 0%, #07c6ffff 40%, #07c6ffff 60%, #c137ffff 100%); */
   overflow: hidden;
 }
 
@@ -252,9 +253,9 @@
 }
 
 .pc-handle {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
   line-height: 1;
 }
 
@@ -298,6 +299,7 @@
   top: 3em;
   display: flex;
   flex-direction: column;
+  gap: 0.3rem;
 }
 
 .pc-details h3 {
@@ -382,7 +384,7 @@
   }
 
   .pc-handle {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .pc-status {
@@ -432,7 +434,7 @@
   }
 
   .pc-handle {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .pc-status {
@@ -475,7 +477,7 @@
   }
 
   .pc-handle {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .pc-status {

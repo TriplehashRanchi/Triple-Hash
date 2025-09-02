@@ -32,55 +32,45 @@ export default function EnhancedHero() {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20    ">
                     {/* Left Content */}
                     <div className="space-y-10 text-center lg:text-left order-2 lg:order-1 my-0 sm:my-0 lg:my-40">
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                             <ScrollReveal>
-                                <h1>
-                                    <span
-                                        className="heading reveal-item block z-2 leading-tight text-transparent bg-clip-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
-                                        style={{
-                                            backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
-                                            WebkitBackgroundClip: "text",
-                                        }}
-                                    >
-                                        Have an Idea?
-                                    </span>
-                                    <span
-                                        className="heading reveal-item block bg-clip-text text-transparent font-semibold text-xl sm:text-2xl md:text-3xl lg:text-5xl"
-                                        style={{
-                                            backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
-                                            WebkitBackgroundClip: "text",
-                                        }}
-                                    >
-                                        Let’s Engineer It Into Reality !
-                                    </span>
-                                </h1>
-                            </ScrollReveal>
 
-                            <p className="mt-6 description z-2 text-sm sm:text-base md:text-md text-[#C4BBD3] max-w-md sm:max-w-lg mx-auto lg:mx-0">
-                                We help founders turn raw ideas into high-performing web & mobile apps —
-                                with full-stack development, AI integration, and scalable architecture
-                                built for long-term&nbsp;growth.
+                                <span
+                                    className=" reveal-item block bg-clip-text text-transparent text-4xl sm:text-[50px] md:text-[50px] lg:text-[64px] leading-tight sm:leading-[55px] md:leading-[70px] font-bold sm:font-[700]"
+                                    style={{
+                                        backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                                        WebkitBackgroundClip: "text",
+                                    }}
+                                >
+                                    The Team That Builds the Future !
+
+                                </span>
+
+                            </ScrollReveal>
+                            <p className="text-[#E0D9F1] text-md sm:text-xl md:text-2xl font-medium">
+                                The minds, the passion, the energy that power our journey.
                             </p>
+
                         </div>
 
                         {/* CTA Buttons */}
                         <div className="mt-6 sm:mt-8 flex z-2 flex-col sm:flex-row justify-center sm:justify-center md:justify-start sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
                             <button className="cursor-pointer w-full sm:w-auto border border-[#FFFFFF63] buttonfont bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
-                                Get started for Free
+                                Get to Know Us
                             </button>
 
                             <button className="cursor-pointer w-full sm:w-auto buttonfont bg-transparent border border-[#FFFFFF63] text-gray-200 text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
-                                Talk to Sales
+                                Join the Team
                             </button>
                         </div>
-
+                        <div className="h-px hidden sm:block bg-gradient-to-r from-orange-500 via-white/20 to-transparent" />
                         {/* Stats Section */}
-                        <div className="pt-10 border-t border-border">
+                        <div >
                             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-6 sm:gap-8 text-white">
                                 {[
+                                    { value: "05+", label: "Experience" },
+                                    { value: "150+", label: "Clients" },
                                     { value: "99.9%", label: "Uptime" },
-                                    { value: "10k+", label: "Active Users" },
-                                    { value: "24/7", label: "Support" },
                                 ].map((stat, i) => (
                                     <div
                                         key={i}
@@ -183,8 +173,8 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
         "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg",
     )
 
-    const frontTexture = useLoader(THREE.TextureLoader, "/Sagar.png")
-    const backTexture = useLoader(THREE.TextureLoader, "/logo.png")
+    const frontTexture = useLoader(THREE.TextureLoader, "/logotriple.png")
+    const backTexture = useLoader(THREE.TextureLoader, "/Team/kunal-sir-icon.jpeg")
 
     const { width, height } = useThree((state) => state.size)
     const [curve] = useState(
@@ -241,7 +231,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     curve.curveType = "chordal"
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping
 
-    const planeWidth = 1.6 / 2.25 // Approximately 0.7111
+    const planeWidth = 1.6 / 2.25  
     const planeHeight = 1
 
     return (
@@ -264,7 +254,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                     <group scale={2.25} position={[0, -1.2, -0.05]}>
                         {/* FRONT SIDE of the card (using planeGeometry with custom image) */}
                         <mesh
-                            position={[0, 0.44, 0.001]}
+                            position={[0, 0.45, 0.001]}
                             onPointerOver={() => hover(true)}
                             onPointerOut={() => hover(false)}
                             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
@@ -287,7 +277,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                         </mesh>
 
                         {/* BACK SIDE of the card (using planeGeometry with custom image, rotated) */}
-                        <mesh position={[0, 0.47, 0.001]} rotation={[0, Math.PI, 0]}>
+                        <mesh position={[0, 0.45, 0.001]} rotation={[0, Math.PI, 0]}>
                             {/* Using planeGeometry for perfect UV mapping */}
                             <planeGeometry args={[planeWidth, planeHeight]} />
                             <meshPhysicalMaterial

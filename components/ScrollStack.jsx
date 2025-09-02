@@ -40,8 +40,8 @@ export default function StackingCards() {
                 </div>
               </div>
               <div className="w-full lg:w-1/2 p-4 lg:pr-8">
-                <img src="/code.webp" alt="Code Preview" className="
-                  border-[3px] border-black object-contain
+                <img src="/service.jpeg" alt="Code Preview" className="
+                   object-contain
                   p-[2px] rounded-[16px] 
                   origin-center 
                   lg:[transform:perspective(1000px)_rotateY(-20deg)]
@@ -103,7 +103,7 @@ export default function StackingCards() {
               </div>
               <div className="w-[90%] lg:w-1/2 p-0 lg:p-8">
                 <img src="/code.webp" alt="Code Preview" className="
-                  border-[3px] border-white object-contain
+                  object-contain
                   p-[2px] rounded-[16px] 
                   origin-center 
                   lg:[transform:perspective(1000px)_rotateY(10deg)]
