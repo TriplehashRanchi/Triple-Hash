@@ -4,7 +4,7 @@ import Image from 'next/image';
 import SpotlightCard from '../../components/ReactBit/SpotlightCard';
 import Link from 'next/link';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
+import CallToAction from '../../components/CallToAction';
 import { caseStudiesData } from './data'; // Adjust path as necessary
 import TestimonialsSection from '../../components/TestimonialsSection'
 import ScrollReveal from "../../components/Gsap/ScrollReveal";
@@ -176,6 +176,7 @@ const CaseStudy = () => {
 
                 </div>
             </div>
+            <CallToAction />
             <TestimonialsSection />
         </>
     );

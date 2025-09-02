@@ -42,10 +42,10 @@ const EnterpriseSection = () => {
 
                     {/* Call-to-Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                        <button className="bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full sm:w-auto">
+                        <button className="cursor-pointer bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full sm:w-auto">
                            Explore Enterprise Solutions
                         </button>
-                        <button className="bg-transparent border border-[#FFFFFF63] text-white buttonfont px-8 py-2.5 rounded-lg hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto">
+                        <button className="cursor-pointer bg-transparent border border-[#FFFFFF63] text-white buttonfont px-8 py-2.5 rounded-lg hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto">
                             Book a Strategy Call
                         </button>
                     </div>
