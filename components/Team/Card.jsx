@@ -170,10 +170,10 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     )
 
     const texture = useTexture(
-        "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/SOT1hmCesOHxEYxL7vkoZ/c57b29c85912047c414311723320c16b/band.jpg",
+        "/Team/band2.png",
     )
 
-    const frontTexture = useLoader(THREE.TextureLoader, "/logotriple.png")
+    const frontTexture = useLoader(THREE.TextureLoader, "/id.png")
     const backTexture = useLoader(THREE.TextureLoader, "/Team/kunal-sir-icon.jpeg")
 
     const { width, height } = useThree((state) => state.size)
@@ -254,7 +254,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
                     <group scale={2.25} position={[0, -1.2, -0.05]}>
                         {/* FRONT SIDE of the card (using planeGeometry with custom image) */}
                         <mesh
-                            position={[0, 0.45, 0.001]}
+                            position={[0, 0.49, 0.001]}
                             onPointerOver={() => hover(true)}
                             onPointerOut={() => hover(false)}
                             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
