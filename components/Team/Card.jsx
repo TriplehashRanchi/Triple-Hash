@@ -47,7 +47,7 @@ export default function EnhancedHero() {
                                 </span>
 
                             </ScrollReveal>
-                            <p className="text-[#E0D9F1] text-md sm:text-xl md:text-2xl font-medium">
+                            <p className="text-[#E0D9F1] text-md sm:text-xl md:text-2xl font-medium ">
                                 The minds, the passion, the energy that power our journey.
                             </p>
 

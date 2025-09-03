@@ -52,7 +52,7 @@ const SectionLayout = () => {
                     Flexibility Built In, Because One Size Doesn’t Fit All
                 </h1>
                 <p className={`animateLine description ${styles.sectionDescription}`}>
-                   Every founder and business operates differently — that’s why TripleHash adapts our approach to fit your goals, budget, and speed. Whether you need to validate an MVP quickly or roll out an enterprise-grade platform, we’ll meet you where you are.
+                    Every founder and business operates differently — that’s why TripleHash adapts our approach to fit your goals, budget, and speed. Whether you need to validate an MVP quickly or roll out an enterprise-grade platform, we’ll meet you where you are.
                 </p>
             </div>
 
@@ -70,7 +70,11 @@ const SectionLayout = () => {
                             <p className={styles.description}>
                                 Test your idea fast with a lean, scalable prototype that can evolve into a full product.
                             </p>
-                            <div className={styles.europeanCloudMapViz}></div>
+                            <div className={styles.europeanCloudMapViz}>
+                                <img src="/layout2.webp" className='opacity-50 ' alt="" />
+                            </div>
+
+
                         </div>
                     ) : (
                         <div className={styles.plusIcon}>+</div>
@@ -90,6 +94,9 @@ const SectionLayout = () => {
                             <p className={styles.description}>
                                 Tailored web, mobile, and AI-powered systems built to match your unique workflows.
                             </p>
+                            <div className={styles.europeanCloudMapViz}>
+                                <img src="/layout2.webp" className='opacity-50' alt="" />
+                            </div>
                         </div>
                     ) : (
                         <div className={styles.plusIcon}>+</div>
@@ -109,6 +116,9 @@ const SectionLayout = () => {
                             <p className={styles.description}>
                                 Secure, compliant, and scalable solutions for teams that can’t afford downtime.
                             </p>
+                            <div className={styles.europeanCloudMapViz}>
+                                <img src="/layout2.webp" className='opacity-50' alt="" />
+                            </div>
                         </div>
                     ) : (
                         <div className={styles.plusIcon}>+</div>

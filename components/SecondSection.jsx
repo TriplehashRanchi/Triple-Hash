@@ -7,10 +7,10 @@ import { BsFillLightningChargeFill } from 'react-icons/bs';
 import { FaPlay } from 'react-icons/fa';
 
 // --- Workflow Components ---
-const ItOpsWorkflow = () => (
+const Founders = () => (
   <div className="w-full h-auto">
     <Image
-      src="/agent.webp" // Path to the image in your /public folder
+      src="/tab1.png" // Path to the image in your /public folder
       alt="IT Ops on-boarding workflow"
       width={1200}
       height={675}
@@ -19,7 +19,54 @@ const ItOpsWorkflow = () => (
     />
   </div>
 );
-
+const ProductTeams = () => (
+  <div className="w-full h-auto">
+    <Image
+      src="/tab2.png" // Path to the image in your /public folder
+      alt="IT Ops on-boarding workflow"
+      width={1200}
+      height={675}
+      priority
+      className="w-full h-auto rounded-2xl" // Image scales responsively
+    />
+  </div>
+);
+const Sales = () => (
+  <div className="w-full h-auto">
+    <Image
+      src="/tab3.png" // Path to the image in your /public folder
+      alt="IT Ops on-boarding workflow"
+      width={1200}
+      height={675}
+      priority
+      className="w-full h-auto rounded-2xl" // Image scales responsively
+    />
+  </div>
+);
+const Educators = () => (
+  <div className="w-full h-auto">
+    <Image
+      src="/tab4.png" // Path to the image in your /public folder
+      alt="IT Ops on-boarding workflow"
+      width={1200}
+      height={675}
+      priority
+      className="w-full h-auto rounded-2xl" // Image scales responsively
+    />
+  </div>
+);
+const We = () => (
+  <div className="w-full h-auto">
+    <Image
+      src="/tab5.png" // Path to the image in your /public folder
+      alt="IT Ops on-boarding workflow"
+      width={1200}
+      height={675}
+      priority
+      className="w-full h-auto rounded-2xl" // Image scales responsively
+    />
+  </div>
+);
 // --- Main Data Array ---
 const tabsData = [
   {
@@ -28,7 +75,7 @@ const tabsData = [
     description: 'Build MVPs that Think',
     icon: BsFillLightningChargeFill,
     iconColor: 'text-orange-400',
-    content: <ItOpsWorkflow />,
+    content: <Founders />,
   },
   {
     id: 'product-teams',
@@ -36,7 +83,7 @@ const tabsData = [
     description: 'Ship Features Smarter',
     icon: BsFillLightningChargeFill,
     iconColor: 'text-orange-400',
-    content: <ItOpsWorkflow />,
+    content: <ProductTeams />,
   },
   {
     id: 'sales', // Renamed from dev-ops to sales, as per previous example description
@@ -44,7 +91,7 @@ const tabsData = [
     description: 'Automate and Convert',
     icon: BsFillLightningChargeFill,
     iconColor: 'text-orange-400',
-    content: <ItOpsWorkflow />,
+    content: <Sales />,
   },
   {
     id: 'educators', // Renamed from sales to educators
@@ -52,7 +99,7 @@ const tabsData = [
     description: 'Smarter Teaching Tools',
     icon: BsFillLightningChargeFill,
     iconColor: 'text-orange-400',
-    content: <ItOpsWorkflow />,
+    content: <Educators />,
   },
   {
     id: 'we', // Renamed from you to we
@@ -60,7 +107,7 @@ const tabsData = [
     description: 'Watch and Book a Call',
     icon: FaPlay,
     iconColor: 'text-blue-500',
-    content: <ItOpsWorkflow />,
+    content: <We />,
   },
 ];
 

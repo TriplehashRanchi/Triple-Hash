@@ -73,9 +73,9 @@ export default function ServicesHero() {
 
                     {/* Right Side Image */}
                     <div className={styles.isImage}>
-                        <div className={styles.imageWrapper} ref={imageRef}>
+                        <div className={`${styles.imageWrapper} `} ref={imageRef}>
                             <img
-                                src="/service.jpeg"
+                                src="/service1.webp"
                                 alt="Effortel Services"
                             />
                         </div>

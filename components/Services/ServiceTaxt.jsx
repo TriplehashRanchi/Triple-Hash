@@ -47,6 +47,7 @@ const ScrollLines = () => {
           pt-12
           text-[2.2rem] sm:text-[3rem] md:text-[4rem]   /* ✅ responsive font sizes */
           px-4
+          
         "
       >
         <h2

@@ -111,7 +111,7 @@
   padding-left: 30px; /* Standard padding */
   padding-right: 30px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 0px !important;
   overflow: visible; /* Allow content to be visible */
 }
 
@@ -140,7 +140,7 @@
 .plusIcon {
   font-size: 36px;
   font-weight: 200;
-  color: #87e9ed;
+  color: #c4bbd3;
   align-self: center;
   margin-bottom: 20px;
   line-height: 1;
@@ -349,18 +349,11 @@
 /* --- European Cloud Specific Visuals --- */
 .europeanCloudMapViz {
   position: relative;
-  flex-grow: 1; /* Allow it to take remaining width in row layout */
-  height: 100%; /* Fill remaining height */
-  display: block; /* Allows absolute positioning of children relative to it */
+  flex-grow: 1;
+  height: 100%;
+  display: block;
 }
 
-/* Adjust size for CloudCheckSquareIcon */
-.cloudCheckSquareIconWrapper svg {
-  width: 68px;
-  height: 68px;
-}
-
-/* Position for CloudCheckSquareIcon within europeanCloudMapViz */
 .cloudCheckSquareIconWrapper {
   position: absolute;
   left: 0px;
@@ -516,7 +509,9 @@
     font-size: 16px;
     text-align: left;
   }
-
+  .europeanCloudMapViz {
+    margin-top: 50px;
+  }
 
   .plusIcon {
     font-size: 28px;
@@ -553,6 +548,9 @@
   .activeSectionContent .description {
     font-size: 0.9rem;
     line-height: 1.4;
+  }
+  .europeanCloudMapViz {
+    margin-top: 50px;
   }
 
   .plusIcon {
