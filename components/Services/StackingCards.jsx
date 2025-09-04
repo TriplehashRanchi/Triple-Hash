@@ -16,7 +16,7 @@ const cardsData = [
   },
   {
     id: 2,
-    img: "/card5.svg",
+    img: "/card6.svg",
     heading: "AI-Powered Tools",
     description: "Chatbots, recommendations, analytics & automations — AI baked into your product.",
     reverse: true,
@@ -30,21 +30,21 @@ const cardsData = [
   },
   {
     id: 4,
-    img: "/card4.svg",
+    img: "/card5.svg",
     heading: "E-Learning & LMS",
     description: "Smart, interactive learning platforms with AI-driven assessments and personalized dashboards.",
     reverse: true,
   },
   {
     id: 5,
-    img: "/card5.svg",
+    img: "/card3.svg",
     heading: "Automation & Integrations",
     description: "Connect with 500+ tools and APIs to eliminate busywork and scale workflows seamlessly.",
     reverse: false,
   },
   {
     id: 6,
-    img: "/card6.svg",
+    img: "/card4.svg",
     heading: "Internal Management Systems",
     description: "Dashboards, reporting, and automation to manage operations and scale efficiently.",
     reverse: true,

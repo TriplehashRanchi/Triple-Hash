@@ -124,7 +124,7 @@ export default function PortfolioProjects() {
                                                     src={project.image || "/placeholder.svg"}
                                                     alt={project.title}
                                                     fill
-                                                    className="object-cover transition-transform duration-500 group-hover:scale-105" // Image zoom on hover
+                                                    className="  transition-transform duration-500 group-hover:scale-105" // Image zoom on hover
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                                                 {/* Overlay for "View Details" on hover */}

@@ -31,7 +31,7 @@ const Team = () => {
       handle: "kunal",
       contactText: "Contact Me",
       avatarUrl: "/Team/kunal.png",
-      miniAvatarUrl: "/Team/kunal.png",
+      miniAvatarUrl: "/Team/kunal-icon.png",
       onContactClick: "https://www.linkedin.com/in/champ18ionx/",
     },
 
@@ -88,7 +88,7 @@ const Team = () => {
             <span style={{
               backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
               WebkitBackgroundClip: "text",
-            }} className="bg-clip-text text-transparent  headline text-center mb-4">
+            }} className="bg-clip-text text-transparent  headline text-center mb-4 w-full">
               Talent. Passion. Innovation.
             </span>
             <span

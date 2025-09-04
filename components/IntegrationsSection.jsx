@@ -6,6 +6,9 @@ import Image from 'next/image';
 import { MdCheck } from 'react-icons/md'
 import SpotlightCard from './ReactBit/SpotlightCard';
 import ScrollReveal from "./Gsap/ScrollReveal";
+import { FaCode } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
+import { FaHandshakeSimple } from "react-icons/fa6";
 
 
 // --- DATA (No changes here) ---
@@ -66,21 +69,21 @@ const integrationsRow2 = [
 const stats = [
     {
         id: 'github',
-        icon: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/VS_Code_Dark_b6aa3d887d.svg',
+        icon: <FaCode className="w-7 h-7" />,
         title: 'Top-Rated Builds',
         description: 'Recognized for delivering MVPs and SaaS products that scale.',
         gradient: `bg-[radial-gradient(circle_farthest-side_at_100%_-80%,rgba(175,106,140,0.46),rgba(98,65,83,0.38)_39%,transparent_55%),radial-gradient(circle_at_50%_100%,#7a396d4a,#2a192963)]`
     },
     {
         id: 'g2',
-        icon: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/VS_Code_Dark_1_ab4a2bad7b.svg',
+        icon: <FaHandshakeSimple  className="w-7 h-7" />,
         title: ' Client Love ',
         description: '4.9/5 Satisfaction — “Triple Hash just gets it done.',
         gradient: `bg-[radial-gradient(circle_at_0_100%,#ff4f311f,#fff0),radial-gradient(circle_at_50%_100%,hsla(0,0%,100%,.06),transparent),radial-gradient(circle_at_50%_100%,#4b397a6e,#2a192963)]`,
     },
     {
         id: 'community',
-        icon: 'https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/social_proof_2_14745833f3.svg',
+        icon: <FaGlobe className="w-7 h-7" />,
         title: 'Global Reach',
         description: " 200+ projects shipped across multiple industries.",
         gradient: `bg-[radial-gradient(circle_farthest-side_at_0_100%,#b200ff26,#fff0_56%),radial-gradient(circle_farthest-side_at_20%_100%,hsla(0,0%,100%,.1),transparent_43%),radial-gradient(circle_at_50%_100%,#a3643a87,#2a192963)]`,
@@ -153,8 +156,8 @@ const IntegrationsSection = () => {
                             <div className="rounded-[15px] p-3 h-full flex items-center">
                                 <div className="flex items-center gap-3">
                                     <div className="flex-shrink-0">
-                                        <div className="bg-black/30 w-13 h-13 rounded-xl flex items-center justify-center">
-                                            <Image src={stat.icon} alt={`${stat.title} icon`} width={40} height={40} className="rounded-full" />
+                                        <div className="bg-black/30 text-gray-400 w-13 h-13 rounded-xl flex items-center justify-center">
+                                            {stat.icon}
                                         </div>
                                     </div>
                                     <div>
@@ -170,29 +173,32 @@ const IntegrationsSection = () => {
                 </div>
 
 
-                <ScrollReveal  >
-                    <h2
-                        className="bg-clip-text text-transparent "
-                    >
+
+                <h2
+
+                >   <ScrollReveal  >
                         <span style={{
                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                             WebkitBackgroundClip: "text",
                         }}
                             className="headline bg-clip-text text-transparent  reveal-item block"
                         >
-                           Integrations So Smooth,
+                            Integrations So Smooth,
                         </span>
-                        <span
-                            style={{
+                    </ScrollReveal>
+                    <ScrollReveal  >
+                        <p>
+                            <span style={{
                                 backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
                                 WebkitBackgroundClip: "text",
                             }}
-                            className="headline reveal-item block bg-clip-text text-transparent"
-                        >
-                            Even Your Coffee’s Jealous ☕️
-                        </span>
-                    </h2>
-                </ScrollReveal>
+                                className="headline reveal-item  bg-clip-text text-transparent"> Even Your Coffee’s Jealous </span>
+                            <span className="inline-block text-[2rem]">☕️</span>
+
+                        </p>
+                    </ScrollReveal>
+                </h2>
+
 
                 {/* --- MODIFIED Marquee Container --- */}
                 <div
@@ -240,7 +246,7 @@ const IntegrationsSection = () => {
                             }}
                                 className="headline bg-clip-text text-transparent   reveal-item block"
                             >
-                                We Don’t Sell Hype. 
+                                We Don’t Sell Hype.
                             </span>
                             <span
                                 style={{
@@ -383,7 +389,7 @@ const IntegrationsSection = () => {
                                             Landing Pages
                                         </h3>
                                         <p className='text-[#938E95] mb-4 max-w-md description'>We create high-converting landing pages and funnels powered by AI-driven personalization and automation.
-</p>
+                                        </p>
                                         <ul className="text-[#938E95] description space-y-2 ">
                                             <li className="flex items-center gap-2">
                                                 <MdCheck className="text-[#938E95] text-xl" /> Custom design
@@ -406,7 +412,7 @@ const IntegrationsSection = () => {
                 </div>
             </div>
 
-        </section>
+        </section >
     );
 };
 

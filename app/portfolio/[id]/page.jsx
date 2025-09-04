@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaChevronLeft, FaExternalLinkAlt } from "react-icons/fa";
 
- import { projects } from "../projects"; // Adjust path if your `data` folder is elsewhere, e.g., "../../data/projects"
+import { projects } from "../projects"; // Adjust path if your `data` folder is elsewhere, e.g., "../../data/projects"
 
 export default function ProjectDetailPage({ params }) {
     const projectId = parseInt(params.id); // Get the ID from the URL parameters
@@ -81,15 +81,26 @@ export default function ProjectDetailPage({ params }) {
                         {project.category}
                     </motion.p>
 
-                    <motion.div variants={itemVariants} className="relative aspect-[16/7] w-full  overflow-hidden mb-12">
+                    <motion.div
+                        variants={itemVariants}
+                        className="
+    relative 
+    w-full 
+    max-w-[1300px] 
+    h-[200px] sm:h-[350px] md:h-[450px] lg:h-[600px] 
+    overflow-hidden 
+    mb-12
+  "
+                    >
                         <Image
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             fill
-                            className="object-cover rounded-2xl "
+                            className="rounded-2xl  "
                             priority
                         />
                     </motion.div>
+
                 </motion.div>
 
                 <motion.div

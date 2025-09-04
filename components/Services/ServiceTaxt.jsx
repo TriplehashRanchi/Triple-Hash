@@ -38,7 +38,7 @@ const ScrollLines = () => {
   };
 
   return (
-    <div className="bg-[#0D0816] text-center">
+    <div className="bg-[#0D0816] text-center ">
       <div
         ref={containerRef}
         className="
@@ -47,6 +47,7 @@ const ScrollLines = () => {
           pt-12
           text-[2.2rem] sm:text-[3rem] md:text-[4rem]   /* ✅ responsive font sizes */
           px-4
+          flex flex-col items-center justify-center
           
         "
       >
@@ -66,10 +67,9 @@ const ScrollLines = () => {
         </h2>
 
         {/* gradient lines */}
-        <p className="line" style={gradientText}>
+        <p className="line w-full sm:w-[50%] text-center" style={gradientText}>
           End-to-End Solutions That Build,
-        </p>
-        <p className="line" style={gradientText}>
+        
           Automate & Scale Your Business
         </p>
       </div>

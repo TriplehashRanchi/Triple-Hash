@@ -52,14 +52,15 @@ const CaseStudy = () => {
                   <Image
                     src={study.companyLogo}
                     alt={`${study.companyName} Logo`}
-                    width={100}
-                    height={30}
+                    width={190}
+                    height={50}
+                    className='filter grayscale opacity-60'
                   />
                 </div>
 
                 {/* Headline */}
                 <h3
-                  className="text-xl md:text-2xl font-normal leading-normal font-raleway text-[#C4BBD3]"
+                  className="text-xl md:text-2xl font-normal leading-medium  text-[#C4BBD3]"
                   dangerouslySetInnerHTML={{ __html: study.headline }}
                 />
 

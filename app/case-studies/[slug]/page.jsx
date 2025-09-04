@@ -82,9 +82,9 @@ const CaseStudyDetailPage = ({ params }) => {
               <Image
                 src={cs.companyLogo}
                 alt={`${cs.companyName} Logo`}
-                width={150}
-                height={45}
-                className="object-contain"
+                width={200}
+                height={50}
+                className="filter grayscale opacity-60 "
               />
             </div>
 

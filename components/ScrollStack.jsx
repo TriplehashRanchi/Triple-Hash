@@ -2,6 +2,7 @@
 import { MdCheck } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import styles from './ScrollStackPureCSS.module.css';
+import { FaCode } from "react-icons/fa";
 
 export default function StackingCards() {
   // simple alternating fade/slide
@@ -26,17 +27,17 @@ export default function StackingCards() {
             <div className="flex flex-col-reverse lg:flex-row items-center w-full h-full gap-5 lg:gap-20 p-4 lg:p-14">
               <div className="w-full lg:w-2/3 flex flex-col gap-6 lg:gap-8 p-4 lg:p-8">
                 <div className="flex flex-col gap-4">
-                  <h2 className="text-black headline">
-                   Apps? Nah. <br /> We Build Business Engines.
+                  <h2 className="text-black headline text-xl">
+                    Apps? Nah.   We Build Business Engines.
                   </h2>
                   <p className="lg:w-[100%] text-gray-800 description">
                     Every feature we design is tied to your business goals — not just technical specs. Our team blends entrepreneurial insight with technical expertise, so what you get isn’t just a product… it’s a system that helps you grow. </p>
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="flex gap-2 description"> <strong>We follow a simple, proven framework to bring your vision to life:</strong></p>
-                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Plan: </strong> Understand your goals, market, and users.</p>
-                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Build: </strong> Develop fast, scalable products with AI at the core.</p>
-                  <p className="flex gap-2 description"><span className="text-gray-500 text-[1.2rem]">&lt;/&gt;</span><strong>Scale: </strong> Optimize funnels, automate workflows, and grow with you.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-700  "><FaCode className="w-6 h-6" /></span><strong>Plan: </strong> Understand your goals, market, and users.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-700  "><FaCode className="w-6 h-6" /></span><strong>Build: </strong> Develop fast, scalable products with AI at the core.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-700  "><FaCode className="w-6 h-6" /> </span><strong>Scale: </strong> Optimize funnels, automate workflows, and grow with you.</p>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 p-4 lg:pr-8">
@@ -75,31 +76,31 @@ export default function StackingCards() {
                   </p>
                 </div>
                 <div className="description text-[#C4BBD3] flex flex-wrap gap-4">
-                  <div className="flex gap-8 flex-wrap lg:flex-nowrap">
+                  <div className="flex gap-4 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                      <MdCheck fontSize={40} />
+                       < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
                       <p><strong className="text-white description"> Launch quickly</strong>  on scalable foundations
                         w</p>
                     </div>
                     <div className="flex justify-start gap-2 w-full lg:w-[45%]">
-                      <MdCheck fontSize={40} />
+                     < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
                       <p><strong className="text-white description">Test live </strong>  wwith real users & pivot fast
                       </p>
                     </div>
                   </div>
-                  <div className="flex gap-8 flex-wrap lg:flex-nowrap">
+                  <div className="flex gap-4 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                      <MdCheck fontSize={40} />
+                       < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
                       <p><strong className="text-white description">Improve continuously, </strong> not in one-off cycles </p>
                     </div>
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                      <MdCheck fontSize={40} />
+                      < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
                       <p><strong className="text-white description">Scale confidently </strong> with data-driven decisions
                       </p>
                     </div>
                   </div>
                 </div>
-               
+
               </div>
               <div className="w-[90%] lg:w-1/2 p-0 lg:p-8">
                 <img src="/code.webp" alt="Code Preview" className="

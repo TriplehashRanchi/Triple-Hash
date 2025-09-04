@@ -36,7 +36,7 @@ export default function EnhancedHero() {
                             <ScrollReveal>
 
                                 <span
-                                    className=" reveal-item block bg-clip-text text-transparent text-4xl sm:text-[50px] md:text-[50px] lg:text-[64px] leading-tight sm:leading-[55px] md:leading-[70px] font-bold sm:font-[700]"
+                                    className=" reveal-item block bg-clip-text text-transparent text-5xl sm:text-[50px] md:text-[50px] lg:text-[64px] leading-medium sm:leading-[55px] md:leading-[70px] font-bold sm:font-[700]"
                                     style={{
                                         backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
                                         WebkitBackgroundClip: "text",
@@ -47,7 +47,7 @@ export default function EnhancedHero() {
                                 </span>
 
                             </ScrollReveal>
-                            <p className="text-[#E0D9F1] text-md sm:text-xl md:text-2xl font-medium ">
+                            <p className="text-[#E0D9F1] text-lg sm:text-xl md:text-2xl font-medium ">
                                 The minds, the passion, the energy that power our journey.
                             </p>
 
@@ -70,7 +70,7 @@ export default function EnhancedHero() {
                                 {[
                                     { value: "05+", label: "Experience" },
                                     { value: "150+", label: "Clients" },
-                                    { value: "99.9%", label: "Uptime" },
+                                    { value: "20+", label: "Team" },
                                 ].map((stat, i) => (
                                     <div
                                         key={i}
@@ -231,7 +231,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     curve.curveType = "chordal"
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping
 
-    const planeWidth = 1.6 / 2.25  
+    const planeWidth = 1.6 / 2.25
     const planeHeight = 1
 
     return (

@@ -70,8 +70,8 @@ const CustomersSectionSimple = () => {
 
                     <div className='border-white/30 border-2 rounded-[1rem] flex flex-col items-center gap-10 py-20 sm:py-20 px-4 sm:px-0 text-center'
                         style={{ backgroundImage: `radial-gradient(circle closest-corner at 50% 110%, #0f0a19, #26214900), linear-gradient(#67454599, #26214900 60%)` }}>
-                        <h2 className='w-fit sm:w-fit md:w-[45%]  text-white headline'>
-                           From Workflows to Wow Moments, We’ve Got You.
+                        <h2 className='w-fit sm:w-fit md:w-[55%]  text-white headline '>
+                           From Workflows to Wow Moments, We’5e Got You.
                         </h2>
                         <p className='text-gray-100 text-[1.25rem]  w-fit sm:w-[70%] md:w-[50%]'>Don’t just take our word for it, try it out. 
                            <span className='bg-[#1F192A] p-1'><strong className="bg-gradient-to-l from-[#e768e6] to-[#ff9b26] bg-clip-text text-transparent "> TripleHash builds </strong></span>  custom workflows and automations that adapt to your business, not the other way around.

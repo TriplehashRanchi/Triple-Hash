@@ -11,7 +11,6 @@ html,
 body {
   overflow-x: hidden;
   font-family: "Geomanist", sans-serif;
-  
 }
 .headline {
   font-size: 2.8rem;
@@ -40,6 +39,12 @@ body {
   letter-spacing: 0.5px;
 }
 
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2.2rem;
+    line-height: 36px;
+  }
+}
 @keyframes scroll-left {
   from {
     transform: translateX(0);
@@ -67,5 +72,3 @@ body {
 html {
   scrollbar-width: none; /* Firefox */
 }
- 
- 
