@@ -2,63 +2,76 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link"; // Import Link
-import { useState, useRef } from "react";
+import Link from "next/link"; 
+import { useState, useRef, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import ScrollReveal from "../Gsap/ScrollReveal"; // Ensure this path is correct
+import ScrollReveal from "../Gsap/ScrollReveal"; 
 
-// Import projects from the new data file
-import { projects } from "../../app/portfolio/projects"; // Adjust path if your `data` folder is elsewhere, e.g., "../data/projects"
-
+import { projects } from "../../app/portfolio/projects"; 
 
 export default function PortfolioProjects() {
     const [currentIndex, setCurrentIndex] = useState(0)
     const scrollContainerRef = useRef(null)
+    const cardRefs = useRef([])
+
+    // Duplicate the projects array to allow infinite looping
+    const displayedProjects = [...projects, ...projects]
+
     const currentProject = projects[currentIndex]
 
-    const scrollToProject = (index) => {
-        setCurrentIndex(index)
-        if (scrollContainerRef.current) {
-            const container = scrollContainerRef.current
-            // Calculate project width based on container width and number of visible items
-            // Assuming w-[calc(100%/1.5)] for small screens and w-[calc(100%/1.8)] for md+
-            // A more robust solution might involve ref.current.children[0].offsetWidth
-            const projectWidth = container.scrollWidth / projects.length; // Approximate width
-
-            const scrollPosition = projectWidth * index
-
-            container.scrollTo({
-                left: scrollPosition,
-                behavior: "smooth",
+    // On mount, scroll to the first real card
+    useEffect(() => {
+        if (scrollContainerRef.current && cardRefs.current[0]) {
+            scrollContainerRef.current.scrollTo({
+                left: cardRefs.current[0].offsetLeft,
+                behavior: "auto",
             })
         }
+    }, [])
+
+    const scrollToProject = (index) => {
+        if (!scrollContainerRef.current || !cardRefs.current[index]) return
+        scrollContainerRef.current.scrollTo({
+            left: cardRefs.current[index].offsetLeft,
+            behavior: "smooth",
+        })
     }
 
     const nextProject = () => {
-        const newIndex = (currentIndex + 1) % projects.length
+        let newIndex = currentIndex + 1
+        setCurrentIndex(newIndex % projects.length)
         scrollToProject(newIndex)
     }
 
     const prevProject = () => {
-        const newIndex = (currentIndex - 1 + projects.length) % projects.length
+        let newIndex = currentIndex - 1
+        if (newIndex < 0) newIndex = projects.length - 1
+        setCurrentIndex(newIndex)
         scrollToProject(newIndex)
     }
 
     const handleScroll = () => {
-        if (scrollContainerRef.current) {
-            const container = scrollContainerRef.current
-            const projectWidth = container.scrollWidth / projects.length
-            const scrollLeft = container.scrollLeft
-            const newIndex = Math.round(scrollLeft / projectWidth)
-            if (newIndex !== currentIndex && newIndex >= 0 && newIndex < projects.length) {
-                setCurrentIndex(newIndex)
+        if (!scrollContainerRef.current) return
+        const scrollLeft = scrollContainerRef.current.scrollLeft
+
+        let closestIndex = 0
+        let closestDistance = Infinity
+
+        cardRefs.current.forEach((card, idx) => {
+            if (!card) return
+            const distance = Math.abs(scrollLeft - card.offsetLeft)
+            if (distance < closestDistance) {
+                closestDistance = distance
+                closestIndex = idx
             }
-        }
+        })
+
+        // Use modulo to keep index within original projects array
+        setCurrentIndex(closestIndex % projects.length)
     }
 
     return (
         <section className="relative min-h-screen py-20 pb-30 overflow-hidden" style={{ backgroundColor: "#0D0816" }}>
-            {/* Content container */}
             <div className="relative max-w-[1360px] mx-auto px-4 lg:px-8">
                 <div className="py-20">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
@@ -91,7 +104,6 @@ export default function PortfolioProjects() {
                         </ScrollReveal>
                     </div>
 
-
                     <div className="h-px bg-gradient-to-r from-orange-500 via-white/20 to-transparent" />
                 </div>
 
@@ -107,16 +119,16 @@ export default function PortfolioProjects() {
                                 msOverflowStyle: "none",
                             }}
                         >
-                            {projects.map((project, index) => (
+                            {displayedProjects.map((project, index) => (
                                 <motion.div
-                                    key={project.id}
-                                    className="flex-none w-[calc(100%)]  sm:w-[calc(100%)] md:w-[calc(100%/1.8)] group" // Added group for hover effects
+                                    key={`${project.id}-${index}`}
+                                    ref={(el) => (cardRefs.current[index] = el)}
+                                    className="flex-none w-[calc(100%)] sm:w-[calc(100%)] md:w-[calc(100%/1.8)] group"
                                     style={{ scrollSnapAlign: "center" }}
                                     initial={{ opacity: 0, x: 50 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                 >
-                                    {/* Wrap the entire clickable area with Link */}
                                     <Link href={`/portfolio/${project.id}`}>
                                         <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 p-4 transition-all duration-300 hover:shadow-lg">
                                             <div className="relative aspect-[16/8] rounded-xl overflow-hidden">
@@ -124,10 +136,9 @@ export default function PortfolioProjects() {
                                                     src={project.image || "/placeholder.svg"}
                                                     alt={project.title}
                                                     fill
-                                                    className="  transition-transform duration-500 group-hover:scale-105" // Image zoom on hover
+                                                    className="transition-transform duration-500 group-hover:scale-105"
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                                                {/* Overlay for "View Details" on hover */}
                                                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                                     <span className="text-white text-lg font-semibold">View Details</span>
                                                 </div>
@@ -135,14 +146,10 @@ export default function PortfolioProjects() {
                                         </div>
                                     </Link>
                                 </motion.div>
-
                             ))}
                         </div>
-
-
                     </div>
 
-                    {/* Project info section */}
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={`info-${currentProject.id}`}
@@ -152,7 +159,6 @@ export default function PortfolioProjects() {
                             transition={{ duration: 0.4, delay: 0.1 }}
                             className="flex flex-col lg:flex-row items-center justify-between gap-8"
                         >
-                            {/* Left side - Project info */}
                             <div className="flex-1 text-center lg:text-left">
                                 <div className="mb-4">
                                     <span
@@ -170,9 +176,7 @@ export default function PortfolioProjects() {
                                 <p className="text-[#C4BBD3] description max-w-2xl">{currentProject.description}</p>
                             </div>
 
-                            {/* Right side - CTA and navigation */}
                             <div className="flex flex-col items-center gap-6">
-                                {/* CTA Button - Changed to link to project detail */}
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
@@ -184,8 +188,6 @@ export default function PortfolioProjects() {
                                     </Link>
                                 </motion.button>
 
-
-                                {/* Navigation */}
                                 <div className="flex items-center gap-4">
                                     <motion.button
                                         whileHover={{ scale: 1.1 }}
@@ -216,14 +218,14 @@ export default function PortfolioProjects() {
             </div>
 
             <style jsx>{`
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
+                .scrollbar-hide {
+                  -ms-overflow-style: none;
+                  scrollbar-width: none;
+                }
+                .scrollbar-hide::-webkit-scrollbar {
+                  display: none;
+                }
+            `}</style>
         </section>
     )
 }

@@ -1,85 +1,132 @@
 // data/projects.js
 export const projects = [
-    {
-        id: 1,
-        title: "E-Commerce Platform",
-        description:
-            "A modern, scalable e-commerce solution built with Next.js and Stripe integration for seamless payments. This project focused on creating a robust shopping experience with user authentication, product management, secure payment gateways, and order tracking. Technologies used include Next.js, Tailwind CSS, Stripe API, and PostgreSQL for the database.",
-        image: "/work/work1.webp",
-        category: "WEB DEVELOPMENT",
-        clientName: "Sarah Johnson",
-        profession: "E-COMMERCE ENTREPRENEUR",
-        // Add more details for the full page
-        technologies: ["Next.js", "Tailwind CSS", "Stripe", "PostgreSQL"],
-        challenge: "Integrating a complex payment workflow with a highly responsive UI.",
-        solution: "Utilized Stripe Elements and webhooks for real-time payment status updates, combined with server-side rendering for optimal performance.",
-        link: "https://example.com/ecommerce-platform" // Optional project link
-    },
-    {
-        id: 2,
-        title: "AI Analytics Dashboard",
-        description: "Real-time analytics platform powered by machine learning algorithms for data-driven insights. This dashboard provides dynamic visualizations and predictive analytics, helping businesses make informed decisions quickly. It processes large datasets efficiently and presents them in an understandable format.",
-        image: "/work/work2.webp",
-        category: "AI/ML PLATFORM",
-        clientName: "Michael Chen",
-        profession: "DATA SCIENTIST",
-        technologies: ["Python", "TensorFlow", "React", "D3.js", "AWS SageMaker"],
-        challenge: "Processing and visualizing petabytes of data in real-time.",
-        solution: "Implemented a distributed data processing pipeline using Apache Flink and integrated D3.js for high-performance data rendering.",
-        link: "https://example.com/ai-dashboard"
-    },
-    {
-        id: 3,
-        title: "Mobile Banking App",
-        description:
-            "Secure and intuitive mobile banking application with biometric authentication and real-time transactions. The app prioritizes user experience with a clean interface and robust security features, including facial recognition and fingerprint login, along with instant transaction notifications.",
-        image: "/work/work3.webp",
-        category: "FINTECH SOLUTION",
-        clientName: "David Rodriguez",
-        profession: "FINANCIAL ADVISOR",
-        technologies: ["React Native", "Node.js", "MongoDB", "OAuth2", "Biometric APIs"],
-        challenge: "Ensuring top-tier security for financial transactions while maintaining ease of use.",
-        solution: "Employed multi-factor authentication, end-to-end encryption, and regular security audits, alongside intuitive UI design for seamless navigation.",
-        link: "https://example.com/mobile-banking"
-    },
-    {
-        id: 4,
-        title: "Healthcare Management System",
-        description:
-            "Comprehensive healthcare platform connecting patients, doctors, and administrators in one unified system. This system streamlines appointments, medical records, billing, and communication, improving efficiency and patient care quality.",
-        image: "/work/work4.webp",
-        category: "HEALTHCARE TECH",
-        clientName: "Dr. Emily Watson",
-        profession: "HEALTHCARE DIRECTOR",
-        technologies: ["Angular", "Spring Boot", "MySQL", "HL7 Integration"],
-        challenge: "Achieving HIPAA compliance and integrating with existing legacy systems.",
-        solution: "Developed a modular architecture with secure data handling protocols and custom adaptors for various EHR systems.",
-        link: "https://example.com/healthcare-system"
-    },
-    {
-        id: 5,
-        title: "Blockchain Wallet",
-        description: "Secure cryptocurrency wallet with multi-chain support and advanced security features. This non-custodial wallet allows users to securely store, send, and receive various cryptocurrencies, featuring seed phrase protection and hardware wallet integration.",
-        image: "/work/work5.webp",
-        category: "BLOCKCHAIN SOLUTION",
-        clientName: "Alex Thompson",
-        profession: "CRYPTO INVESTOR",
-        technologies: ["Web3.js", "Solidity", "React", "Node.js", "Cryptography"],
-        challenge: "Implementing robust security against common blockchain vulnerabilities.",
-        solution: "Utilized multi-signature transactions, cold storage integration, and a rigorous smart contract auditing process.",
-        link: "https://example.com/blockchain-wallet"
-    },
-    {
-        id: 6,
-        title: "Smart Home IoT Platform",
-        description: "Integrated IoT platform for smart home automation with voice control and energy monitoring. This platform connects various smart devices, allowing users to control lighting, climate, security, and appliances through a single app or voice commands, with a focus on energy efficiency.",
-        image: "/work/work6.webp",
-        category: "IOT PLATFORM",
-        clientName: "Lisa Park",
-        profession: "SMART HOME CONSULTANT",
-        technologies: ["Node-RED", "MQTT", "React Native", "Raspberry Pi", "AWS IoT"],
-        challenge: "Ensuring seamless interoperability between diverse IoT devices from different manufacturers.",
-        solution: "Designed a flexible API gateway and implemented an adaptive communication protocol to handle various device standards.",
-        link: "https://example.com/smart-home-iot"
-    },
+  {
+    id: 1,
+    title: "Codingwise",
+    description:
+      "Codingwise is an e-learning platform that enables students to log in, enroll in courses, and begin learning with ease. It offers a streamlined course management system that lets students monitor their progress and revisit lessons at any time. Built with scalability and accessibility in mind, the platform supports mentors in delivering structured education efficiently.",
+    image: "/work/work1.webp",
+    category: "EdTech Platform, Course Management System, LMS Platform",
+    clientName: "Sagar Chouksey",
+    profession: "EdTech Mentor",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "MySQL",
+      "Firebase",
+      "Bootstrap",
+      "PHP",
+    ],
+    challenge:
+      "Managing course workflows and scaling the platform to support a growing number of students while ensuring smooth navigation, responsive design, and minimal server load. Ensuring data consistency and progress tracking for hundreds of concurrent users posed a significant technical challenge.",
+    solution:
+      "Implemented a modular course structure, optimized backend logic with efficient queries, caching mechanisms, and server-side rendering. Scalable database schemas and robust authentication ensured smooth student experiences and reliable course progress tracking.",
+    impact:
+      "Improved learning experience, simplified course delivery for mentors, enhanced student engagement, minimized server load issues, and increased student retention due to a smooth and reliable platform.",
+    link: "https://codingwise.in/",
+  },
+
+  {
+    id: 2,
+    title: "Digital Gyani Saarthi",
+    description:
+      "A CRM designed for financial advisors who are not highly technical, helping them grow their business by leveraging digital technologies. The CRM seamlessly integrates meta leads, providing a unified dashboard with follow-ups automation, email/WhatsApp nurturing, marketing banner sharing, and financial health calculators. Everything an advisor needs is in one place—from capturing leads to converting them into customers.",
+    image: "/work/work2.webp",
+    category: "Web Development, SaaS Platform, Mobile App, CRM Solution",
+    clientName: "Digital Gyani",
+    profession: "Financial Services Coach",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "MySQL",
+      "Capacitor",
+      "Firebase Login",
+    ],
+    challenge:
+      "Designing a CRM that is simple and intuitive for non-technical financial advisors while integrating multiple tools like Meta leads, WhatsApp automation, email campaigns, marketing materials, and reminders. Ensuring real-time updates and avoiding complexity was a major challenge.",
+    solution:
+      "Implemented integrated workflows for lead management, follow-ups, marketing, and automation. Developed an intuitive dashboard UI, set up notification systems, and provided client training to ensure ease of adoption and seamless usage.",
+    impact:
+      "Reduced manual work, improved customer engagement, increased sales conversions, and empowered financial advisors to manage their business effectively without relying on multiple separate tools.",
+    link: "https://app.digitalgyanisaarthi.com",
+  },
+  {
+    id: 3,
+    title: "Finask",
+    description:
+      "Finasq is a comprehensive internal management system designed for Finasq Value Company to streamline all policy-related operations. The system allows employees to log and track sold policies, manage renewals, and automate notifications and reminders. It also provides tools for internet team management and internal workflow optimization. By centralizing all these operations in one platform, Finasq ensures smoother processes, reduced errors, and better coordination across teams.",
+    image: "/work/work3.webp",
+    category: "Internal Management System",
+    clientName: "Palash Malik",
+    profession: "Founder, Finask Value",
+    technologies: ["Next.js", "Node.js", "MySQL", "Tailwind CSS", "Firebase"],
+    challenge:
+      "Managing large amounts of policy data, automating renewal reminders, and coordinating multiple internal teams was challenging due to the volume of data, potential for errors, and need for real-time updates.",
+    solution:
+      "Implemented a structured database design, automated workflows for renewals and reminders, intuitive dashboards for team management, and notification systems. Optimized backend processes to handle large datasets efficiently and reduce human errors.",
+    impact:
+      "Significantly improved operational efficiency, reduced manual errors, automated reminders, enhanced team coordination, and saved time and resources across departments.",
+    link: "",
+  },
+  {
+    id: 4,
+    title: "Firsthash",
+    description:
+      "Firsthash is a SaaS platform designed to streamline the operations of wedding photography businesses. It offers features for client onboarding, project tracking, internal team management, and salary disbursement, providing a centralized system for operations. The platform automates workflows, reduces administrative overhead, and ensures timely project delivery, improving efficiency and coordination across teams.",
+    image: "/work/work4.webp",
+    category: "SaaS Platform",
+    clientName: "Abdullah Ansari",
+    profession: "Founder, Marketizers & Owner, FirstHash",
+    technologies: ["Next.js", "Node.js", "MySQL", "Tailwind CSS", "Firebase"],
+    challenge:
+      "Managing client onboarding, internal team workflows, salary calculations, and project tracking posed significant operational challenges. Ensuring all data remained synchronized and reducing human errors across multiple departments was complex.",
+    solution:
+      "Implemented optimized backend architecture, structured database design, automated workflows, notifications, and an intuitive UI. Added salary management modules and project tracking dashboards to reduce administrative burden and improve efficiency.",
+    impact:
+      "Streamlined operations, reduced errors, automated payroll, improved team coordination, accelerated project delivery, and increased client satisfaction with accurate and timely services.",
+    link: "https://connect.firsthash.in/",
+  },
+  {
+    id: 5,
+    title: "Kalam IAS",
+    description:
+      "Kalam IAS Academy combines traditional teaching methods with modern technology to deliver an effective learning experience. The platform offers comprehensive GS Foundation courses, mentorship programs, online & offline classes, test series, and well-researched study materials. It is designed to manage large numbers of students while providing personalized attention and progress tracking.",
+    image: "/work/work5.webp",
+    category: "EdTech Platform",
+    clientName: "Kalam IAS Academy",
+    profession: "UPSC Coaching Provider",
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase",
+    ],
+    challenge:
+      "Managing a large number of students, scheduling classes, and providing personalized attention while maintaining performance and scalability. Handling online/offline integration and student progress tracking was complex.",
+    solution:
+      "Implemented a robust backend system to handle student data, track progress, and facilitate communication between students and mentors. Integrated scalable class scheduling and test series modules for smooth operations.",
+    impact:
+      "Enhanced student engagement, improved learning outcomes, increased enrollment, ensured a high success rate in UPSC exams, and consistently received positive feedback from students.",
+    link: "https://kalamias.academy/",
+  },
+  {
+    id: 6,
+    title: "Prepex",
+    description:
+      "Prepex is an AI-powered career platform designed to assist job seekers in optimizing their applications. The platform provides tools for resume and LinkedIn profile analysis, intelligent job filtering, and personalized cover-letter generation. By integrating the Gemini API via Google GenKit and developing a Chrome extension with a Python backend, Prepex offers a seamless user experience. Premium features are supported with integrated payments, enabling early adoption and delivering real value to users seeking career growth.",
+    image: "/work/work6.webp",
+    category: "AI‑Powered Career SaaS",
+    clientName: "Deepak Goyal",
+    profession: "Founder, Azurelib",
+    technologies: ["Next.js", "Node.js", "MySQL", "Tailwind CSS", "Firebase"],
+    challenge:
+      "Integrating AI APIs, handling personalized recommendations, parsing resumes accurately, and developing a Chrome extension that communicates effectively with the backend posed significant technical challenges.",
+    solution:
+      "Implemented structured API integration, optimized backend architecture for AI processing, automated workflows for cover letter generation, and performance optimizations. Ensured smooth data flow between Chrome extension and backend services.",
+    impact:
+      "Enabled users to improve resumes, streamline job applications, access personalized cover letters, and facilitated early adoption with dozens of users leveraging premium features for career growth.",
+    link: "https://prepx.co/",
+  },
 ];

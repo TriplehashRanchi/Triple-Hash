@@ -157,6 +157,16 @@ export default function ProjectDetailPage({ params }) {
                                 </motion.p>
                             </>
                         )}
+                          {project.impact && (
+                            <>
+                                <motion.h3 variants={itemVariants} className="subheadline mb-3 text-white">
+                                    Impact
+                                </motion.h3>
+                                <motion.p variants={itemVariants} className="description text-[#C4BBD3] mb-8">
+                                    {project.impact}
+                                </motion.p>
+                            </>
+                        )}
 
                         {project.link && (
                             <motion.div variants={itemVariants} className="mt-8">
@@ -181,10 +191,18 @@ export default function ProjectDetailPage({ params }) {
 
                         <motion.div variants={itemVariants}>
                             <h3 className="subheadline mb-6 text-white">Category</h3>
-                            <span className="px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium backdrop-blur-sm border border-orange-500/30">
-                                {project.category}
-                            </span>
+                            <div className="flex flex-wrap gap-2">
+                                {project.category.split(",").map((cat, index) => (
+                                    <span
+                                        key={index}
+                                        className="px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium backdrop-blur-sm border border-orange-500/30"
+                                    >
+                                        {cat.trim()}
+                                    </span>
+                                ))}
+                            </div>
                         </motion.div>
+
                     </div>
                 </motion.div>
             </div>

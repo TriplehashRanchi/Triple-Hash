@@ -231,7 +231,7 @@ const IntegrationsSection = () => {
 
                 {/* CTA Button (No changes here) */}
                 <div className="mt-16">
-                    <button className="bg-gradient-to-r cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                    <button  className="bg-gradient-to-r cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                         Supercharge My Business
                     </button>
                 </div>
