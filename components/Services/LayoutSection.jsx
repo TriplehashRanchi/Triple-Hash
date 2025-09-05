@@ -71,7 +71,7 @@ const SectionLayout = () => {
                                 Test your idea fast with a lean, scalable prototype that can evolve into a full product.
                             </p>
                             <div className={styles.europeanCloudMapViz}>
-                                <img src="/layout2.webp" className='opacity-50 ' alt="" />
+                                <img src="/layout1.png" className='opacity-40 ' alt="" />
                             </div>
 
 
@@ -95,7 +95,7 @@ const SectionLayout = () => {
                                 Tailored web, mobile, and AI-powered systems built to match your unique workflows.
                             </p>
                             <div className={styles.europeanCloudMapViz}>
-                                <img src="/layout2.webp" className='opacity-50' alt="" />
+                                <img src="/layout2.png" className='  invert-50' alt="" />
                             </div>
                         </div>
                     ) : (
@@ -117,7 +117,8 @@ const SectionLayout = () => {
                                 Secure, compliant, and scalable solutions for teams that can’t afford downtime.
                             </p>
                             <div className={styles.europeanCloudMapViz}>
-                                <img src="/layout2.webp" className='opacity-50' alt="" />
+                                <img src="/layout3.png" className='  invert-50' alt="" />
+                                
                             </div>
                         </div>
                     ) : (

@@ -154,6 +154,7 @@
 .description {
   color: #c4bbd3;
   font-size: 1.12rem;
+  line-height: 1.2;
 }
 /* Hide placeholderVisual now that europeanCloudMapViz and hybridVisual are specific */
 .placeholderVisual {
