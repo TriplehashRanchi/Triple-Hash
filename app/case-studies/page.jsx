@@ -12,7 +12,7 @@ import ScrollReveal from "../../components/Gsap/ScrollReveal";
 
 const CaseStudy = () => {
 
-    const ITEMS_PER_PAGE = 12;
+    const ITEMS_PER_PAGE = 9;
     const [currentPage, setCurrentPage] = useState(1);
 
     // pagination math
@@ -32,14 +32,13 @@ const CaseStudy = () => {
                                     backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
                                     WebkitBackgroundClip: 'text',
                                 }}
-                                className="headline z-10 text-transparent bg-clip-text pt-20 text-center"
+                                className="headline z-10 text-transparent bg-clip-text pt-20 text-center  "
                             >
-                                Case Studies
+                                Articles, Case Studies & Stories from Tech
                             </h2>
 
-                            <p className="mt-6 text-[#C4BBD3] z-10 text-center">
-                                Discover how TripleHash is being used to create robust and scalable automation
-                            </p>
+                            <p className="mt-4 text-[#C4BBD3] z-10 text-center">
+                                In-depth tech insights, case studies, and expert breakdowns for builders and innovators.                            </p>
                         </ScrollReveal>
                         <div
                             className="absolute -bottom-80 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] lg:w-[1000px] h-[600px] sm:h-[800px] lg:h-[1000px] rounded-full blur-[120px] opacity-60 Fpointer-events-none z-0"
@@ -47,7 +46,6 @@ const CaseStudy = () => {
                                 background: "radial-gradient(ellipse at center, #611610, #2E0D32 100%)",
                             }}
                         />
-
                     </div>
                     {/* Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 w-full mt-16 z-10">
@@ -87,7 +85,7 @@ const CaseStudy = () => {
 
                                     {/* Quote */}
                                     <p className="text-[#E4E4E4]/70 text-lg leading-normal flex-grow ">
-                                        "{study.quote}"
+                                        "{study.content[0].html.replace(/<[^>]+>/g, '').slice(0, 100)}..."
                                     </p>
 
                                     {/* Author */}

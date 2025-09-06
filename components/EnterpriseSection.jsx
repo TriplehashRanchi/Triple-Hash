@@ -111,7 +111,7 @@ const EnterpriseSection = () => {
 
                             {/* Author */}
                             <div className="flex items-center mb-8 sm:mb-12">
-                                <Image src="/Team/kunal-sir.jpeg" alt="Kunal Kumar Avatar" width={48} height={48} className="rounded-full mr-4" />
+                                <Image src="/Team/kunal-sir-icon.jpeg" alt="Kunal Kumar Avatar" width={48} height={48} className="rounded-full mr-4" />
                                 <div>
                                     <p className="font-semibold text-base sm:text-[1.1rem] font-raleway">Kunal Kumar</p>
                                     <p className="text-[#C4BBD3] text-sm font-raleway">Founder, Triplehash</p>

@@ -55,11 +55,11 @@ export default function EnhancedHero() {
 
                         {/* CTA Buttons */}
                         <div className="mt-6 sm:mt-8 flex z-2 flex-col sm:flex-row justify-center sm:justify-center md:justify-start sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
-                            <button className="cursor-pointer w-full sm:w-auto border border-[#FFFFFF63] buttonfont bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                            <button onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')} className="cursor-pointer w-full sm:w-auto border border-[#FFFFFF63] buttonfont bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                                 Get to Know Us
                             </button>
 
-                            <button className="cursor-pointer w-full sm:w-auto buttonfont bg-transparent border border-[#FFFFFF63] text-gray-200 text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
+                            <button onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')} className="cursor-pointer w-full sm:w-auto buttonfont bg-transparent border border-[#FFFFFF63] text-gray-200 text-sm sm:text-base md:text-lg px-4 sm:px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
                                 Join the Team
                             </button>
                         </div>
