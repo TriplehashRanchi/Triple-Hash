@@ -79,6 +79,9 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button (Hamburger/Close) */}
                     <div className={styles.mobileMenuButtonContainer}>
+                        <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.callButton} onClick={closeMobileMenu}>
+                            Book A Call
+                        </Link>
                         <button
                             className={styles.mobileMenuButton}
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -120,9 +123,7 @@ const Navbar = () => {
                             <Link href="/contact" className={styles.mobileSignInLink} onClick={closeMobileMenu}>
                                 Get In Touch
                             </Link>
-                            <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.mobileGetStartedButton} onClick={closeMobileMenu}>
-                                Book A Call
-                            </Link>
+
                         </div>
                     </div>
                 </div>

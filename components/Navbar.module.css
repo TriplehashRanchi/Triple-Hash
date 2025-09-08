@@ -137,6 +137,7 @@
 
 /* --- Mobile Menu Button --- */
 .mobileMenuButtonContainer {
+ 
   display: block;
 }
 
@@ -256,6 +257,20 @@ transition: color 0.5s ease-in-out;
   line-height: 1;
 }
 
+.callButton {
+  background-image: linear-gradient(to right, #ff8c00, #ff4500);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem; /* text-xl */
+  padding:  0.35rem 1.5rem; /* py-3 px-6 */
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  transition: opacity 0.5s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1.5rem;
+ 
+}
 .mobileGetStartedButton:hover {
   opacity: 0.9;
 }

@@ -132,11 +132,11 @@ export default function CareersPage() {
                             }}
                             className="headline z-10 text-transparent bg-clip-text pt-20 text-center  "
                         >
-                            Articles, Case Studies & Stories from Tech
+                            We’ve saved a seat for you — bring your brilliance.
                         </h2>
 
                         <p className="mt-4 text-[#C4BBD3] z-10 text-center">
-                            In-depth tech insights, case studies, and expert breakdowns for builders and innovators.                            </p>
+                            Because average just isn’t our thing — and neither is boring work.                            </p>
                     </ScrollReveal>
                     <div
                         className="absolute -bottom-80 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] lg:w-[1000px] h-[600px] sm:h-[800px] lg:h-[1000px] rounded-full blur-[120px] opacity-60 Fpointer-events-none z-0"
