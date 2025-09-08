@@ -69,7 +69,7 @@ const CaseStudy = () => {
 
                 {/* Quote */}
                 <p className="text-[#E4E4E4]/70 text-lg leading-normal flex-grow font-raleway">
-                 “{study.content[0].html.replace(/<[^>]+>/g, '').slice(0, 200)}...”
+                  “{study.content[0].html.replace(/<[^>]+>/g, '').slice(0, 200)}...”
                 </p>
 
                 {/* Author */}

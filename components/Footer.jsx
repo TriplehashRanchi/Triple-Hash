@@ -6,26 +6,26 @@ import React from 'react';
 const Footer = () => {
     // Realistic data for TripleHash
     const companyLinks = [
-        { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
+        { name: 'About Us', href: '/team' },
+        { name: 'Careers', href: '/career-page' },
         { name: 'Contact', href: '/contact' },
-        { name: 'Press', href: '/press' },
-        { name: 'Security', href: '/security' },
+        { name: 'Press', href: '/#' },
+        { name: 'Security', href: '/#' },
     ];
 
     const resourcesLinks = [
         { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'AI Agent Reports', href: '/ai-reports' },
-        { name: 'Tools & Templates', href: '/tools' },
+        { name: 'Blog', href: '#' },
+        { name: 'Webinars', href: '#' },
+        { name: 'AI Agent Reports', href: '#' },
+        { name: 'Tools & Templates', href: '#' },
     ];
 
     const partnersLinks = [
-        { name: 'Affiliate Program', href: '/affiliate' },
-        { name: 'Expert Partners', href: '/partners' },
-        { name: 'Join User Tests', href: '/user-tests' },
-        { name: 'Events', href: '/events' },
+        { name: 'Affiliate Program', href: '#' },
+        { name: 'Expert Partners', href: '#' },
+        { name: 'Join User Tests', href: '#' },
+        { name: 'Events', href: '#' },
     ];
 
     const socialIcons = [

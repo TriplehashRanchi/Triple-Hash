@@ -43,7 +43,7 @@ const EnterpriseSection = () => {
                     {/* Call-to-Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
                         <button className="cursor-pointer bg-gradient-to-r from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300 w-full sm:w-auto">
-                           Explore Enterprise Solutions
+                            Explore Enterprise Solutions
                         </button>
                         <button onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')} className="cursor-pointer bg-transparent border border-[#FFFFFF63] text-white buttonfont px-8 py-2.5 rounded-lg hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto">
                             Book a Strategy Call
@@ -57,7 +57,7 @@ const EnterpriseSection = () => {
                         </div>
                         <div>
                             <p className="text-[#C4BBD3] description">
-                               Enterprise-grade protection with encrypted stores, SSO, and advanced access controls.
+                                Enterprise-grade protection with encrypted stores, SSO, and advanced access controls.
                             </p>
                         </div>
 
@@ -111,7 +111,7 @@ const EnterpriseSection = () => {
 
                             {/* Author */}
                             <div className="flex items-center mb-8 sm:mb-12">
-                                <Image src="/Team/kunal-sir-icon.jpeg" alt="Kunal Kumar Avatar" width={48} height={48} className="rounded-full mr-4" />
+                                <Image src="/team/kunal-sir-icon.jpeg" alt="Kunal Kumar Avatar" width={48} height={48} className="rounded-full mr-4" />
                                 <div>
                                     <p className="font-semibold text-base sm:text-[1.1rem] font-raleway">Kunal Kumar</p>
                                     <p className="text-[#C4BBD3] text-sm font-raleway">Founder, Triplehash</p>
@@ -119,7 +119,7 @@ const EnterpriseSection = () => {
                             </div>
 
                             {/* Link */}
-                            <a href="/case-studies/kunal-kumar" className="inline-flex items-center text-[#C4BBD3] text-sm font-semibold group font-raleway">
+                            <a href="/case-studies/gpt-5-hype-reality" className="inline-flex items-center text-[#C4BBD3] text-sm font-semibold group font-raleway">
                                 See the case <HiArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                             </a>
                         </div>

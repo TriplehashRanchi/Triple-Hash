@@ -39,7 +39,10 @@ const SectionLayout = () => {
     return (
         <div className={styles.layoutSection}>
             <div ref={textRef}>
-                <h2 className={`animateLine bg-clip-text text-transparent ${styles.title}`}>
+                <h2    style={{
+                backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                WebkitBackgroundClip: "text",
+              }} className={`animateLine bg-clip-text text-transparent subheadline ${styles.title}`}>
                     [ CHOOSE HOW YOU SCALE ]
                 </h2>
                 <h1

@@ -60,7 +60,10 @@ const features = [
         <div className={styles.platformSection}>
             <div className={styles.container}>
                 <ScrollReveal>
-                    <p className={styles.tagline}>[ BUILT FOR IMPACT ]</p>
+                    <p     style={{
+                backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                WebkitBackgroundClip: "text",
+              }} className={`bg-clip-text text-transparent subheadline ${styles.tagline}`}>[ BUILT FOR IMPACT ]</p>
                     <h1 className={styles.heading} style={gradientText}>Features That Power Every TripleHash Build</h1>
                     <p className={`${styles.description} description`}>
                         Every product we ship comes with the essentials already built in — scalability, automation, integrations, and security. No extra fluff, just the features you actually need to grow.

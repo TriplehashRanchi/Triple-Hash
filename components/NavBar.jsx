@@ -69,7 +69,7 @@ const Navbar = () => {
 
                     {/* Right Side: Action Buttons - Desktop */}
                     <div className={styles.desktopActions}>
-                        <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.signInLink}>
+                        <Link href="/contact" className={styles.signInLink}>
                             Get In Touch
                         </Link>
                         <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.getStartedButton}>
@@ -117,7 +117,7 @@ const Navbar = () => {
 
                         {/* Mobile Action Buttons */}
                         <div className={styles.mobileActions}>
-                            <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.mobileSignInLink} onClick={closeMobileMenu}>
+                            <Link href="/contact" className={styles.mobileSignInLink} onClick={closeMobileMenu}>
                                 Get In Touch
                             </Link>
                             <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.mobileGetStartedButton} onClick={closeMobileMenu}>

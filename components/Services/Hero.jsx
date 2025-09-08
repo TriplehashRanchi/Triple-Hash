@@ -12,39 +12,39 @@ export default function ServicesHero() {
     const textRef = useRef(null);
     const imageRef = useRef(null);
 
-   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-        const lines = textRef.current.querySelectorAll('.animateLine');
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            const lines = textRef.current.querySelectorAll('.animateLine');
 
-        gsap.from(lines, {
-            scrollTrigger: {
-                trigger: textRef.current,
-                start: "top 80%",
-                toggleActions: "play none none none",
-            },
-            opacity: 0,
-            y: 50,
-            stagger: 0.3,
-            duration: 0.8,
-            ease: "power3.out",
+            gsap.from(lines, {
+                scrollTrigger: {
+                    trigger: textRef.current,
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 0.8,
+                ease: "power3.out",
+            });
+
+            gsap.from(imageRef.current, {
+                scrollTrigger: {
+                    trigger: imageRef.current,
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                delay: 0.6,
+                ease: "power3.out",
+            });
         });
 
-        gsap.from(imageRef.current, {
-            scrollTrigger: {
-                trigger: imageRef.current,
-                start: "top 85%",
-                toggleActions: "play none none none",
-            },
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            delay: 0.6, 
-            ease: "power3.out",
-        });
-    });
-
-    return () => ctx.revert(); // cleanup on unmount
-}, []);
+        return () => ctx.revert(); // cleanup on unmount
+    }, []);
 
     return (
         <section className={styles.section}>
@@ -52,7 +52,10 @@ export default function ServicesHero() {
                 <aside className={styles.containerSmall}>
                     {/* Left Side */}
                     <div className={styles.heroSection} ref={textRef}>
-                        <div className={`animateLine ${styles.subtitle}`}>
+                        <div style={{
+                            backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+                            WebkitBackgroundClip: "text",
+                        }} className={`animateLine subheadline  bg-clip-text text-transparent ${styles.subtitle}`}>
                             [ FROM IDEA TO IMPACT ]
                         </div>
                         <h1

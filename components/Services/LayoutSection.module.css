@@ -7,10 +7,7 @@
 }
 .title {
   font-family: monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  font-weight: 600;
-  color: #c4bbd3;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -520,6 +517,9 @@
 
   .activeSectionContent .description {
     max-width: 100%;
+  }
+  .title {
+    font-size: 1.2rem;
   }
 }
 

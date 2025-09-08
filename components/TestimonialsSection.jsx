@@ -18,7 +18,7 @@ const testimonials = [
     ),
     author: "Sagar Chouksey",
     handle: "Founder, Codingwise",
-    avatarSrc: "/Testimonials/sagar-codingwise.png",
+    avatarSrc: "/testimonials/sagar-codingwise.png",
     bgColor: {
       "--bg-color-1": "rgba(126,34,206,.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -43,7 +43,7 @@ const testimonials = [
     ),
     author: "Abdullah Ansari",
     handle: "Founder, Marketizers & Owner FirstHash",
-    avatarSrc: "/Testimonials/abdullah.jpg",
+    avatarSrc: "/testimonials/abdullah.jpg",
     bgColor: {
       "--bg-color-1": "rgba(7, 122, 199, 0.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -68,7 +68,7 @@ const testimonials = [
     ),
     author: "Amit Sharma",
     handle: "Co-founder, Digital Gyani",
-    avatarSrc: "/Testimonials/amit.jpeg",
+    avatarSrc: "/testimonials/amit.jpeg",
     bgColor: {
       "--bg-color-1": "rgba(126,34,206,.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -93,7 +93,7 @@ const testimonials = [
     ),
     author: "Palash Malik",
     handle: "Founder, Finask Value",
-    avatarSrc: "/Testimonials/palash.jpeg",
+    avatarSrc: "/testimonials/palash.jpeg",
     bgColor: {
       "--bg-color-1": "rgba(7, 122, 199, 0.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -118,7 +118,7 @@ const testimonials = [
     ),
     author: "Kalam IAS Academy",
     handle: "Management Team",
-    avatarSrc: "/Testimonials/kalam.png",
+    avatarSrc: "/testimonials/kalam.png",
     bgColor: {
       "--bg-color-1": "rgba(126,34,206,.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -143,7 +143,7 @@ const testimonials = [
     ),
     author: "Deepak Goyal",
     handle: "Founder, Azurelib",
-    avatarSrc: "/Testimonials/deepak.jpeg",
+    avatarSrc: "/testimonials/deepak.jpeg",
     bgColor: {
       "--bg-color-1": "rgba(7, 122, 199, 0.3)",
       "--bg-color-2": "rgba(38, 33, 73, 0)",
@@ -160,73 +160,73 @@ const testimonials = [
 
 
 const TestimonialCard = ({ quote, author, handle, avatarSrc, bgColor }) => {
-    return (
-        <div style={bgColor} className="flex-none w-[350px] md:w-[400px] lg:w-[600px] h-[330px] flex flex-col justify-between p-6 sm:p-10 m-4 rounded-xl border border-white/[0.1] ">
-            <p className="text-gray-300 text-[1.05rem] leading-relaxed mb-6 flex-grow overflow-hidden">
-                {quote}
-            </p>
-            <div className="flex items-center mt-auto">
-                <img
-                    src={avatarSrc}
-                    alt={author}
-                    className="w-10 h-10 rounded-full mr-4 object-cover"
-                />
-                <div>
-                    <p className="text-white  text-base">{author}</p>
-                    <p className="text-gray-400 text-sm">{handle}</p>
-                </div>
-            </div>
+  return (
+    <div style={bgColor} className="flex-none w-[350px] md:w-[400px] lg:w-[600px] h-[330px] flex flex-col justify-between p-6 sm:p-10 m-4 rounded-xl border border-white/[0.1] ">
+      <p className="text-gray-300 text-[1.05rem] leading-relaxed mb-6 flex-grow overflow-hidden">
+        {quote}
+      </p>
+      <div className="flex items-center mt-auto">
+        <img
+          src={avatarSrc}
+          alt={author}
+          className="w-10 h-10 rounded-full mr-4 object-cover"
+        />
+        <div>
+          <p className="text-white  text-base">{author}</p>
+          <p className="text-gray-400 text-sm">{handle}</p>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 
 
 const TestimonialsSection = () => {
-    const [isPaused, setIsPaused] = useState(false);
-    const scrollContainerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollContainerRef = useRef(null);
 
-    // Duplicate testimonials multiple times to create a seamless infinite loop effect.
-    // We'll duplicate it 3 times to ensure enough content for smooth animation.
-    const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+  // Duplicate testimonials multiple times to create a seamless infinite loop effect.
+  // We'll duplicate it 3 times to ensure enough content for smooth animation.
+  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
-    return (
-        <section className="bg-[#0D0816] pb-20 overflow-hidden relative">
-            {/* Background glow/particles (as seen in your original image) */}
-            <div className='max-w-[1360px] mx-auto px-4 lg:px-8'>
+  return (
+    <section className="bg-[#0D0816] pb-20 overflow-hidden relative">
+      {/* Background glow/particles (as seen in your original image) */}
+      <div className='max-w-[1360px] mx-auto px-4 lg:px-8'>
 
 
-                {/* Scrolling Testimonials Container */}
-                <div
-                    className="overflow-hidden relative  " // pb-10 gives space for potential shadow on cards
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
-                >
-                    <div className="absolute inset-0 z-0"
-                    >
-                        <div className="absolute inset-0 bg-transparent stars-background" />
-                    </div>
+        {/* Scrolling Testimonials Container */}
+        <div
+          className="overflow-hidden relative  " // pb-10 gives space for potential shadow on cards
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="absolute inset-0 z-0"
+          >
+            <div className="absolute inset-0 bg-transparent stars-background" />
+          </div>
 
-                    <div
-                        ref={scrollContainerRef}
-                        // Apply 'paused' class if isPaused is true, else 'scrolling'
-                        className={`flex w-max will-change-transform ${isPaused ? 'paused' : 'scrolling'}`}
-                    >
-                        {duplicatedTestimonials.map((testimonial, index) => (
-                            <TestimonialCard
-                                key={index} // Use index as key here because data is duplicated
-                                quote={testimonial.quote}
-                                author={testimonial.author}
-                                handle={testimonial.handle}
-                                avatarSrc={testimonial.avatarSrc}
-                                bgColor={testimonial.bgColor}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+          <div
+            ref={scrollContainerRef}
+            // Apply 'paused' class if isPaused is true, else 'scrolling'
+            className={`flex w-max will-change-transform ${isPaused ? 'paused' : 'scrolling'}`}
+          >
+            {duplicatedTestimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={index} // Use index as key here because data is duplicated
+                quote={testimonial.quote}
+                author={testimonial.author}
+                handle={testimonial.handle}
+                avatarSrc={testimonial.avatarSrc}
+                bgColor={testimonial.bgColor}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default TestimonialsSection;

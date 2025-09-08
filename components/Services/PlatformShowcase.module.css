@@ -21,12 +21,9 @@
 
 .tagline {
   font-family: monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  font-weight: 600;
-  color: #c4bbd3;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .heading {
@@ -51,7 +48,7 @@
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) ;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px; /* Space between grid items */
   margin-top: 50px;
 }
@@ -103,7 +100,6 @@
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
-   
   .heading {
     font-size: 2.4rem !important;
   }
@@ -124,7 +120,7 @@
 }
 
 @media (max-width: 768px) {
-  .container{
+  .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -132,15 +128,15 @@
     grid-template-columns: repeat(1, 1fr) !important; /* 2 columns on tablets */
     gap: 10px; /* Increase gap for better spacing */
   }
-  
+
   .tagline {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     margin-bottom: 15px;
   }
   .heading {
     font-size: 2.2rem;
     margin-bottom: 20px;
-      width: 100%; 
+    width: 100%;
   }
   .description {
     font-size: 1rem;
@@ -153,7 +149,7 @@
   }
   .featureCard {
     justify-content: center;
-    padding: 20px 40px ;
+    padding: 20px 40px;
     gap: 10px;
   }
   .iconWrapper {

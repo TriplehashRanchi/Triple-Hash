@@ -68,8 +68,12 @@ export default function ProcessSteps() {
       <div className="mx-auto px-4 max-w-[1160px] p-4 lg:p-8">
         <ScrollReveal>
           <p
-            style={{ fontFamily: 'monospace' }}
-            className="text-center text-[0.85rem] font-[600] tracking-[0.15em] text-[#c4bbd3] uppercase mb-[3rem]"
+            style={{
+              backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+              WebkitBackgroundClip: "text",
+              fontFamily: "monospace",
+            }}
+            className="text-center text-[1.2rem] sm:text-[1.2rem] md:text-[1.5rem] leading-[24px] font-[600] tracking-[0.1em]  bg-clip-text text-transparent uppercase mb-[2rem]"
           >
             [ HOW WE BUILD AT TRIPLEHASH ]
           </p>
@@ -97,17 +101,15 @@ export default function ProcessSteps() {
           return (
             <ScrollReveal key={step.id}>
               <div
-                className={`flex flex-col sm:flex-row items-center gap-8 ${
-                  isEven ? 'sm:flex-row-reverse' : 'sm:flex-row'
-                } my-12 md:my-24 lg:my-32 last:mb-0`}
+                className={`flex flex-col sm:flex-row items-center gap-8 ${isEven ? 'sm:flex-row-reverse' : 'sm:flex-row'
+                  } my-12 md:my-24 lg:my-32 last:mb-0`}
               >
                 {/* Number + Content */}
                 <div className="flex flex-row sm:flex-row gap-6 sm:gap-10 items-center sm:items-start">
                   {/* Step Number */}
                   <div
-                    className={`text-9xl sm:text-9xl md:text-8xl lg:text-[12rem] font-extrabold text-gray-300 opacity-80 ${
-                      isEven ? 'sm:order-2' : 'sm:order-1'
-                    }`}
+                    className={`text-9xl sm:text-9xl md:text-8xl lg:text-[12rem] font-extrabold text-gray-300 opacity-80 ${isEven ? 'sm:order-2' : 'sm:order-1'
+                      }`}
                     style={{ lineHeight: 0.5 }}
                   >
                     {step.id}
@@ -115,9 +117,8 @@ export default function ProcessSteps() {
 
                   {/* Step Content */}
                   <div
-                    className={`w-full max-w-lg text-[#f8f8f8f2] text-left sm:text-left mt-4 sm:mt-0 md:mt-10 ${
-                      isEven ? 'sm:order-1 sm:text-right' : 'sm:order-2 sm:text-left'
-                    }`}
+                    className={`w-full max-w-lg text-[#f8f8f8f2] text-left sm:text-left mt-4 sm:mt-0 md:mt-10 ${isEven ? 'sm:order-1 sm:text-right' : 'sm:order-2 sm:text-left'
+                      }`}
                   >
                     <h3 className="subheadline text-2xl sm:text-4xl mb-3 sm:mb-4">
                       {step.title}
@@ -129,9 +130,8 @@ export default function ProcessSteps() {
                     {/* Team (optional): show roles if you want) */}
                     {step.team?.length ? (
                       <ul
-                        className={`flex flex-wrap gap-2 text-xs tracking-wide text-[#CFC7DE] ${
-                          isEven ? 'justify-end' : 'justify-start'
-                        }`}
+                        className={`flex flex-wrap gap-2 text-xs tracking-wide text-[#CFC7DE] ${isEven ? 'justify-end' : 'justify-start'
+                          }`}
                       >
                         {step.team.map((role) => (
                           <li

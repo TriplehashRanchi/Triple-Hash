@@ -39,7 +39,7 @@ const HeroText = () => {
 
 
 
-                    <p className="mt-6  z-2  text-[#C4BBD3] max-w-lg ">
+                    <p className="mt-6  z-2  text-[#C4BBD3] max-w-lg description">
                         We help founders turn raw ideas into high-performing web & mobile apps — with full-stack development, AI integration, and scalable architecture built for long-term&nbsp;growth.
                     </p>
 
@@ -49,7 +49,7 @@ const HeroText = () => {
                             Get Started Today
                         </button>
 
-                        <button  onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')} className="cursor-pointer buttonfont w-full sm:w-auto   bg-transparent border border-[#FFFFFF63] text-gray-200  px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
+                        <button onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')} className="cursor-pointer buttonfont w-full sm:w-auto   bg-transparent border border-[#FFFFFF63] text-gray-200  px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300">
                             Book Clarity Call
                         </button>
 

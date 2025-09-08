@@ -45,21 +45,25 @@ const ScrollLines = () => {
           font-[700] 
           leading-[1.1]
           pt-12
-          text-[2.2rem] sm:text-[3rem] md:text-[4rem]   /* ✅ responsive font sizes */
+          text-[2.2rem] sm:text-[3rem] md:text-[4rem]    
           px-4
           flex flex-col items-center justify-center
           
         "
       >
         <h2
+          style={{
+            backgroundImage: "linear-gradient(to right, #ff9b26, #ee4f27)",
+            WebkitBackgroundClip: "text",
+          }}
           className="
             line 
             font-mono 
-            text-[0.75rem] sm:text-[0.85rem] 
+             text-[1.2rem] sm:text-[1.2rem] md:text-[1.5rem]
             font-semibold 
-            tracking-[0.15em] 
+            tracking-[0.1em] 
             uppercase 
-            text-[#c4bbd3] 
+            bg-clip-text text-transparent
             mb-6 sm:mb-10
           "
         >
@@ -69,7 +73,7 @@ const ScrollLines = () => {
         {/* gradient lines */}
         <p className="line w-full sm:w-[50%] text-center" style={gradientText}>
           End-to-End Solutions That Build,
-        
+
           Automate & Scale Your Business
         </p>
       </div>
