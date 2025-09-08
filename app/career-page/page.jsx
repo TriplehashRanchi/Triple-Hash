@@ -3,7 +3,7 @@
  const page = () => {
    return (
      <div>
-       <h1>Join Our Team</h1>
+       <h1>Join Our Team </h1>
        <p>At TripleHash, we are always looking for talented individuals to join our team.</p>
        <h2>Current Openings</h2>
        <ul>
