@@ -362,7 +362,7 @@ const IntegrationsSection = () => {
                        h-auto sm:h-full gap-8">
 
                                     <div>
-                                        <img src="/container2.png" alt="" className='object-contain' />
+                                        <img src="/container1.png" alt="" className='object-contain' />
                                     </div>
 
                                     <div className="text-left">
