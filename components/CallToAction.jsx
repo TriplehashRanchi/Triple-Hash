@@ -43,7 +43,7 @@ export default function CallToAction() {
             </div>
 
             <button
-              onClick={() => alert("Booking a meeting...")}
+              onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')}
               className={styles.bookMeetingButton}
             >
               <span className={styles.bookMeetingText}>Book a Meeting</span>

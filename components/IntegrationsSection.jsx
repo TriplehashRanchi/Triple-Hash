@@ -76,7 +76,7 @@ const stats = [
     },
     {
         id: 'g2',
-        icon: <FaHandshakeSimple  className="w-7 h-7" />,
+        icon: <FaHandshakeSimple className="w-7 h-7" />,
         title: ' Client Love ',
         description: '4.9/5 Satisfaction — “Triple Hash just gets it done.',
         gradient: `bg-[radial-gradient(circle_at_0_100%,#ff4f311f,#fff0),radial-gradient(circle_at_50%_100%,hsla(0,0%,100%,.06),transparent),radial-gradient(circle_at_50%_100%,#4b397a6e,#2a192963)]`,
@@ -90,44 +90,34 @@ const stats = [
     },
 ];
 
-// --- COMPONENT ---
-
 const IntegrationsSection = () => {
     const marqueeRef = useRef(null);
 
-    // --- NEW useEffect for 3D rotation on scroll ---
     useEffect(() => {
         const marquee = marqueeRef.current;
         if (!marquee) return;
 
-        // You can tweak these values to change the intensity of the effect
-        const MAX_ROTATION_X = 25; // Max tilt up/down
-        const MAX_ROTATION_Y = 10;  // Max tilt left/right
+        const MAX_ROTATION_X = 25;
+        const MAX_ROTATION_Y = 10;
 
         const handleScroll = () => {
             const rect = marquee.getBoundingClientRect();
             const viewportHeight = window.innerHeight;
 
-            // Calculate the vertical center of the element relative to the viewport
             const elementCenterY = rect.top + rect.height / 2;
 
-            // Calculate the progress of the element's center through the viewport
-            // 0 when centered, -1 at the top, 1 at the bottom
             const progress = (elementCenterY - viewportHeight / 2) / (viewportHeight / 2);
 
-            // Clamp progress between -1 and 1 to avoid extreme values
             const clampedProgress = Math.max(-1, Math.min(1, progress));
 
-            // Calculate rotation values based on scroll progress
-            const rotateX = clampedProgress * MAX_ROTATION_X * -1; // Invert for natural feel
+            const rotateX = clampedProgress * MAX_ROTATION_X * -1;
             const rotateY = clampedProgress * MAX_ROTATION_Y;
 
-            // Apply the transform directly for performance
-            // This avoids React re-renders on every scroll event
+
             marquee.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         };
 
-        // Initial call to set the position on load
+
         handleScroll();
 
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -135,10 +125,9 @@ const IntegrationsSection = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []); // Empty dependency array ensures this runs only once on mount
+    }, []);
 
     return (
-        // The main container needs `overflow-hidden` to contain the glows properly
         <section className="relative w-full bg-[#0D0816] py-10 sm:py-0 overflow-hidden">
             <div className=" hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-11/12 rotate-[24deg] aspect-[1/2.2] w-[80%] max-w-[400px] bg-[linear-gradient(#a13355,#5159d9)] rounded-[800%] opacity-45 blur-[128px] z-[0]" />
             <div
@@ -149,7 +138,6 @@ const IntegrationsSection = () => {
             />
 
             <div className="relative z-10 w-full max-w-[1360px] mx-auto px-4 lg:px-8 text-center">
-                {/* Stats Cards (No changes here) */}
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-2 mb-25 sm:mb-32">
                     {stats.map((stat) => (
                         <div key={stat.id} className={`p-px border border-[#ffffff1a] rounded-xl ${stat.gradient}`}>
@@ -172,10 +160,7 @@ const IntegrationsSection = () => {
                     ))}
                 </div>
 
-
-
                 <h2
-
                 >   <ScrollReveal  >
                         <span style={{
                             backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
@@ -200,7 +185,6 @@ const IntegrationsSection = () => {
                 </h2>
 
 
-                {/* --- MODIFIED Marquee Container --- */}
                 <div
                     ref={marqueeRef}
                     // A transition is added for smoothness when the scroll stops or starts
@@ -229,9 +213,9 @@ const IntegrationsSection = () => {
                     </div>
                 </div>
 
-                {/* CTA Button (No changes here) */}
+
                 <div className="mt-16">
-                    <button  className="bg-gradient-to-r cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                    <button className="bg-gradient-to-r cursor-pointer from-[#077AC7] to-[#6B21EF] text-white buttonfont px-6 py-2.5 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                         Supercharge My Business
                     </button>
                 </div>
@@ -261,7 +245,7 @@ const IntegrationsSection = () => {
                     </ScrollReveal>
 
                     <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:grid-rows-2 gap-6 md:gap-2 w-full ">
-                        {/* Card 1: Build multi-step agents (Left side, spanning both rows) */}
+                        {/* Card 1  */}
                         <SpotlightCard
                             className="custom-spotlight-card"
                             spotlightColor="radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 104, 180, 0.3), rgba(91, 24, 255, 0.15) 60%, rgba(12, 8, 34, 0.1) 80%)"                        >
@@ -300,8 +284,8 @@ const IntegrationsSection = () => {
                                 </div>
                             </div>
                         </SpotlightCard>
-                        {/* Card 2: Chat with your own data (Right side, spanning both rows) */}
 
+                        {/* Card 2  */}
                         <div
                             className="p-px rounded-3xl w-full lg:col-start-2 lg:row-span-2" /* Explicitly start in col 2, span 2 rows */
                             style={{
@@ -359,7 +343,7 @@ const IntegrationsSection = () => {
                             </SpotlightCard>
                         </div>
 
-                        {/* Card 3: Self-host everything (Bottom Left - will implicitly be in row 2, col 1) */}
+                        {/* Card 3 */}
                         <SpotlightCard className="custom-spotlight-card"
                             spotlightColor="radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 104, 180, 0.3), rgba(91, 24, 255, 0.15) 60%, rgba(12, 8, 34, 0.1) 80%)"
 

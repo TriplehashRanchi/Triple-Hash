@@ -8,7 +8,7 @@ const Team = () => {
   const teamMembers = [
     {
       name: "Kunal Kumar",
-      title: "Founder",
+      title: "CEO & Co-Founder",
       handle: "ceo",
       contactText: "Contact Me",
       avatarUrl: "/Team/kunal-sir.png",
@@ -18,7 +18,7 @@ const Team = () => {
 
     {
       name: "Vishal Kumar",
-      title: "Video Editor",
+      title: "Co-Founder & Editor",
       handle: "vishal",
       contactText: "Contact Me",
       avatarUrl: "/Team/Vishalkumar.png",
@@ -27,7 +27,7 @@ const Team = () => {
     },
     {
       name: "Kunal Kumar",
-      title: " Full Stack Developer",
+      title: " CTO & Developer",
       handle: "kunal",
       contactText: "Contact Me",
       avatarUrl: "/Team/kunal.png",
