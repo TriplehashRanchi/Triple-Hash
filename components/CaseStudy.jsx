@@ -52,7 +52,7 @@ const CaseStudy = () => {
                   <Image
                     src={study.companyLogo}
                     alt={`${study.companyName} Logo`}
-                    width={190}
+                    width={160}
                     height={50}
                     className='filter grayscale opacity-60'
                   />
