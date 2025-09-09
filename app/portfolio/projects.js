@@ -129,4 +129,29 @@ export const projects = [
       "Enabled users to improve resumes, streamline job applications, access personalized cover letters, and facilitated early adoption with dozens of users leveraging premium features for career growth.",
     link: "https://prepx.co/",
   },
+  {
+    id: 7,
+    title: "Mlinda",
+
+    description:
+      "Mlinda is a cutting-edge platform that leverages AI to provide personalized learning experiences for students. By analyzing individual learning styles and preferences, Mlinda curates tailored content and resources, ensuring optimal engagement and knowledge retention. The platform integrates interactive quizzes, real-time feedback, and progress tracking to help students stay motivated and on track with their learning goals. With a user-friendly interface and seamless navigation, Mlinda makes learning enjoyable and effective for students of all ages.",
+    image: "/work/work7.webp",
+    category: "AI-Powered Learning Platform",
+    clientName: "John Doe",
+    profession: "Educational Technologist",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "AI Integration",
+    ],
+    challenge:
+      "Creating a platform that effectively personalizes learning experiences based on diverse student needs while ensuring scalability and performance. Integrating AI algorithms for content curation and real-time feedback was particularly challenging.",
+    solution:
+      "Implemented advanced AI algorithms for personalized content delivery, optimized backend architecture for scalability, and developed interactive features such as quizzes and progress tracking. Ensured a seamless user experience with an intuitive UI design.",
+    impact:
+      "Enhanced student engagement and learning outcomes, increased platform adoption, and received positive feedback from users appreciating the personalized approach to education.",
+    link: "https://malinda.ai/",
+  },
 ];

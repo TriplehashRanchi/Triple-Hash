@@ -219,7 +219,7 @@ const IntegrationsSection = () => {
                         Supercharge My Business
                     </button>
                 </div>
-                <div className="py-20 sm:py-34  flex flex-col items-center gap-20 ">
+                <div className="pt-20 sm:py-34  flex flex-col items-center gap-20 ">
                     <ScrollReveal  >
                         <h2
                             className="headline bg-clip-text text-transparent  "

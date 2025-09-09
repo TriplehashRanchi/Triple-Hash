@@ -2,12 +2,12 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link"; 
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import ScrollReveal from "../Gsap/ScrollReveal"; 
+import ScrollReveal from "../Gsap/ScrollReveal";
 
-import { projects } from "../../app/portfolio/projects"; 
+import { projects } from "../../app/portfolio/projects";
 
 export default function PortfolioProjects() {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -99,7 +99,7 @@ export default function PortfolioProjects() {
                         <ScrollReveal>
                             <div className="text-left sm:text-right text-gray-400 mt-4 sm:mt-0">
                                 <p className="text-sm">ISSUE #01</p>
-                                <p className="text-sm">2024 EDITION</p>
+                                <p className="text-sm">2025 EDITION</p>
                             </div>
                         </ScrollReveal>
                     </div>
@@ -171,7 +171,10 @@ export default function PortfolioProjects() {
                                         {currentProject.category}
                                     </span>
                                 </div>
-                                <h3 className=" heading text-white mb-2">{currentProject.clientName}</h3>
+                                <h3 style={{
+                                    backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
+                                    WebkitBackgroundClip: "text",
+                                }} className=" heading  bg-clip-text text-transparent  mb-2">{currentProject.clientName}</h3>
                                 <p className="text-gray-400 subheadline mb-6">{currentProject.profession}</p>
                                 <p className="text-[#C4BBD3] description max-w-2xl">{currentProject.description}</p>
                             </div>

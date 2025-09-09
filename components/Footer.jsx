@@ -6,19 +6,22 @@ import React from 'react';
 const Footer = () => {
     // Realistic data for TripleHash
     const companyLinks = [
-        { name: 'About Us', href: '/team' },
-        { name: 'Careers', href: '/career-page' },
+        { name: 'Home', href: '/' },
+        { name: 'Portfolio', href: '/portfolio' },
+        { name: 'Services', href: '/services' },
+        { name: 'Team', href: '/team' },
+
         { name: 'Contact', href: '/contact' },
-        { name: 'Press', href: '/#' },
-        { name: 'Security', href: '/#' },
+
+
     ];
 
     const resourcesLinks = [
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Blog', href: '#' },
-        { name: 'Webinars', href: '#' },
-        { name: 'AI Agent Reports', href: '#' },
-        { name: 'Tools & Templates', href: '#' },
+        { name: 'Privacy Policy', href: '/privacy-policy' },
+        { name: 'Terms & Conditions', href: '/terms-conditions' },
+        { name: 'Refund', href: '/refund' },
+        { name: 'Blog', href: '/case-studies' },
+        { name: 'Careers', href: '/career-page' },
     ];
 
     const partnersLinks = [
@@ -83,7 +86,7 @@ const Footer = () => {
                             <img src="/triplelogo.png" alt="TripleHash Logo" className="h-8 w-auto mr-2" />
                             <span className="text-white text-md font-bold">TripleHash</span>
                         </div>
-                        <p className="text-gray-400 text-md mb-6">Automate workflows, build smarter apps, scale effortlessly.</p>
+                        <p className="text-gray-400 text-md mb-6">Triple Hash helps business owners, coaches, and consultants elevate their brand with smart digital marketing strategies and flawless execution.</p>
                         <div className="flex space-x-4">
                             {socialIcons.map((social, index) => (
                                 <a key={index} href={social.href} aria-label={social.label} target="_blank" rel="noopener noreferrer"
@@ -96,7 +99,7 @@ const Footer = () => {
 
                     <div className="col-span-1 md:col-span-1 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-4 lg:gap-8 pt-8 md:pt-0">
                         <LinkColumn title="Company" links={companyLinks} />
-                        <LinkColumn title="Resources" links={resourcesLinks} />
+                        <LinkColumn title="Quick Links" links={resourcesLinks} />
                         <LinkColumn title="Partners" links={partnersLinks} />
                     </div>
                 </div>
@@ -105,13 +108,13 @@ const Footer = () => {
 
                 <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
                     <div className="flex space-x-4 mb-4 sm:mb-0">
-                        <a href="/imprint" className="hover:text-white transition-colors duration-200">Imprint</a>
+                        <a href="/" className="hover:text-white transition-colors duration-200">Imprint</a>
                         <span>|</span>
-                        <a href="/legal" className="hover:text-white transition-colors duration-200">Legal</a>
+                        <a href="/" className="hover:text-white transition-colors duration-200">Legal</a>
                         <span>|</span>
-                        <a href="/privacy" className="hover:text-white transition-colors duration-200">Privacy</a>
+                        <a href="/privacy-policy" className="hover:text-white transition-colors duration-200">Privacy</a>
                         <span>|</span>
-                        <a href="/report-vulnerability" className="hover:text-white transition-colors duration-200">Report a Vulnerability</a>
+                        <a href="/" className="hover:text-white transition-colors duration-200">Report a Vulnerability</a>
                     </div>
                     <p className="text-gray-400">
                         © {new Date().getFullYear()} TripleHash | All rights reserved.

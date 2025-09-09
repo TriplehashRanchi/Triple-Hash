@@ -135,10 +135,10 @@
   opacity: 0.9;
 }
 
-/* --- Mobile Menu Button --- */
-.mobileMenuButtonContainer {
  
+.mobileMenuButtonContainer {
   display: block;
+ 
 }
 
 @media (min-width: 1024px) {
@@ -261,8 +261,8 @@ transition: color 0.5s ease-in-out;
   background-image: linear-gradient(to right, #ff8c00, #ff4500);
   color: #fff;
   font-weight: 600;
-  font-size: 0.8rem; /* text-xl */
-  padding:  0.35rem 1.5rem; /* py-3 px-6 */
+  font-size: 0.8rem;  
+  padding:  0.35rem 1.5rem;  
   border-radius: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.39);
   transition: opacity 0.5s ease-in-out;
