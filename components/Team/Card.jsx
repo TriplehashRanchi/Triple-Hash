@@ -173,7 +173,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     )
 
     const texture = useTexture(
-        "/Team/band2.png",
+        "/team/band2.png",
     )
 
     const frontTexture = useLoader(THREE.TextureLoader, "/id.png")
