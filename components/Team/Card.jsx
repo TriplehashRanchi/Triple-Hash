@@ -177,7 +177,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     )
 
     const frontTexture = useLoader(THREE.TextureLoader, "/id.png")
-    const backTexture = useLoader(THREE.TextureLoader, "/Team/kunal-sir-icon.jpeg")
+    const backTexture = useLoader(THREE.TextureLoader, "/team/kunal-sir-icon.jpeg")
 
     const { width, height } = useThree((state) => state.size)
     const [curve] = useState(
