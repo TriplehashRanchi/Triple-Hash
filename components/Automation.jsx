@@ -33,7 +33,7 @@ const CustomersSectionSimple = () => {
                             />
                         </div>
 
-                        {/* "n8n embed" Badge */}
+                        {/* "n8n embed" Badgesfacgfx */}
                         <div className="inline-flex items-center gap-0.5 pr-3 pt-0.5 mb-6 mt-[20] sm:mt-[10] md:mt-[-70]  rounded-full border border-[#ffffff1a] text-white text-[0.8rem]  
                                 backdrop-filter backdrop-blur-md"
                             style={{
