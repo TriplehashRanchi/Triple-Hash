@@ -43,7 +43,7 @@ const CustomersSectionSimple = () => {
                         >
 
                             <img src="/case.png" alt="" />
-                            <span>n8n embed</span>
+                            <span>AI Power</span>
                         </div>
 
                         {/* Main Heading */}

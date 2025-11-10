@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa"
+import { IoMdClose } from "react-icons/io"
 
 export default function ContactPage() {
   const [showForm, setShowForm] = useState(false)
@@ -15,6 +15,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#0D0816] relative overflow-hidden">
+      {/* Grid Background */}
       <div
         className="absolute inset-0 opacity-50"
         style={{
@@ -30,7 +31,7 @@ export default function ContactPage() {
       <div className="relative z-10 flex items-center justify-center min-h-screen p-4 sm:p-8">
         <div className="w-full max-w-4xl mx-auto">
           {/* Contact Card */}
-          <div className="relative p-6 sm:p-12 text-center ">
+          <div className="relative p-6 sm:p-12 text-center">
             {/* Header Text */}
             <div className="mb-6 sm:mb-8">
               <h1
@@ -54,7 +55,7 @@ export default function ContactPage() {
             </div>
 
             {/* Avatar Group */}
-            <div className="relative flex items-center justify-center   flex-wrap">
+            <div className="relative flex items-center justify-center flex-wrap">
               {/* Left Avatar */}
               <div
                 onClick={() => setShowForm(true)}
@@ -69,9 +70,16 @@ export default function ContactPage() {
                 className="w-28 h-28 sm:w-45 sm:h-45 rounded-full bg-white border-2 sm:border-4 border-black flex items-center justify-center relative z-20 -mx-2 sm:-mx-4 hover:scale-105 transition-transform duration-200 cursor-pointer"
               >
                 <img src="/triplelogo.png" alt="" className="w-20 h-20 sm:w-35 sm:h-35 rounded-full" />
-                <div className="absolute -bottom-2 -right-2 w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-black rounded-full"></div>
-                </div>
+                
+                {/* 🔥 Replaced the small dot with Map Icon */}
+                <a
+                  href="https://maps.app.goo.gl/iS42XGFtWcAGHdFP6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute -bottom-5 -right-3 w-8 h-8 sm:w-10 sm:h-10 bg-[#ee4f27] rounded-full flex items-center justify-center border-2 border-black shadow-md hover:scale-110 transition-transform"
+                >
+                  <FaMapMarkerAlt size={16} className="text-white" />
+                </a>
               </button>
 
               {/* Right Avatar */}
@@ -88,13 +96,15 @@ export default function ContactPage() {
 
       {/* Modal Form */}
       <div
-        className={`fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 transition-all duration-700 ${showForm ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+        className={`fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 transition-all duration-700 ${
+          showForm ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
         onClick={() => setShowForm(false)}
       >
         <div
-          className={`border border-gray-600/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 w-full max-w-lg sm:max-w-2xl transform transition-all duration-700 shadow-2xl ${showForm ? "scale-100 translate-y-0 rotate-0" : "scale-90 translate-y-12 rotate-1"
-            }`}
+          className={`border border-gray-600/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 w-full max-w-lg sm:max-w-2xl transform transition-all duration-700 shadow-2xl ${
+            showForm ? "scale-100 translate-y-0 rotate-0" : "scale-90 translate-y-12 rotate-1"
+          }`}
           style={{ backgroundColor: "transparent" }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -166,7 +176,7 @@ export default function ContactPage() {
                 <FaPhoneAlt className="text-[#ee4f27] mt-1 flex-shrink-0" size={18} />
                 <div>
                   <p className="text-white text-base sm:text-lg font-medium">Phone</p>
-                  <p className="text-[#C4BBD3] text-sm sm:text-base">+91 7568357351, </p>
+                  <p className="text-[#C4BBD3] text-sm sm:text-base">+91 7568357351</p>
                 </div>
               </div>
 
@@ -181,17 +191,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-
-    {!showForm && (
-      <a
-        href="https://maps.app.goo.gl/iS42XGFtWcAGHdFP6"  
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed top-30 right-10 bg-[#ee4f27] p-3 sm:p-4 rounded-full animate-bounce cursor-pointer z-50"
-      >
-        <FaMapMarkerAlt size={24} className="text-white" />
-      </a>
-    )}
     </div>
   )
 }
