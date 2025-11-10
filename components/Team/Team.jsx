@@ -77,7 +77,7 @@ const Team = () => {
       handle: "Tezashwani",
       contactText: "Contact Me",
       avatarUrl: "/team/diksha.png",
-      miniAvatarUrl: "/team/sagar-icon.jpg",
+      miniAvatarUrl: "/team/diksha.png",
       onContactClick: "https://www.linkedin.com/in/sagar-kumar-ab452b276/",
     },
 
