@@ -40,7 +40,7 @@ const Team = () => {
       title: "Senior WordPress Developer",
       handle: "dhiraj",
       contactText: "Connect Me",
-      avatarUrl: "/team/dheeraj-sir.png",
+      avatarUrl: "/team/dj.png",
       miniAvatarUrl: "/team/dheeraj-sir.png",
       onContactClick: "https://www.linkedin.com/in/dhiraj-giri-717a3532b/",
     },
