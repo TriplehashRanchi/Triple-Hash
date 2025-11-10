@@ -71,6 +71,15 @@ const Team = () => {
       miniAvatarUrl: "/team/sagar-icon.jpg",
       onContactClick: "https://www.linkedin.com/in/sagar-kumar-ab452b276/",
     },
+    {
+      name: "Tezashwani",
+      title: "Social Media Manager",
+      handle: "Tezashwani",
+      contactText: "Contact Me",
+      avatarUrl: "/team/sagar1.png",
+      miniAvatarUrl: "/team/sagar-icon.jpg",
+      onContactClick: "https://www.linkedin.com/in/sagar-kumar-ab452b276/",
+    },
 
   ];
 
