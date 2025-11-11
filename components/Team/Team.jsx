@@ -74,7 +74,7 @@ const Team = () => {
     {
       name: "Tezashwani",
       title: "Social Media Manager",
-      handle: "Tezashwani",
+      handle: "Tezash",
       contactText: "Contact Me",
       avatarUrl: "/team/diksha.png",
       miniAvatarUrl: "/team/diksha.png",
