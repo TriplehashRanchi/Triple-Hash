@@ -1,18 +1,48 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import emailjs from "emailjs-com";
 
 export default function ContactPage() {
   const [showForm, setShowForm] = useState(false);
-  const [statusMessage, setStatusMessage] = useState(""); // ✅ for success/fail message
-
+  const [statusMessage, setStatusMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  // ✅ handleSubmit captures input data + sends email via EmailJS
+
+  const [captchaVerified, setCaptchaVerified] = useState(false); // ✅ NEW
+
+  // ✅ Render Turnstile when popup opens
+useEffect(() => {
+  if (showForm) {
+    setTimeout(() => {
+      if (window?.turnstile) {
+        window.turnstile.render("#turnstile-container", {
+          sitekey: "0x4AAAAAACBTYd9Es4r2uQCA",
+          callback: () => setCaptchaVerified(true),
+        });
+      }
+    }, 200);
+  } else {
+    // ⭐ Reset the container when modal closes
+    const el = document.getElementById("turnstile-container");
+    if (el) el.innerHTML = ""; // remove old widget
+    setCaptchaVerified(false); // reset verification
+  }
+}, [showForm]);
+
+
+
+  // ===========================
+  // EMAIL SUBMIT HANDLER
+  // ===========================
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!captchaVerified) {
+      alert("Please verify you're not a robot");
+      return;
+    }
 
     const formData = new FormData(e.target);
     const name = formData.get("from_name");
@@ -20,12 +50,10 @@ export default function ContactPage() {
     const phone = formData.get("phone");
     const message = formData.get("message");
 
-    // ✅ Send using EmailJS
     emailjs
       .send(
-        "service_hmrmwos", // replace with your EmailJS Service ID
-        "template_trwzkza", // replace with your EmailJS Template ID
-
+        "service_hmrmwos",
+        "template_trwzkza",
         {
           name: name,
           email: email,
@@ -33,14 +61,13 @@ export default function ContactPage() {
           query: message,
           time: new Date().toLocaleString(),
         },
-        "F1bI-EDyf_giVJu3b" // replace with your EmailJS Public Key
+        "F1bI-EDyf_giVJu3b"
       )
       .then(() => {
         setLoading(false);
-        setStatusMessage(
-          "✅ Thanks for contacting Triple Hash!"
-        );
+        setStatusMessage("✅ Thanks for contacting Triple Hash!");
         e.target.reset();
+        setCaptchaVerified(false);
       })
       .catch((err) => {
         console.error("EmailJS Error:", err);
@@ -185,7 +212,10 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Form */}
             <div>
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-4 sm:space-y-6"
+              >
                 <input
                   type="text"
                   name="from_name"
@@ -193,6 +223,7 @@ export default function ContactPage() {
                   className="w-full border border-gray-600/50 text-white placeholder-gray-500 outline-none rounded-xl h-12 px-4 transition-all duration-300"
                   required
                 />
+
                 <input
                   type="email"
                   name="from_email"
@@ -200,6 +231,7 @@ export default function ContactPage() {
                   className="w-full border border-gray-600/50 text-white placeholder-gray-500 outline-none rounded-xl h-12 px-4 transition-all duration-300"
                   required
                 />
+
                 <input
                   type="tel"
                   name="phone"
@@ -207,6 +239,7 @@ export default function ContactPage() {
                   className="w-full border border-gray-600/50 text-white placeholder-gray-500 outline-none rounded-xl h-12 px-4 transition-all duration-300"
                   required
                 />
+
                 <textarea
                   name="message"
                   placeholder="Tell us about your project..."
@@ -214,10 +247,13 @@ export default function ContactPage() {
                   className="w-full border border-gray-600/50 text-white placeholder-gray-500 outline-none rounded-xl p-4 resize-none transition-all duration-300"
                   required
                 />
+
+                {/* ✅ Turnstile Captcha */}
+                <div id="turnstile-container" className="mt-1"></div>
+
                 <button className="w-full font-bold sm:w-auto border cursor-pointer border-[#FFFFFF63] bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white px-5 py-2 rounded-lg">
                   {loading ? "Sending..." : "Say Hello Today"}
                 </button>
-                 
               </form>
             </div>
 
@@ -268,10 +304,10 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-              {/* ✅ Status Message */}
+
               {statusMessage && (
                 <p className="text-center text-xl text-[#C4BBD3] mt-3">
-                   {statusMessage}
+                  {statusMessage}
                 </p>
               )}
             </div>
