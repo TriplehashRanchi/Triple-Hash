@@ -39,6 +39,7 @@ export default function RootLayout({
           async
           defer
         ></script>
+        <meta name="facebook-domain-verification" content="cno5w9daoatrzcgo9md0hpuhip9hb5" />
       </head>
       <body
         className={`${geistSans.variable}${raleway.variable} ${geistMono.variable} antialiased`}
