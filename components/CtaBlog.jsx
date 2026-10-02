@@ -10,7 +10,7 @@ const CtaSection = () => (
     <button
       onClick={() =>
         window.open(
-          "https://hashboard.in/book/web",
+          "https://app.hashboard.in/book/triplehash/discovery-call",
           "_blank"
         )
       }

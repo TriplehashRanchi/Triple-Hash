@@ -43,7 +43,7 @@ export default function CallToAction() {
             </div>
 
             <button
-              onClick={() => window.open('https://hashboard.in/book/web', '_blank')}
+              onClick={() => window.open('https://app.hashboard.in/book/triplehash/discovery-call', '_blank')}
               className={styles.bookMeetingButton}
             >
               <span className={styles.bookMeetingText}>Book a Meeting</span>

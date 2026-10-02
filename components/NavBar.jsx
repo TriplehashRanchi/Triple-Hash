@@ -72,14 +72,14 @@ const Navbar = () => {
                         <Link href="/contact" className={styles.signInLink}>
                             Get In Touch
                         </Link>
-                        <Link href="https://hashboard.in/book/web" className={styles.getStartedButton}>
+                        <Link href="https://app.hashboard.in/book/triplehash/discovery-call" className={styles.getStartedButton}>
                             Book A Call
                         </Link>
                     </div>
 
                     {/* Mobile Menu Button (Hamburger/Close) */}
                     <div className={styles.mobileMenuButtonContainer}>
-                        <Link href="https://hashboard.in/book/web" className={styles.callButton} onClick={closeMobileMenu}>
+                        <Link href="https://app.hashboard.in/book/triplehash/discovery-call" className={styles.callButton} onClick={closeMobileMenu}>
                             Book A Call
                         </Link>
                         <button

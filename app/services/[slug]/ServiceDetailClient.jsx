@@ -256,7 +256,7 @@ export default function ServiceDetailClient({ service, allServices }) {
             <div className="flex z-2 flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-4 w-full sm:w-auto">
               <button
                 onClick={() =>
-                  window.open("https://hashboard.in/book/web", "_blank")
+                  window.open("https://app.hashboard.in/book/triplehash/discovery-call", "_blank")
                 }
                 className="cursor-pointer buttonfont w-full sm:w-auto border border-[#FFFFFF63] bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white px-5 py-2 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
               >
@@ -265,7 +265,7 @@ export default function ServiceDetailClient({ service, allServices }) {
 
               <button
                 onClick={() =>
-                  window.open("https://hashboard.in/book/web", "_blank")
+                  window.open("https://app.hashboard.in/book/triplehash/discovery-call", "_blank")
                 }
                 className="cursor-pointer buttonfont w-full sm:w-auto bg-transparent border border-[#FFFFFF63] text-gray-200 px-5 py-2 rounded-lg hover:bg-white/10 hover:border-gray-400 transition-colors duration-300"
               >
@@ -443,7 +443,7 @@ export default function ServiceDetailClient({ service, allServices }) {
 
               <button
                 onClick={() =>
-                  window.open("https://hashboard.in/book/web", "_blank")
+                  window.open("https://app.hashboard.in/book/triplehash/discovery-call", "_blank")
                 }
                 className="cursor-pointer buttonfont border border-[#FFFFFF63] bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
               >
